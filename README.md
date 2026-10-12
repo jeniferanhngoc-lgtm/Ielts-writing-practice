@@ -100,3 +100,15 @@ Tài liệu kỹ thuật: [Streamlit installation](https://docs.streamlit.io/get
 ## Cập nhật giao diện
 
 Luyện tập đặt đề bên trái và bài làm bên phải, mỗi khung cuộn riêng. Dữ liệu đề hiển thị bằng bảng thay vì JSON. Cài đặt dùng lịch chọn ngày thi và giữ lựa chọn khi chuyển trang. Hướng dẫn Google Cloud Console và mẫu Secrets có ngay trong Cài đặt & dữ liệu.
+
+
+## Các dạng luyện tập mới
+
+- Ghép nối khung bài: kéo-thả câu của toàn bài, phân loại vào introduction/overview/body 1/body 2; có lựa chọn bàn phím. Chấm theo bài mẫu, không kết luận các thứ tự khác đều sai tiếng Anh.
+- Điền cấu trúc: toàn bài được đục lỗ tối đa ba cụm mỗi đoạn, có chọn cụm hoặc gõ lại và gợi ý tiếng Việt.
+- Dịch ngược: ba khung và ba câu tham khảo; hiện dùng các ví dụ bổ sung theo nhóm dạng, có nhãn rõ ràng, chưa có bộ dịch riêng cho mọi ảnh đề.
+- Luyện bốn bước: introduction → hai ý overview → gom thẻ thông tin vào body → viết đoạn. Thời lượng 2/3/3/10 phút là gợi ý, không phải giới hạn nộp bài. Gom nhóm hiện dùng câu chứa thông tin trong bài mẫu, chưa có nhãn dữ liệu độc lập được biên tập cho từng ảnh.
+- Flashcard: lọc theo dạng, lật xem cấu trúc và ví dụ, tự đánh giá để lên lịch 1–3–7–14 ngày. Không cộng điểm tự đánh giá vào độ chính xác quiz.
+- Viết & học thuộc: giữ chức năng cũ. Checklist chỉ ở bài hoàn chỉnh, kiểm tra đủ trước khi ghi nhận lần nộp. Làm lại tạo checklist mới.
+
+Các dạng mới lưu lịch sử bằng cùng kho local/Sheets đang cấu hình. Dạng luyện và kết quả được lưu riêng; chưa gửi bài thì không tạo lần làm.

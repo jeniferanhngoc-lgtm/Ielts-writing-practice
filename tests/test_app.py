@@ -21,6 +21,7 @@ def test_pages_render():
 def test_submit_rerun_retry_and_correction():
     at=app()
     at.sidebar.radio[0].set_value('Luyện tập').run()
+    next(w for w in at.selectbox if w.label=='Dạng luyện tập').set_value('Viết & học thuộc').run()
     at.text_area[0].set_value('The diagrams show the landfill.')
     next(b for b in at.button if b.label=='Nộp bài').click().run()
     assert not at.exception
@@ -63,6 +64,7 @@ def test_settings_exam_date_survives_navigation():
 def test_practice_data_is_table_and_all_modes_render():
     at=app()
     at.sidebar.radio[0].set_value('Luyện tập').run()
+    next(w for w in at.selectbox if w.label=='Dạng luyện tập').set_value('Viết & học thuộc').run()
     next(w for w in at.selectbox if w.label=='Chọn đề').set_value('q004').run()
     assert len(at.dataframe)>0
     assert not at.get('json')
@@ -75,6 +77,7 @@ def test_practice_data_is_table_and_all_modes_render():
 def test_memory_structure_hints_follow_selected_part():
     at=app()
     at.sidebar.radio[0].set_value('Luyện tập').run()
+    next(w for w in at.selectbox if w.label=='Dạng luyện tập').set_value('Viết & học thuộc').run()
     assert any(x.label=='Gợi ý cấu trúc áp dụng' for x in at.expander)
     next(w for w in at.selectbox if w.label=='Chọn đề').set_value('q014').run()
     assert any('how many' in x.value for x in at.markdown)
@@ -82,3 +85,57 @@ def test_memory_structure_hints_follow_selected_part():
     assert not at.exception
     assert any('most dramatic rise' in x.value for x in at.markdown)
     assert not any('The chart/table illustrates how many' in x.value for x in at.markdown)
+
+
+def test_new_modes_and_full_checklist_gate():
+    at=app()
+    at.sidebar.radio[0].set_value('Luyện tập').run()
+    for mode in ['Ghép nối khung bài','Điền từ nối & cấu trúc','Dịch ngược · 3 cách viết','Luyện từng bước','Flashcard · Ôn ngắt quãng','Viết & học thuộc']:
+        next(w for w in at.selectbox if w.label=='Dạng luyện tập').set_value(mode).run()
+        assert not at.exception,mode
+    next(w for w in at.selectbox if w.label=='Phần cần nhớ').set_value('full').run()
+    next(w for w in at.text_area if w.label=='Bài của bạn').set_value('A full essay draft.')
+    next(b for b in at.button if b.label=='Nộp bài').click().run()
+    assert not at.session_state.events
+    checks=[w for w in at.checkbox if w.key and 'check' in w.key]
+    assert checks
+    for w in checks:w.check()
+    next(b for b in at.button if b.label=='Nộp bài').click().run()
+    assert len(at.session_state.events)==1
+    assert not at.exception
+
+
+def test_outline_keyboard_submit_and_no_duplicate():
+    at=app()
+    at.sidebar.radio[0].set_value('Luyện tập').run()
+    next(w for w in at.checkbox if w.label=='Dùng bàn phím thay kéo-thả').check().run()
+    from core.content_validation import load_content
+    from core.learning_tasks import sentence_cards
+    e=load_content()[1][0]
+    order=','.join(c['id'] for c in sentence_cards(e))
+    next(w for w in at.text_input if w.label.startswith('Nhập mã')).set_value(order)
+    next(b for b in at.button if b.label=='Kiểm tra thứ tự').click().run()
+    assert not at.exception
+    assert at.session_state.events[0]['data']['score']==len(sentence_cards(e))
+    at.run()
+    assert len(at.session_state.events)==1
+    assert not at.get('json')
+
+
+def test_cloze_submission_and_flashcard_review():
+    from core.content_validation import load_content
+    from core.learning_tasks import cloze
+    at=app();at.sidebar.radio[0].set_value('Luyện tập').run()
+    next(w for w in at.selectbox if w.label=='Dạng luyện tập').set_value('Điền từ nối & cấu trúc').run()
+    next(w for w in at.radio if w.label=='Cách điền').set_value('Gõ chính xác').run()
+    blanks=cloze(load_content()[1][0])[1]
+    for i,b in enumerate(blanks,1):next(w for w in at.text_input if w.label==f'Ô {i}').set_value(b['answer'])
+    next(w for w in at.button if w.label=='Kiểm tra điền từ').click().run()
+    assert not at.exception
+    assert at.session_state.events[-1]['data']['score']==len(blanks)
+    next(w for w in at.selectbox if w.label=='Dạng luyện tập').set_value('Flashcard · Ôn ngắt quãng').run()
+    next(w for w in at.button if w.label=='Lật thẻ').click().run()
+    next(w for w in at.button if w.label=='Đã nhớ').click().run()
+    assert not at.exception
+    assert at.session_state.events[-1]['data']['grading_type']=='flashcard'
+    count=len(at.session_state.events);at.run();assert len(at.session_state.events)==count

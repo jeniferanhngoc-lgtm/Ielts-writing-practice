@@ -2,3 +2,5 @@ streamlit==1.65.0
 gspread==6.2.1
 Pillow==12.3.0
 tzdata==2026.5
+
+streamlit-sortables==0.3.1

@@ -20,7 +20,7 @@ def schedule(previous, passed, moment=None, basis='quiz'):
 def reviews_from_attempts(attempts):
     reviews = {}
     for attempt in sorted(attempts, key=lambda a:a['submitted_at']):
-        if attempt['grading_type'] not in ('quiz','memory'):
+        if attempt['grading_type'] not in ('quiz','memory','flashcard'):
             continue
         key = attempt['exercise_id'] + ':' + attempt['task_id']
         passed = attempt['score'] == attempt['max_score']

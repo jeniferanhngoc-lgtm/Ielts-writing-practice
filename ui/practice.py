@@ -64,7 +64,8 @@ def practice(exercises,structures):
             if e['status']!='verified':
                 st.warning(e.get('review_reason','Nội dung chưa được kiểm tra. Chưa mở bài học/chấm tự động.'))
                 return
-            answer_panel(e,structures,chosen)
+            from ui.learning_modes import learning_panel
+            learning_panel(e,structures)
 
 
 def answer_panel(e,structures,chosen):
@@ -72,6 +73,7 @@ def answer_panel(e,structures,chosen):
     task_id=''
     reference=''
     quiz=None
+    part=None
     if mode=='Quiz':
         quiz=st.selectbox('Bài luyện',e['quizzes'],format_func=lambda q:q['prompt'])
         task_id=quiz['quiz_id']
@@ -117,8 +119,15 @@ def answer_panel(e,structures,chosen):
                 answer=st.multiselect('Chọn tất cả đáp án đúng (đúng toàn bộ mới được 1 điểm)',quiz['options'])
             else:
                 answer=st.text_area('Bài của bạn',height=220 if mode!='Quiz' else 100,max_chars=20000)
+            checks=[]
+            if part=='full':
+                st.markdown('**Checklist trước khi nộp cả bài**')
+                for i,line in enumerate(e.get('checklist_vi') or ['Đã kiểm tra overview, số liệu, thì và ngữ pháp.']):
+                    checks.append(st.checkbox(line,key=key+state['attempt_id']+'check'+str(i)))
             submitted=st.form_submit_button('Nộp bài',type='primary')
         if submitted:
+            if part=='full' and not all(checks):
+                st.warning('Tích đủ checklist trước khi nộp cả bài. Bài viết vẫn được giữ.'); return
             if not answer or (isinstance(answer,str) and not answer.strip()):
                 st.warning('Bạn chưa nhập câu trả lời.'); return
             if mode=='Học thuộc':
@@ -143,7 +152,9 @@ def answer_panel(e,structures,chosen):
         if result.get('changes'):
             st.dataframe(result['changes'],hide_index=True,width='stretch')
         if quiz:
-            st.write('Đáp án:',quiz['accepted_answers'])
+            st.markdown('**Đáp án**')
+            from ui.learning_modes import readable_answer
+            readable_answer(quiz['accepted_answers'])
             st.write(quiz['explanation_vi'])
         else:
             st.markdown('**Mẫu để đối chiếu**'); st.write(result['reference_snapshot'])
@@ -153,9 +164,7 @@ def answer_panel(e,structures,chosen):
             st.rerun()
     if st.checkbox('Xem bài mẫu đầy đủ và giải thích',key='model'+chosen):
         show_model(e,structures)
-    with st.expander('Checklist trước khi nộp'):
-        for line in e.get('checklist_vi',[]):
-            st.checkbox(line,key=chosen+'check'+line)
+
 
 
 def show_data(data):

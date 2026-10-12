@@ -115,9 +115,10 @@ def progress(exercises):
         byid={a['attempt_id']:a for a in attempts}
         selected=st.selectbox('Xem nội dung một lần làm',list(reversed(byid)),format_func=lambda ident:byid[ident]['submitted_at'][:19]+' · '+byid[ident]['exercise_id']+' · '+byid[ident]['task_id']+' · '+ident[:8])
         chosen=byid[selected]
-        st.write(chosen['answer'])
+        from ui.learning_modes import readable_answer
+        readable_answer(chosen['answer'])
         with st.expander('Mẫu/đáp án tại thời điểm làm'):
-            st.write(chosen.get('reference_snapshot',''))
+            readable_answer(chosen.get('reference_snapshot',''))
     if sessions:
         st.subheader('Thời gian từng buổi'); st.dataframe(sessions,hide_index=True,width='stretch')
     if records('correction'):
