@@ -1,0 +1,370 @@
+[
+  {
+    "structure_id": "intro",
+    "title": "Giới thiệu đúng nội dung",
+    "paragraph_role": "introduction",
+    "template": "The chart/table shows the number/percentage/amount of … in … .",
+    "explanation_vi": "Nêu đối tượng, đơn vị và thời gian. Có thể dùng shows; không cần thay mọi từ bằng từ khó.",
+    "usage_conditions": "number + danh từ đếm được số nhiều; amount + không đếm được; percentage phải giữ nghĩa tỷ lệ.",
+    "examples": [
+      "The table shows the number of cars made in three countries in 2003, 2006 and 2009."
+    ],
+    "common_errors": "Không đổi percentage thành number; không dùng how much people cho số người.",
+    "source_reference": "PDF thầy Kiên, trang PDF 11–14",
+    "categories": [
+      "cot_4",
+      "cot_lt4",
+      "cot_5plus",
+      "two_years",
+      "future",
+      "mixed",
+      "static",
+      "maps",
+      "process",
+      "natural_process",
+      "mechanism",
+      "odd"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+  },
+  {
+    "structure_id": "overview-trend",
+    "title": "Tổng quan xu hướng",
+    "paragraph_role": "overview",
+    "template": "Overall, … increased, while … decreased. In addition, … had the highest figure(s).",
+    "explanation_vi": "Chọn xu hướng chính và một điểm so sánh nổi bật.",
+    "usage_conditions": "Chỉ dùng increased/decreased nếu có thay đổi theo thời gian. Dùng consistently khi đúng ở mọi mốc.",
+    "examples": [
+      "Overall, car production increased in Argentina, while it decreased in Australia."
+    ],
+    "common_errors": "Không viết consistently nếu có ngoại lệ; không đưa nguyên nhân không có trong đề.",
+    "source_reference": "PDF thầy Kiên, trang PDF 4–7",
+    "categories": [
+      "cot_4",
+      "cot_lt4",
+      "cot_5plus",
+      "two_years",
+      "future",
+      "mixed"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+  },
+  {
+    "structure_id": "from-to",
+    "title": "Từ mốc đầu đến mốc cuối",
+    "paragraph_role": "body",
+    "template": "The figure for … rose/fell from … in … to … in … .",
+    "explanation_vi": "from là mốc đầu, to là mốc cuối. by dùng cho lượng chênh lệch.",
+    "usage_conditions": "Hai mốc: chỉ mô tả chênh lệch, không suy diễn tăng đều ở giữa.",
+    "examples": [
+      "The figure rose from 20% to 35%, an increase of 15 percentage points."
+    ],
+    "common_errors": "Tăng từ 20% lên 35% là 15 điểm phần trăm, không phải tăng 15%.",
+    "source_reference": "PDF thầy Kiên, trang PDF 8",
+    "categories": [
+      "cot_4",
+      "cot_lt4",
+      "cot_5plus",
+      "two_years",
+      "future",
+      "mixed"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+  },
+  {
+    "structure_id": "sequence",
+    "title": "Mở đầu, chuyển biến, kết thúc",
+    "paragraph_role": "body",
+    "template": "The … started at …, after which it experienced …, before ending the period at … .",
+    "explanation_vi": "Ghép mốc đầu, diễn biến tiếp theo và mốc cuối trong một câu.",
+    "usage_conditions": "Cần ít nhất ba mốc để mô tả hai nhịp; chủ ngữ của ending phải cùng đối tượng.",
+    "examples": [
+      "The proportion started at 20%, after which it rose to 35%, before ending the period at 30%."
+    ],
+    "common_errors": "experienced cho quá khứ; started at, không bỏ at.",
+    "source_reference": "PDF thầy Kiên, trang PDF 7–10",
+    "categories": [
+      "cot_4",
+      "cot_lt4",
+      "cot_5plus",
+      "two_years",
+      "future",
+      "mixed"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+  },
+  {
+    "structure_id": "with",
+    "title": "Đưa số liệu lên đầu",
+    "paragraph_role": "body",
+    "template": "… in …, with a subsequent increase/decrease to … and a final … .",
+    "explanation_vi": "Sau with dùng cụm danh từ, chẳng hạn a rise hoặc a fall.",
+    "usage_conditions": "Dùng cho chuỗi thay đổi đã thể hiện trong dữ liệu.",
+    "examples": [
+      "Twenty per cent of households owned a car in 2000, with a subsequent rise to 35% and a final fall to 30%."
+    ],
+    "common_errors": "Không dùng with increased; không dùng cấu trúc này để bịa mốc giữa.",
+    "source_reference": "PDF thầy Kiên, trang PDF 7–10",
+    "categories": [
+      "cot_4",
+      "cot_lt4",
+      "cot_5plus",
+      "two_years",
+      "future",
+      "mixed"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+  },
+  {
+    "structure_id": "followed",
+    "title": "Biến động tiếp theo",
+    "paragraph_role": "body",
+    "template": "The figure was …, followed by an increase/decrease to … .",
+    "explanation_vi": "followed by + danh từ chỉ diễn biến tiếp theo.",
+    "usage_conditions": "Mốc sau phải thực sự nằm sau mốc trước.",
+    "examples": [
+      "The figure was 20%, followed by an increase to 35%."
+    ],
+    "common_errors": "a slow increase, không phải an slow increase.",
+    "source_reference": "PDF thầy Kiên, trang PDF 7–10",
+    "categories": [
+      "cot_4",
+      "cot_lt4",
+      "cot_5plus",
+      "two_years",
+      "future",
+      "mixed"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+  },
+  {
+    "structure_id": "similar",
+    "title": "Xu hướng tương tự",
+    "paragraph_role": "body",
+    "template": "A similar change was seen in …, which rose/fell from … to … .",
+    "explanation_vi": "Nối nhóm có cùng hướng thay đổi; vẫn ghi rõ số liệu riêng.",
+    "usage_conditions": "Cùng hướng không có nghĩa cùng mức độ. Có thể thêm to a lesser extent khi phù hợp.",
+    "examples": [
+      "A similar change was seen in France, where the figure rose from 30% to 40%."
+    ],
+    "common_errors": "Không ghép nhóm tăng với nhóm giảm bằng similarly.",
+    "source_reference": "PDF thầy Kiên, trang PDF 7, 22–24",
+    "categories": [
+      "cot_4",
+      "cot_lt4",
+      "cot_5plus",
+      "two_years",
+      "future",
+      "mixed"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+  },
+  {
+    "structure_id": "peak",
+    "title": "Nhấn mạnh đỉnh hoặc kết thúc",
+    "paragraph_role": "body",
+    "template": "… increased/decreased, reaching … / ending at … .",
+    "explanation_vi": "Dùng V-ing bổ sung kết quả cho biến động đã nêu.",
+    "usage_conditions": "reaching a peak of chỉ dùng khi thật sự là điểm cao nhất trong phạm vi đề.",
+    "examples": [
+      "Sales increased, reaching a peak of 50 million in 2010."
+    ],
+    "common_errors": "Không viết reaching at; viết reaching 50 hoặc reaching a peak of 50.",
+    "source_reference": "PDF thầy Kiên, trang PDF 9–11",
+    "categories": [
+      "cot_4",
+      "cot_lt4",
+      "cot_5plus",
+      "two_years",
+      "future",
+      "mixed"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+  },
+  {
+    "structure_id": "respectively",
+    "title": "Ghép số liệu theo thứ tự",
+    "paragraph_role": "body",
+    "template": "The figures for A and B were … and … respectively.",
+    "explanation_vi": "Số thứ nhất thuộc A, số thứ hai thuộc B.",
+    "usage_conditions": "Dùng khi thứ tự hai nhóm và hai số rõ ràng.",
+    "examples": [
+      "The figures for France and Italy were 75 and 60 million respectively."
+    ],
+    "common_errors": "Không đảo thứ tự đối tượng so với số liệu.",
+    "source_reference": "PDF thầy Kiên, trang PDF 22, 35",
+    "categories": [
+      "static",
+      "cot_4",
+      "cot_lt4",
+      "cot_5plus",
+      "two_years",
+      "future",
+      "mixed"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+  },
+  {
+    "structure_id": "static-overview",
+    "title": "Tổng quan so sánh tĩnh",
+    "paragraph_role": "overview",
+    "template": "Overall, … had the highest figure, while … had the lowest.",
+    "explanation_vi": "Nêu chênh lệch nổi bật khi không có diễn biến theo thời gian.",
+    "usage_conditions": "Đề tĩnh không dùng rose/fell chỉ vì cột này cao hơn cột khác.",
+    "examples": [
+      "Overall, professionals earned the most, while manual workers earned the least."
+    ],
+    "common_errors": "Nhóm lớn nhất dưới 50% không phải majority.",
+    "source_reference": "PDF thầy Kiên, trang PDF 35–36",
+    "categories": [
+      "static",
+      "mixed"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+  },
+  {
+    "structure_id": "compare",
+    "title": "So sánh trực tiếp",
+    "paragraph_role": "body",
+    "template": "… was …, compared with … for … .",
+    "explanation_vi": "Đặt hai số liệu cùng đơn vị cạnh nhau để so sánh.",
+    "usage_conditions": "So sánh cùng loại số liệu, tránh number với percentage.",
+    "examples": [
+      "The figure for men was $1,400, compared with $900 for women."
+    ],
+    "common_errors": "Không suy ra nguyên nhân từ chênh lệch.",
+    "source_reference": "PDF thầy Kiên, trang PDF 35–36",
+    "categories": [
+      "static",
+      "mixed",
+      "two_years",
+      "odd"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+  },
+  {
+    "structure_id": "forecast",
+    "title": "Dữ liệu dự báo",
+    "paragraph_role": "body",
+    "template": "… is expected/projected to rise/fall to … in … .",
+    "explanation_vi": "Tách số thực tế và số dự báo của đề.",
+    "usage_conditions": "Theo nhãn dự báo của nguồn, kể cả khi năm ấy đã qua ở thời điểm học.",
+    "examples": [
+      "The proportion is projected to reach 30% in 2030."
+    ],
+    "common_errors": "Không trình bày dự báo như số liệu đã quan sát.",
+    "source_reference": "PDF thầy Kiên, trang PDF 34",
+    "categories": [
+      "future"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+  },
+  {
+    "structure_id": "map-change",
+    "title": "Thay đổi trên bản đồ",
+    "paragraph_role": "body",
+    "template": "… was replaced by … / was converted into … .",
+    "explanation_vi": "Bị động để tập trung vào công trình; replaced by là thay thế, converted into là chuyển đổi.",
+    "usage_conditions": "Quá khứ cho bản đồ đã thay đổi; will be cho phương án tương lai.",
+    "examples": [
+      "The farmland was replaced by a playground."
+    ],
+    "common_errors": "Không tự đoán hướng Bắc nếu ảnh không có ký hiệu hướng.",
+    "source_reference": "PDF thầy Kiên, trang PDF 38–39",
+    "categories": [
+      "maps"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+  },
+  {
+    "structure_id": "map-overview",
+    "title": "Tổng quan bản đồ",
+    "paragraph_role": "overview",
+    "template": "Overall, the area became more …, with the addition of … .",
+    "explanation_vi": "Tóm tắt 2–3 thay đổi lớn nhất, không liệt kê mọi chi tiết.",
+    "usage_conditions": "Dựa vào đặc điểm hiện trên bản đồ; không suy đoán nguyên nhân kinh tế.",
+    "examples": [
+      "Overall, the area gained more facilities, while the main road remained unchanged."
+    ],
+    "common_errors": "Không nói mọi thứ thay đổi nếu có công trình giữ nguyên.",
+    "source_reference": "PDF thầy Kiên, trang PDF 38–39",
+    "categories": [
+      "maps"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+  },
+  {
+    "structure_id": "process-overview",
+    "title": "Tổng quan quy trình",
+    "paragraph_role": "overview",
+    "template": "Overall, the process begins with … and ends with … .",
+    "explanation_vi": "Dùng danh từ/V-ing sau with. Nêu đầu–cuối hoặc chu kỳ nếu có.",
+    "usage_conditions": "Quá trình tự nhiên không mặc định là chu kỳ. Cách hoạt động có thể tóm tắt chức năng.",
+    "examples": [
+      "Overall, the process begins with collecting waste glass and ends with producing new bottles."
+    ],
+    "common_errors": "Không tự đếm bước khi sơ đồ có nhánh chưa rõ.",
+    "source_reference": "PDF thầy Kiên, trang PDF 42–46",
+    "categories": [
+      "process",
+      "natural_process",
+      "mechanism"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+  },
+  {
+    "structure_id": "process-order",
+    "title": "Nối các bước",
+    "paragraph_role": "body",
+    "template": "Once …, … . / …, after which … .",
+    "explanation_vi": "Once + mệnh đề; after which + mệnh đề để nối thứ tự.",
+    "usage_conditions": "Dùng bị động khi nguyên liệu chịu tác động, chủ động khi vật tự chuyển động/phát triển.",
+    "examples": [
+      "The beans are dried, after which they are roasted."
+    ],
+    "common_errors": "Không ép mọi câu quy trình thành bị động; chú ý thứ tự mũi tên.",
+    "source_reference": "PDF thầy Kiên, trang PDF 42–46",
+    "categories": [
+      "process",
+      "natural_process",
+      "mechanism"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+  },
+  {
+    "structure_id": "location",
+    "title": "Vị trí và bộ phận",
+    "paragraph_role": "body",
+    "template": "… is located above/below/next to … .",
+    "explanation_vi": "Dùng từ vị trí quen thuộc để mô tả thiết bị hoặc bản đồ.",
+    "usage_conditions": "Chỉ nói vị trí thể hiện trên hình; không thêm bộ phận ngoài nguồn.",
+    "examples": [
+      "The burner is located above the basket."
+    ],
+    "common_errors": "Không tự thêm cơ chế không được minh họa.",
+    "source_reference": "PDF thầy Kiên, trang PDF 38–39, 46",
+    "categories": [
+      "maps",
+      "mechanism",
+      "odd"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+  }
+]

@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.streamlit/secrets.toml
+private_data/
+tmp/
+*.log
+.env
+credentials*.json
+service_account*.json
