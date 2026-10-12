@@ -5,6 +5,8 @@ from core.content_validation import CATEGORIES, ROOT, full_model
 from core.grading import memory_grade, grade_quiz, word_count
 from core.review_schedule import now
 from ui.state import emit, records
+from ui.readable import show_answer
+from ui.learning_modes import MODES, learning_panel
 
 LABELS={'introduction':'Introduction','overview':'Overview','body1':'Body 1','body2':'Body 2'}
 
@@ -23,7 +25,7 @@ def show_model(exercise, structures):
     st.markdown('**Cấu trúc mục tiêu và cách dùng**')
     for item in structures:
         if item['structure_id'] in exercise['target_structure_ids']:
-            st.code(item['template'],language=None,wrap_lines=True)
+            st.info(item['template'])
             st.write(item['explanation_vi'])
             st.caption(item['usage_conditions'])
 
@@ -68,7 +70,10 @@ def practice(exercises,structures):
 
 
 def answer_panel(e,structures,chosen):
-    mode=st.radio('Cách luyện',['Học thuộc','Vận dụng','Quiz'],horizontal=True)
+    mode=st.radio('Cách luyện',['Học thuộc','Vận dụng','Quiz']+MODES,horizontal=True,key='practice-mode')
+    if mode in MODES:
+        learning_panel(e,structures,mode)
+        return
     task_id=''
     reference=''
     quiz=None
@@ -143,10 +148,11 @@ def answer_panel(e,structures,chosen):
         if result.get('changes'):
             st.dataframe(result['changes'],hide_index=True,width='stretch')
         if quiz:
-            st.write('Đáp án:',quiz['accepted_answers'])
+            st.markdown('**Đáp án**')
+            show_answer(quiz['accepted_answers'],quiz.get('options') if quiz['kind']=='order' else None)
             st.write(quiz['explanation_vi'])
         else:
-            st.markdown('**Mẫu để đối chiếu**'); st.write(result['reference_snapshot'])
+            st.markdown('**Mẫu để đối chiếu**'); show_answer(result['reference_snapshot'])
             st.caption('Hãy kiểm tra số liệu, đơn vị, thì, overview và cấu trúc mục tiêu.')
         if st.button('Thử lại',key='retry'+key):
             st.session_state[key]={'attempt_id':str(uuid.uuid4()),'started':time.time(),'submitted':False,'retry_of':result['attempt_id']}

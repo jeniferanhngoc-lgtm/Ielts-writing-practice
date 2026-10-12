@@ -2,6 +2,12 @@
 
 Ứng dụng Streamlit một người học, giao diện tiếng Việt. Học thuộc khung câu rồi vận dụng vào đề mới; không tích hợp AI và không quy đổi điểm luyện tập thành band IELTS.
 
+## Bản cập nhật: 5 chế độ luyện
+
+Luyện tập có thêm **Ghép khung & kéo-thả**, **Điền khung cấu trúc**, **Dịch ngược — 3 cách**, **Quy trình 4 bước** và **Flashcard & ôn lại**. Đáp án hiển thị bằng văn bản, không còn dạng danh sách JSON/code.
+
+Xem [UPDATE_GUIDE.md](UPDATE_GUIDE.md) để biết cách thay file, phạm vi chấm và kiểm tra sau triển khai. Phân loại chức năng câu tự động hiện có nhãn biên tập cho q014; các đề khác tự đối chiếu. Bộ gom nhóm theo dàn ý mẫu có cho 71 đề sẵn sàng.
+
 ## Nội dung hiện có
 
 - Đã rà soát 100 ảnh: **71 đề có full bài, dàn ý, giải thích và quiz; 3 ảnh lặp; 26 ảnh cần xác nhận nguồn**. Xem [CONTENT_REVIEW.md](CONTENT_REVIEW.md).

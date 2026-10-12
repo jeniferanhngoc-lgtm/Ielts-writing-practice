@@ -8,6 +8,7 @@ from core.timer import elapsed, start, pause
 from core.export_prompt import make_prompt
 from storage.store import merge_events
 from ui.state import records, emit
+from ui.readable import show_answer
 
 
 def timer_panel():
@@ -64,9 +65,10 @@ def library(structures):
         with st.expander(f"{s['structure_id']} · {s['title']}"):
             st.write(s['explanation_vi']); st.caption(s['usage_conditions'])
             if st.checkbox('Hiện khung và ví dụ',key=s['structure_id']):
-                st.code(s['template'],language=None,wrap_lines=True)
+                st.info(s['template'])
                 st.write(s['examples'][0])
-            st.write('Lỗi cần tránh:',s['common_errors'])
+            st.markdown('**Lỗi cần tránh**')
+            show_answer(s['common_errors'])
             st.caption(s['source_reference']+' · '+s['editorial_note'])
 
 
@@ -115,9 +117,9 @@ def progress(exercises):
         byid={a['attempt_id']:a for a in attempts}
         selected=st.selectbox('Xem nội dung một lần làm',list(reversed(byid)),format_func=lambda ident:byid[ident]['submitted_at'][:19]+' · '+byid[ident]['exercise_id']+' · '+byid[ident]['task_id']+' · '+ident[:8])
         chosen=byid[selected]
-        st.write(chosen['answer'])
+        show_answer(chosen['answer'])
         with st.expander('Mẫu/đáp án tại thời điểm làm'):
-            st.write(chosen.get('reference_snapshot',''))
+            show_answer(chosen.get('reference_snapshot',''))
     if sessions:
         st.subheader('Thời gian từng buổi'); st.dataframe(sessions,hide_index=True,width='stretch')
     if records('correction'):
