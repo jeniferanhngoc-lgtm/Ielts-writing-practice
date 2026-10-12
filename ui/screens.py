@@ -131,12 +131,14 @@ def progress(exercises):
 def settings_page(structures,exercises):
     st.title('Cài đặt & dữ liệu')
     settings=st.session_state.settings
-    with st.form('settings'):
+    with st.form('settings_form'):
         start_date=st.date_input('Ngày bắt đầu',date.fromisoformat(settings['start_date']))
         minutes=st.number_input('Phút mỗi ngày',10,180,int(settings['daily_minutes']),5)
         sundays=st.checkbox('Học cả Chủ nhật',settings['sundays'])
-        meaning=st.selectbox('Mốc 30 ngày là gì?',['Chưa xác định','Đến ngày thi','Một đợt ôn 30 ngày'])
-        target=st.text_input('Ngày thi nếu đã biết (YYYY-MM-DD)',settings.get('target_date',''))
+        meanings=['Chưa xác định','Đến ngày thi','Một đợt ôn 30 ngày']
+        meaning=st.selectbox('Mốc 30 ngày là gì?',meanings,index=meanings.index(settings.get('target_meaning','Chưa xác định')))
+        target_day=st.date_input('Ngày thi nếu đã biết',value=date.fromisoformat(settings['target_date']) if settings.get('target_date') else None)
+        target=target_day.isoformat() if target_day else ''
         save=st.form_submit_button('Lưu cài đặt')
     if save:
         try:
@@ -148,6 +150,8 @@ def settings_page(structures,exercises):
             settings=dict(settings,start_date=start_date.isoformat(),daily_minutes=minutes,sundays=sundays,target_date=target,target_meaning=meaning)
             emit('settings',settings); st.session_state.settings=settings
             st.success('Đã ghi nhận cài đặt trong phiên.')
+    from ui.sheets_setup import sheets_panel
+    sheets_panel()
     st.subheader('Sao lưu tiến độ')
     export={'schema_version':1,'exported_at':now().isoformat(),'events':st.session_state.events}
     st.download_button('Xuất toàn bộ tiến độ JSON',json.dumps(export,ensure_ascii=False,indent=2),file_name='ielts-progress-'+now().date().isoformat()+'.json',mime='application/json')

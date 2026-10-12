@@ -37,3 +37,36 @@ def test_submit_rerun_retry_and_correction():
     next(b for b in at.button if b.label=='Lưu nhận xét và bản viết lại').click().run()
     assert not at.exception
     assert at.session_state.events[-1]['kind']=='correction'
+
+
+def test_settings_exam_date_survives_navigation():
+    from datetime import date, timedelta
+    at=app()
+    at.sidebar.radio[0].set_value('Cài đặt & dữ liệu').run()
+    next(w for w in at.date_input if w.label=='Ngày thi nếu đã biết').set_value(date(2027,6,1))
+    next(w for w in at.selectbox if w.label=='Mốc 30 ngày là gì?').set_value('Đến ngày thi')
+    next(b for b in at.button if b.label=='Lưu cài đặt').click().run()
+    assert not at.exception
+    assert at.session_state.settings['target_date']=='2027-06-01'
+    assert at.session_state.events[-1]['kind']=='settings'
+    at.sidebar.radio[0].set_value('Hôm nay').run()
+    at.sidebar.radio[0].set_value('Cài đặt & dữ liệu').run()
+    assert next(w for w in at.date_input if w.label=='Ngày thi nếu đã biết').value==date(2027,6,1)
+    assert next(w for w in at.selectbox if w.label=='Mốc 30 ngày là gì?').value=='Đến ngày thi'
+    next(w for w in at.date_input if w.label=='Ngày thi nếu đã biết').set_value(date.fromisoformat(at.session_state.settings['start_date'])-timedelta(days=1))
+    next(b for b in at.button if b.label=='Lưu cài đặt').click().run()
+    assert not at.exception
+    assert at.error
+    assert at.session_state.settings['target_date']=='2027-06-01'
+
+
+def test_practice_data_is_table_and_all_modes_render():
+    at=app()
+    at.sidebar.radio[0].set_value('Luyện tập').run()
+    next(w for w in at.selectbox if w.label=='Chọn đề').set_value('q004').run()
+    assert len(at.dataframe)>0
+    assert not at.get('json')
+    for mode in ['Vận dụng','Quiz','Học thuộc']:
+        next(w for w in at.radio if w.label=='Cách luyện').set_value(mode).run()
+        assert not at.exception
+

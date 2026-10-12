@@ -40,26 +40,34 @@ def practice(exercises,structures):
     chosen=st.selectbox('Chọn đề',[e['exercise_id'] for e in pool],format_func=lambda x:next(f"{e['exercise_id']} · {e['title']} {'✓' if e['status']=='verified' else '— cần kiểm tra'}" for e in pool if e['exercise_id']==x))
     e=next(x for x in pool if x['exercise_id']==chosen)
     st.subheader(e['title'])
-    left,right=st.columns([1,1])
+    left,right=st.columns([1,1],gap='large')
     with left:
-        asset=ROOT/e.get('asset_reference','missing')
-        if asset.is_file():
-            st.image(str(asset),width='stretch')
-            st.download_button('Tải ảnh đề để phóng to / đính kèm',asset.read_bytes(),file_name=asset.name,key='img'+chosen)
-        else:
-            st.info('Ảnh chưa được đưa vào bản triển khai này.')
+        with st.container(height=720,border=True):
+            st.markdown('### Đề bài')
+            asset=ROOT/e.get('asset_reference','missing')
+            if asset.is_file():
+                st.image(str(asset),width='stretch')
+                st.download_button('Tải ảnh đề để phóng to / đính kèm',asset.read_bytes(),file_name=asset.name,key='img'+chosen)
+            else:
+                st.info('Ảnh chưa được đưa vào bản triển khai này.')
+            st.write(e['prompt'])
+            st.caption(e.get('source_note',''))
+            with st.expander('Gợi ý đọc đề và chia bài'):
+                st.write(e.get('analysis_vi','Đang kiểm tra dữ liệu.'))
+                st.write(e.get('outline_vi',''))
+            if e.get('data'):
+                with st.expander('Dữ liệu của đề'):
+                    show_data(e['data'])
     with right:
-        st.write(e['prompt'])
-        st.caption(e.get('source_note',''))
-        st.markdown('**Đọc đề và chia bài**')
-        st.write(e.get('analysis_vi','Đang kiểm tra dữ liệu.'))
-        st.write(e.get('outline_vi',''))
-        if e.get('data'):
-            with st.expander('Dữ liệu đã nhập'):
-                st.json(e['data'])
-    if e['status']!='verified':
-        st.warning(e.get('review_reason','Nội dung chưa được kiểm tra. Chưa mở bài học/chấm tự động.'))
-        return
+        with st.container(height=720,border=True):
+            st.markdown('### Bài làm của bạn')
+            if e['status']!='verified':
+                st.warning(e.get('review_reason','Nội dung chưa được kiểm tra. Chưa mở bài học/chấm tự động.'))
+                return
+            answer_panel(e,structures,chosen)
+
+
+def answer_panel(e,structures,chosen):
     mode=st.radio('Cách luyện',['Học thuộc','Vận dụng','Quiz'],horizontal=True)
     task_id=''
     reference=''
@@ -146,3 +154,28 @@ def practice(exercises,structures):
     with st.expander('Checklist trước khi nộp'):
         for line in e.get('checklist_vi',[]):
             st.checkbox(line,key=chosen+'check'+line)
+
+
+def show_data(data):
+    labels={'years':'Năm','unit':'Đơn vị','stages':'Các giai đoạn','components':'Thành phần','sequence':'Trình tự','layers':'Các lớp','regions':'Khu vực','countries':'Quốc gia','groups':'Nhóm','months':'Số tháng','container_m3':'Dung tích thùng (m³)'}
+    def label(key):
+        return labels.get(key,str(key).replace('_',' ').replace('�','–'))
+    def readable(value):
+        if isinstance(value,dict):
+            return '; '.join(f'{label(k)}: {readable(v)}' for k,v in value.items())
+        if isinstance(value,list):
+            return ' → '.join(readable(v) for v in value)
+        if isinstance(value,bool):
+            return 'Có' if value else 'Không'
+        return str(value)
+    if data.get('unit'):
+        st.caption('Đơn vị: '+str(data['unit']))
+    if data.get('approximate'):
+        st.caption('Số liệu gần đúng, đọc từ hình.')
+    years=data.get('years',[])
+    series={k:v for k,v in data.items() if k!='years' and isinstance(v,list) and years and len(v)==len(years)}
+    if series:
+        st.dataframe([{'Nhóm':label(k),**{str(y):readable(v) for y,v in zip(years,values)}} for k,values in series.items()],hide_index=True,width='stretch')
+    remaining=[{'Thông tin':label(k),'Nội dung':readable(v)} for k,v in data.items() if k not in series and k not in ['unit','approximate'] and not (k=='years' and series)]
+    if remaining:
+        st.dataframe(remaining,hide_index=True,width='stretch')

@@ -60,7 +60,7 @@ Lịch ôn dùng ngày `Asia/Ho_Chi_Minh`, sau các lần đúng liên tiếp l�
 
 ## Google Sheets
 
-1. Tạo Google Cloud project và bật Google Sheets API.
+1. Tạo Google Cloud project và bật Google Sheets API cùng Google Drive API.
 2. Tạo service account và khóa JSON trên máy của bạn. Không gửi khóa trong chat, không commit.
 3. Tạo Google Sheet riêng, chia sẻ quyền **Editor** cho `client_email` của service account.
 4. Điền `spreadsheet_id` và bảng `[gcp_service_account]` trong secrets; đổi chế độ thành `sheets`.
@@ -78,7 +78,7 @@ Repo: **[jeniferanhngoc-lgtm/Ielts-writing-practice](https://github.com/jenifera
 - Thêm secrets trong giao diện quản lý Streamlit; dùng `sheets` trên cloud.
 - **Repo private không tự bảo đảm ứng dụng web private.** Kiểm tra quyền truy cập ứng dụng và chỉ cho người học truy cập trước khi đưa dữ liệu cá nhân vào.
 - Không dùng SQLite trên máy chủ cloud để hứa lưu qua redeploy.
-- Chưa triển khai Streamlit Cloud, chưa kết nối Google Sheets thật.
+- Người dùng đã triển khai Streamlit Cloud. Kết nối Google Sheets thật cần cấu hình Secrets và kiểm tra trên tài khoản người dùng.
 
 ## Bổ sung nội dung
 
@@ -96,3 +96,7 @@ Các bài nguồn biên soạn nằm ở `tools/corpus/`. `tools/build_content.p
 Kiểm tra chấm bài, ôn lặp, múi giờ, pause/resume, SQLite qua phiên, schema, độ dài bài mẫu, dữ liệu dễ nhầm, Sheets giả lập timeout/chia ô, và luồng giao diện qua Streamlit AppTest. Kiểm thử Sheets giả lập không thay cho kiểm tra kết nối Google thực tế.
 
 Tài liệu kỹ thuật: [Streamlit installation](https://docs.streamlit.io/get-started/installation/command-line), [gspread worksheet API](https://docs.gspread.org/en/latest/api/models/worksheet.html). Dependency đã kiểm tra và cài ngày 12/10/2026.
+
+## Cập nhật giao diện
+
+Luyện tập đặt đề bên trái và bài làm bên phải, mỗi khung cuộn riêng. Dữ liệu đề hiển thị bằng bảng thay vì JSON. Cài đặt dùng lịch chọn ngày thi và giữ lựa chọn khi chuyển trang. Hướng dẫn Google Cloud Console và mẫu Secrets có ngay trong Cài đặt & dữ liệu.
