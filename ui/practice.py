@@ -89,6 +89,8 @@ def answer_panel(e,structures,chosen):
             reference=sentences[idx]
             part+=f'-sentence-{idx}'
         task_id='memory-'+part
+        from ui.structure_hints import memory_hints
+        memory_hints(e,structures,part)
         st.caption('Điểm nhớ mẫu: khoảng cách chỉnh sửa giữa các từ/dấu câu. Thiếu, thừa và thay từ đều trừ điểm. Bỏ qua khoảng trắng; mặc định phân biệt hoa/thường và dấu câu. Đây không phải band IELTS.')
         sensitive=st.checkbox('Phân biệt chữ hoa/thường',value=True)
         punctuation=st.checkbox('Tính dấu câu',value=True)

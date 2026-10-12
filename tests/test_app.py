@@ -70,3 +70,15 @@ def test_practice_data_is_table_and_all_modes_render():
         next(w for w in at.radio if w.label=='Cách luyện').set_value(mode).run()
         assert not at.exception
 
+
+
+def test_memory_structure_hints_follow_selected_part():
+    at=app()
+    at.sidebar.radio[0].set_value('Luyện tập').run()
+    assert any(x.label=='Gợi ý cấu trúc áp dụng' for x in at.expander)
+    next(w for w in at.selectbox if w.label=='Chọn đề').set_value('q014').run()
+    assert any('how many' in x.value for x in at.markdown)
+    next(w for w in at.selectbox if w.label=='Phần cần nhớ').set_value('overview').run()
+    assert not at.exception
+    assert any('most dramatic rise' in x.value for x in at.markdown)
+    assert not any('The chart/table illustrates how many' in x.value for x in at.markdown)
