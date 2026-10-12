@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{font-family:system-ui,sans-serif;color:#172b38;background:#fff;font-size:14px;--surface:#fff;--panel:#f5f8fa}
+body{margin:4px}.hint{opacity:.8;line-height:1.5}.box{padding:10px;background:var(--panel);border:1px solid #cad9df;border-radius:10px;margin:10px 0;min-height:50px}
+.box.over{border:2px solid #118574}.card{padding:12px;margin:7px 0;background:var(--surface);border:1px solid #bccdd7;border-radius:8px;line-height:1.55;cursor:grab}
+.card:focus{outline:3px solid #138576}.actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+button,select{font:inherit;border:1px solid #b7c9d2;background:var(--surface);border-radius:5px;padding:5px 8px;color:inherit}
+button{cursor:pointer}button:disabled{opacity:.4}h3{margin:0 0 6px;font-size:14px}
+</style></head><body><p class="hint">Kéo câu đến vị trí/hộp cần chọn. Có thể dùng nút ↑ ↓ và danh sách chọn trên mỗi câu bằng bàn phím hoặc điện thoại.</p><div id="board"></div>
+<script>
+let args,values,dragged,signature,theme;
+function send(type,extra={}){window.parent.postMessage({isStreamlitMessage:true,type,...extra},"*")}
+function height(){send("streamlit:setFrameHeight",{height:document.body.scrollHeight+12})}
+function publish(){send("streamlit:setComponentValue",{value:values,dataType:"json"})}
+function move(id,box,before=null){
+ if(args.mode==="order"){
+  values=values.filter(x=>x!==id);let at=before===null?values.length:values.indexOf(before);
+  values.splice(at<0?values.length:at,0,id);
+ }else values={...values,[id]:box};
+ publish();render();
+}
+function button(label,fn,disabled=false){let b=document.createElement("button");b.type="button";b.textContent=label;b.disabled=disabled;b.onclick=fn;return b}
+function render(){
+ let board=document.getElementById("board");board.replaceChildren();
+ let boxes=args.mode==="order"?[{id:"order",label:"Thứ tự bài — từ trên xuống dưới"}]:args.boxes;
+ for(let box of boxes){
+  let zone=document.createElement("section");zone.className="box";let title=document.createElement("h3");title.textContent=box.label;zone.append(title);
+  zone.ondragover=e=>{e.preventDefault();zone.classList.add("over")};zone.ondragleave=()=>zone.classList.remove("over");
+  zone.ondrop=e=>{e.preventDefault();zone.classList.remove("over");if(dragged)move(dragged,box.id)};
+  let ids=args.mode==="order"?values:args.cards.filter(c=>(values[c.id]||"unassigned")===box.id).map(c=>c.id);
+  for(let id of ids){
+   let c=args.cards.find(c=>c.id===id);if(!c)continue;
+   let card=document.createElement("div");card.className="card";card.draggable=true;card.tabIndex=0;
+   card.ondragstart=e=>{dragged=id;e.dataTransfer.setData("text/plain",id);e.dataTransfer.effectAllowed="move"};
+   card.ondragend=()=>{dragged=null};
+   card.ondragover=e=>e.preventDefault();
+   card.ondrop=e=>{e.preventDefault();e.stopPropagation();if(dragged&&dragged!==id)move(dragged,box.id,id)};
+   let text=document.createElement("div");text.textContent=c.text;card.append(text);
+   let controls=document.createElement("div");controls.className="actions";
+   if(args.mode==="order"){
+    let i=values.indexOf(id);
+    controls.append(button("↑",()=>move(id,"order",values[i-1]),i===0));
+    controls.append(button("↓",()=>{let next=values[i+2]||null;move(id,"order",next)},i===values.length-1));
+   }else{
+    let select=document.createElement("select");select.setAttribute("aria-label","Chuyển câu vào hộp");
+    for(let target of boxes){let opt=document.createElement("option");opt.value=target.id;opt.textContent=target.label;select.append(opt)}
+    select.value=values[id]||"unassigned";select.onchange=()=>move(id,select.value);controls.append(select);
+   }
+   card.append(controls);zone.append(card);
+  }
+  board.append(zone);
+ }
+ height();
+}
+window.addEventListener("message",event=>{
+ if(event.data.type!=="streamlit:render")return;
+ let next=event.data.args;let sig=JSON.stringify([next.cards,next.mode,next.initial]);
+ args=next;
+ if(signature!==sig){signature=sig;values=JSON.parse(JSON.stringify(args.initial))}
+ theme=event.data.theme;
+ if(theme){document.documentElement.style.color=theme.textColor;document.documentElement.style.background=theme.backgroundColor;
+  document.documentElement.style.setProperty("--surface",theme.backgroundColor);
+  document.documentElement.style.setProperty("--panel",theme.secondaryBackgroundColor);}
+ render();
+});
+window.addEventListener("resize",height);
+send("streamlit:componentReady",{apiVersion:1});
+</script></body></html>

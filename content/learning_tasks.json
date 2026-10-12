@@ -1,0 +1,1381 @@
+{
+  "q014": {
+    "sentence_functions": {
+      "introduction-0": [
+        "introduction"
+      ],
+      "overview-0": [
+        "overview"
+      ],
+      "overview-1": [
+        "overview"
+      ],
+      "body1-0": [
+        "comparison"
+      ],
+      "body1-1": [
+        "trend"
+      ],
+      "body1-2": [
+        "trend",
+        "both"
+      ],
+      "body1-3": [
+        "both"
+      ],
+      "body2-0": [
+        "trend"
+      ],
+      "body2-1": [
+        "comparison"
+      ],
+      "body2-2": [
+        "both"
+      ],
+      "body2-3": [
+        "both"
+      ]
+    },
+    "grouping": {
+      "instruction": "Đề dưới 4 nhóm: chia theo thời gian. Gán từng mục (quốc gia + giai đoạn) vào body tương ứng với dàn ý mẫu.",
+      "items": [
+        "Argentina · 2003–2006",
+        "Australia · 2003–2006",
+        "Thailand · 2003–2006",
+        "Argentina · 2006–2009",
+        "Australia · 2006–2009",
+        "Thailand · 2006–2009"
+      ],
+      "accepted_assignments": [
+        {
+          "Argentina · 2003–2006": "body1",
+          "Australia · 2003–2006": "body1",
+          "Thailand · 2003–2006": "body1",
+          "Argentina · 2006–2009": "body2",
+          "Australia · 2006–2009": "body2",
+          "Thailand · 2006–2009": "body2"
+        }
+      ]
+    }
+  },
+  "q001": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Đào hố trong đá",
+        "Lót đất sét và chất tổng hợp",
+        "Lắp ống thoát nước",
+        "Đưa rác vào hố",
+        "Đóng bãi và thoát khí"
+      ],
+      "accepted_assignments": [
+        {
+          "Đào hố trong đá": "body1",
+          "Lót đất sét và chất tổng hợp": "body1",
+          "Lắp ống thoát nước": "body1",
+          "Đưa rác vào hố": "body2",
+          "Đóng bãi và thoát khí": "body2"
+        }
+      ]
+    }
+  },
+  "q003": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Bộ phận của hệ thống",
+        "Nguồn nước đầu vào",
+        "Tuần hoàn nước nóng",
+        "Cấp nước qua vòi"
+      ],
+      "accepted_assignments": [
+        {
+          "Bộ phận của hệ thống": "body1",
+          "Nguồn nước đầu vào": "body1",
+          "Tuần hoàn nước nóng": "body2",
+          "Cấp nước qua vòi": "body2"
+        }
+      ]
+    }
+  },
+  "q004": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Japan",
+        "China",
+        "Mexico",
+        "Russia",
+        "Saudi Arabia"
+      ],
+      "accepted_assignments": [
+        {
+          "Japan": "body1",
+          "China": "body1",
+          "Mexico": "body2",
+          "Russia": "body2",
+          "Saudi Arabia": "body2"
+        }
+      ]
+    }
+  },
+  "q005": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Thùng chứa",
+        "Các lớp food / grass / newspaper",
+        "Thêm thành phần để ủ",
+        "Ủ trong 6 tháng",
+        "Thành phẩm"
+      ],
+      "accepted_assignments": [
+        {
+          "Thùng chứa": "body1",
+          "Các lớp food / grass / newspaper": "body1",
+          "Thêm thành phần để ủ": "body2",
+          "Ủ trong 6 tháng": "body2",
+          "Thành phẩm": "body2"
+        }
+      ]
+    }
+  },
+  "q007": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Phần phía trên của bản đồ",
+        "High street",
+        "Dải ven biển"
+      ],
+      "accepted_assignments": [
+        {
+          "Phần phía trên của bản đồ": "body1",
+          "High street": "body1",
+          "Dải ven biển": "body2"
+        }
+      ]
+    }
+  },
+  "q008": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Bố cục hiện tại",
+        "Vòng xoay mới",
+        "Lối vào mới"
+      ],
+      "accepted_assignments": [
+        {
+          "Bố cục hiện tại": "body1",
+          "Vòng xoay mới": "body2",
+          "Lối vào mới": "body2"
+        }
+      ]
+    }
+  },
+  "q010": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "7–14",
+        "15–24",
+        "25–35",
+        "35+"
+      ],
+      "accepted_assignments": [
+        {
+          "7–14": "body1",
+          "15–24": "body1",
+          "25–35": "body2",
+          "35+": "body2"
+        }
+      ]
+    }
+  },
+  "q011": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Germany",
+        "France",
+        "Italy",
+        "Austria"
+      ],
+      "accepted_assignments": [
+        {
+          "Germany": "body1",
+          "France": "body1",
+          "Italy": "body2",
+          "Austria": "body2"
+        }
+      ]
+    }
+  },
+  "q013": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Dữ liệu 1971",
+        "Dữ liệu 1981",
+        "Dữ liệu 1991",
+        "Dữ liệu 2001"
+      ],
+      "accepted_assignments": [
+        {
+          "Dữ liệu 1971": "body1",
+          "Dữ liệu 1981": "body1",
+          "Dữ liệu 1991": "body2",
+          "Dữ liệu 2001": "body2"
+        }
+      ]
+    }
+  },
+  "q016": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Thu gom từ mái nhà",
+        "Lọc nước",
+        "Lưu trữ",
+        "Xử lý hóa học",
+        "Cấp nước uống"
+      ],
+      "accepted_assignments": [
+        {
+          "Thu gom từ mái nhà": "body1",
+          "Lọc nước": "body1",
+          "Lưu trữ": "body1",
+          "Xử lý hóa học": "body2",
+          "Cấp nước uống": "body2"
+        }
+      ]
+    }
+  },
+  "q017": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Tỷ lệ forest theo khu vực",
+        "Tỷ lệ timber theo khu vực",
+        "Đối chiếu forest với timber"
+      ],
+      "accepted_assignments": [
+        {
+          "Tỷ lệ forest theo khu vực": "body1",
+          "Tỷ lệ timber theo khu vực": "body2",
+          "Đối chiếu forest với timber": "body2"
+        }
+      ]
+    }
+  },
+  "q018": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Bố cục hiện tại",
+        "Bố trí tương lai"
+      ],
+      "accepted_assignments": [
+        {
+          "Bố cục hiện tại": "body1",
+          "Bố trí tương lai": "body2"
+        }
+      ]
+    }
+  },
+  "q020": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "USA",
+        "Western Europe and Japan",
+        "China",
+        "Middle East"
+      ],
+      "accepted_assignments": [
+        {
+          "USA": "body1",
+          "Western Europe and Japan": "body1",
+          "China": "body2",
+          "Middle East": "body2"
+        }
+      ]
+    }
+  },
+  "q022": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "chicken",
+        "beef",
+        "lamb",
+        "fish"
+      ],
+      "accepted_assignments": [
+        {
+          "chicken": "body1",
+          "beef": "body1",
+          "lamb": "body2",
+          "fish": "body2"
+        }
+      ]
+    }
+  },
+  "q023": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Germany",
+        "Italy",
+        "France",
+        "UK",
+        "Belgium"
+      ],
+      "accepted_assignments": [
+        {
+          "Germany": "body1",
+          "Italy": "body1",
+          "France": "body1",
+          "UK": "body2",
+          "Belgium": "body2"
+        }
+      ]
+    }
+  },
+  "q025": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "teachers",
+        "other workers",
+        "resources",
+        "furniture/equipment",
+        "insurance"
+      ],
+      "accepted_assignments": [
+        {
+          "teachers": "body1",
+          "other workers": "body1",
+          "resources": "body2",
+          "furniture/equipment": "body2",
+          "insurance": "body2"
+        }
+      ]
+    }
+  },
+  "q026": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "England",
+        "Scotland",
+        "Wales",
+        "Northern Ireland"
+      ],
+      "accepted_assignments": [
+        {
+          "England": "body1",
+          "Scotland": "body1",
+          "Wales": "body2",
+          "Northern Ireland": "body2"
+        }
+      ]
+    }
+  },
+  "q027": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Nguyên liệu",
+        "Tạo hình",
+        "Nung",
+        "Thêm màu",
+        "Thành phẩm"
+      ],
+      "accepted_assignments": [
+        {
+          "Nguyên liệu": "body1",
+          "Tạo hình": "body1",
+          "Nung": "body2",
+          "Thêm màu": "body2",
+          "Thành phẩm": "body2"
+        }
+      ]
+    }
+  },
+  "q028": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Brazil",
+        "Costa Rica",
+        "Colombia"
+      ],
+      "accepted_assignments": [
+        {
+          "Brazil": "body1",
+          "Costa Rica": "body1",
+          "Colombia": "body2"
+        }
+      ]
+    }
+  },
+  "q029": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Professionals",
+        "Technicians",
+        "Service workers",
+        "Administrative/clerical workers",
+        "Manual workers"
+      ],
+      "accepted_assignments": [
+        {
+          "Professionals": "body1",
+          "Technicians": "body1",
+          "Service workers": "body2",
+          "Administrative/clerical workers": "body2",
+          "Manual workers": "body2"
+        }
+      ]
+    }
+  },
+  "q030": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Khu công nghiệp",
+        "Nhà ở",
+        "Công trình giữ lại",
+        "Tiện ích ven biển"
+      ],
+      "accepted_assignments": [
+        {
+          "Khu công nghiệp": "body1",
+          "Nhà ở": "body1",
+          "Công trình giữ lại": "body2",
+          "Tiện ích ven biển": "body2"
+        }
+      ]
+    }
+  },
+  "q031": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "London",
+        "Paris",
+        "Tokyo",
+        "Washington DC",
+        "Kyoto",
+        "Los Angeles"
+      ],
+      "accepted_assignments": [
+        {
+          "London": "body1",
+          "Paris": "body1",
+          "Tokyo": "body1",
+          "Washington DC": "body2",
+          "Kyoto": "body2",
+          "Los Angeles": "body2"
+        }
+      ]
+    }
+  },
+  "q032": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Germany",
+        "China",
+        "India",
+        "Spain",
+        "France",
+        "USA"
+      ],
+      "accepted_assignments": [
+        {
+          "Germany": "body1",
+          "China": "body1",
+          "India": "body1",
+          "Spain": "body2",
+          "France": "body2",
+          "USA": "body2"
+        }
+      ]
+    }
+  },
+  "q033": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Phân bố dân số trên pie chart",
+        "Nơi cư trú trong bảng"
+      ],
+      "accepted_assignments": [
+        {
+          "Phân bố dân số trên pie chart": "body1",
+          "Nơi cư trú trong bảng": "body2"
+        }
+      ]
+    }
+  },
+  "q035": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "fixed line",
+        "mobile"
+      ],
+      "accepted_assignments": [
+        {
+          "fixed line": "body1",
+          "mobile": "body2"
+        }
+      ]
+    }
+  },
+  "q036": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Stage 1: cleaning",
+        "Stage 2: heating/cooling/carbonation",
+        "Stage 3: mixing",
+        "Stage 4: filtering and filling",
+        "Stage 5: packaging"
+      ],
+      "accepted_assignments": [
+        {
+          "Stage 1: cleaning": "body1",
+          "Stage 2: heating/cooling/carbonation": "body1",
+          "Stage 3: mixing": "body2",
+          "Stage 4: filtering and filling": "body2",
+          "Stage 5: packaging": "body2"
+        }
+      ]
+    }
+  },
+  "q037": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Bố cục năm 1982",
+        "Các thay đổi đến năm 2012"
+      ],
+      "accepted_assignments": [
+        {
+          "Bố cục năm 1982": "body1",
+          "Các thay đổi đến năm 2012": "body2"
+        }
+      ]
+    }
+  },
+  "q038": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "sole parent",
+        "single no children",
+        "couple with children",
+        "couple no children",
+        "Các nhóm thấp còn lại",
+        "Số liệu tổng"
+      ],
+      "accepted_assignments": [
+        {
+          "sole parent": "body1",
+          "single no children": "body1",
+          "couple with children": "body1",
+          "couple no children": "body2",
+          "Các nhóm thấp còn lại": "body2",
+          "Số liệu tổng": "body2"
+        }
+      ]
+    }
+  },
+  "q040": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "no qualification",
+        "school exams",
+        "bachelor",
+        "master"
+      ],
+      "accepted_assignments": [
+        {
+          "no qualification": "body1",
+          "school exams": "body1",
+          "bachelor": "body2",
+          "master": "body2"
+        }
+      ]
+    }
+  },
+  "q041": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Tất cả nhóm · 1980–1990",
+        "Tất cả nhóm · 1990–2000"
+      ],
+      "accepted_assignments": [
+        {
+          "Tất cả nhóm · 1980–1990": "body1",
+          "Tất cả nhóm · 1990–2000": "body2"
+        }
+      ]
+    }
+  },
+  "q042": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "passenger",
+        "commercial",
+        "motorcycles",
+        "heavy trucks",
+        "light trucks"
+      ],
+      "accepted_assignments": [
+        {
+          "passenger": "body1",
+          "commercial": "body1",
+          "motorcycles": "body2",
+          "heavy trucks": "body2",
+          "light trucks": "body2"
+        }
+      ]
+    }
+  },
+  "q043": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Các thay đổi phía tây",
+        "Các thay đổi phía đông"
+      ],
+      "accepted_assignments": [
+        {
+          "Các thay đổi phía tây": "body1",
+          "Các thay đổi phía đông": "body2"
+        }
+      ]
+    }
+  },
+  "q044": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "none (0 children)",
+        "one child",
+        "two children",
+        "three children",
+        "four+ children"
+      ],
+      "accepted_assignments": [
+        {
+          "none (0 children)": "body1",
+          "one child": "body1",
+          "two children": "body1",
+          "three children": "body2",
+          "four+ children": "body2"
+        }
+      ]
+    }
+  },
+  "q045": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "16–24",
+        "24–35",
+        "35–50",
+        "50–75",
+        "75+"
+      ],
+      "accepted_assignments": [
+        {
+          "16–24": "body1",
+          "24–35": "body1",
+          "35–50": "body1",
+          "50–75": "body2",
+          "75+": "body2"
+        }
+      ]
+    }
+  },
+  "q046": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Canada / Germany / UK · 1988–2000",
+        "Canada / Germany / UK · dự báo 2030"
+      ],
+      "accepted_assignments": [
+        {
+          "Canada / Germany / UK · 1988–2000": "body1",
+          "Canada / Germany / UK · dự báo 2030": "body2"
+        }
+      ]
+    }
+  },
+  "q048": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Canada / Germany / UK · 1988–2000",
+        "Canada / Germany / UK · dự báo 2030"
+      ],
+      "accepted_assignments": [
+        {
+          "Canada / Germany / UK · 1988–2000": "body1",
+          "Canada / Germany / UK · dự báo 2030": "body2"
+        }
+      ]
+    }
+  },
+  "q049": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Sao Paulo",
+        "Shanghai",
+        "Jakarta",
+        "So sánh dự báo và thực tế"
+      ],
+      "accepted_assignments": [
+        {
+          "Sao Paulo": "body1",
+          "Shanghai": "body1",
+          "Jakarta": "body2",
+          "So sánh dự báo và thực tế": "body2"
+        }
+      ]
+    }
+  },
+  "q050": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "accepted_assignments": [
+        {
+          "A": "body1",
+          "D": "body1",
+          "B": "body2",
+          "C": "body2"
+        }
+      ]
+    }
+  },
+  "q051": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Cấu tạo khí cầu",
+        "Cách khí cầu hoạt động"
+      ],
+      "accepted_assignments": [
+        {
+          "Cấu tạo khí cầu": "body1",
+          "Cách khí cầu hoạt động": "body2"
+        }
+      ]
+    }
+  },
+  "q052": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "food",
+        "housing",
+        "clothing",
+        "entertainment"
+      ],
+      "accepted_assignments": [
+        {
+          "food": "body1",
+          "housing": "body1",
+          "clothing": "body2",
+          "entertainment": "body2"
+        }
+      ]
+    }
+  },
+  "q053": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "evaporation",
+        "condensation / clouds",
+        "precipitation",
+        "surface runoff",
+        "groundwater",
+        "water returns to ocean"
+      ],
+      "accepted_assignments": [
+        {
+          "evaporation": "body1",
+          "condensation / clouds": "body1",
+          "precipitation": "body1",
+          "surface runoff": "body2",
+          "groundwater": "body2",
+          "water returns to ocean": "body2"
+        }
+      ]
+    }
+  },
+  "q056": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Số lượt thăm",
+        "Tổng chi tiêu",
+        "Chi tiêu mỗi lượt",
+        "Số đêm mỗi lượt"
+      ],
+      "accepted_assignments": [
+        {
+          "Số lượt thăm": "body1",
+          "Tổng chi tiêu": "body1",
+          "Chi tiêu mỗi lượt": "body2",
+          "Số đêm mỗi lượt": "body2"
+        }
+      ]
+    }
+  },
+  "q057": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "definite job",
+        "formal study",
+        "accompany/join",
+        "looking for work",
+        "no reason",
+        "other"
+      ],
+      "accepted_assignments": [
+        {
+          "definite job": "body1",
+          "formal study": "body1",
+          "accompany/join": "body1",
+          "looking for work": "body2",
+          "no reason": "body2",
+          "other": "body2"
+        }
+      ]
+    }
+  },
+  "q058": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Australia",
+        "Spain",
+        "New Zealand",
+        "USA",
+        "France"
+      ],
+      "accepted_assignments": [
+        {
+          "Australia": "body1",
+          "Spain": "body1",
+          "New Zealand": "body2",
+          "USA": "body2",
+          "France": "body2"
+        }
+      ]
+    }
+  },
+  "q059": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Số liệu của nam",
+        "Số liệu của nữ",
+        "Khoảng cách cuối kỳ"
+      ],
+      "accepted_assignments": [
+        {
+          "Số liệu của nam": "body1",
+          "Số liệu của nữ": "body2",
+          "Khoảng cách cuối kỳ": "body2"
+        }
+      ]
+    }
+  },
+  "q060": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Income / spending trong bảng",
+        "Cơ cấu chi tiêu trên pie charts"
+      ],
+      "accepted_assignments": [
+        {
+          "Income / spending trong bảng": "body1",
+          "Cơ cấu chi tiêu trên pie charts": "body2"
+        }
+      ]
+    }
+  },
+  "q061": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Cơ cấu năm 2005",
+        "Cơ cấu năm 2010",
+        "Mức thay đổi 2005–2010"
+      ],
+      "accepted_assignments": [
+        {
+          "Cơ cấu năm 2005": "body1",
+          "Cơ cấu năm 2010": "body2",
+          "Mức thay đổi 2005–2010": "body2"
+        }
+      ]
+    }
+  },
+  "q062": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Phân bố nước trên hai pie charts",
+        "Sử dụng nước trên bar chart"
+      ],
+      "accepted_assignments": [
+        {
+          "Phân bố nước trên hai pie charts": "body1",
+          "Sử dụng nước trên bar chart": "body2"
+        }
+      ]
+    }
+  },
+  "q063": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "dam water",
+        "roof rainwater",
+        "household wastewater",
+        "stormwater"
+      ],
+      "accepted_assignments": [
+        {
+          "dam water": "body1",
+          "roof rainwater": "body1",
+          "household wastewater": "body2",
+          "stormwater": "body2"
+        }
+      ]
+    }
+  },
+  "q066": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "US",
+        "Japan",
+        "Korea",
+        "Poland",
+        "Portugal",
+        "Ireland"
+      ],
+      "accepted_assignments": [
+        {
+          "US": "body1",
+          "Japan": "body1",
+          "Korea": "body1",
+          "Poland": "body2",
+          "Portugal": "body2",
+          "Ireland": "body2"
+        }
+      ]
+    }
+  },
+  "q067": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "China / France / Japan · 1990–2010",
+        "China / France / Japan · dự báo 2020"
+      ],
+      "accepted_assignments": [
+        {
+          "China / France / Japan · 1990–2010": "body1",
+          "China / France / Japan · dự báo 2020": "body2"
+        }
+      ]
+    }
+  },
+  "q068": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Thu gom chai",
+        "Rửa",
+        "Phân loại theo màu",
+        "Nấu thủy tinh",
+        "Tạo chai mới",
+        "Bán"
+      ],
+      "accepted_assignments": [
+        {
+          "Thu gom chai": "body1",
+          "Rửa": "body1",
+          "Phân loại theo màu": "body1",
+          "Nấu thủy tinh": "body2",
+          "Tạo chai mới": "body2",
+          "Bán": "body2"
+        }
+      ]
+    }
+  },
+  "q069": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "pick / dry / roast",
+        "cool / grind / mix hot water",
+        "strain",
+        "freeze / grind frozen liquid",
+        "vacuum dry",
+        "pack jars"
+      ],
+      "accepted_assignments": [
+        {
+          "pick / dry / roast": "body1",
+          "cool / grind / mix hot water": "body1",
+          "strain": "body1",
+          "freeze / grind frozen liquid": "body2",
+          "vacuum dry": "body2",
+          "pack jars": "body2"
+        }
+      ]
+    }
+  },
+  "q070": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "gut fish",
+        "salt water",
+        "steam",
+        "smoking",
+        "colouring",
+        "buckets / truck"
+      ],
+      "accepted_assignments": [
+        {
+          "gut fish": "body1",
+          "salt water": "body1",
+          "steam": "body1",
+          "smoking": "body2",
+          "colouring": "body2",
+          "buckets / truck": "body2"
+        }
+      ]
+    }
+  },
+  "q071": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "USA",
+        "Korea",
+        "China",
+        "India"
+      ],
+      "accepted_assignments": [
+        {
+          "USA": "body1",
+          "Korea": "body1",
+          "China": "body2",
+          "India": "body2"
+        }
+      ]
+    }
+  },
+  "q072": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Cơ cấu năm 1998",
+        "Cơ cấu năm 2008",
+        "Chuyển dịch 1998–2008"
+      ],
+      "accepted_assignments": [
+        {
+          "Cơ cấu năm 1998": "body1",
+          "Cơ cấu năm 2008": "body2",
+          "Chuyển dịch 1998–2008": "body2"
+        }
+      ]
+    }
+  },
+  "q073": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "car theft đến 1990",
+        "burglary đến 1990",
+        "burglary hồi phục sau 1990",
+        "street robbery"
+      ],
+      "accepted_assignments": [
+        {
+          "car theft đến 1990": "body1",
+          "burglary đến 1990": "body1",
+          "burglary hồi phục sau 1990": "body2",
+          "street robbery": "body2"
+        }
+      ]
+    }
+  },
+  "q074": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "black coal",
+        "brown coal",
+        "Chênh lệch 5 units"
+      ],
+      "accepted_assignments": [
+        {
+          "black coal": "body1",
+          "brown coal": "body2",
+          "Chênh lệch 5 units": "body2"
+        }
+      ]
+    }
+  },
+  "q075": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Tổng chi tiêu",
+        "food / housing / other lớn",
+        "electricity/water tăng",
+        "transport / clothing giảm"
+      ],
+      "accepted_assignments": [
+        {
+          "Tổng chi tiêu": "body1",
+          "food / housing / other lớn": "body1",
+          "electricity/water tăng": "body2",
+          "transport / clothing giảm": "body2"
+        }
+      ]
+    }
+  },
+  "q076": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Iceland",
+        "Turkey",
+        "Australia",
+        "Sweden"
+      ],
+      "accepted_assignments": [
+        {
+          "Iceland": "body1",
+          "Turkey": "body1",
+          "Australia": "body2",
+          "Sweden": "body2"
+        }
+      ]
+    }
+  },
+  "q083": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Cơ cấu năm 2004",
+        "Cơ cấu năm 2009",
+        "Mức thay đổi 2004–2009"
+      ],
+      "accepted_assignments": [
+        {
+          "Cơ cấu năm 2004": "body1",
+          "Cơ cấu năm 2009": "body2",
+          "Mức thay đổi 2004–2009": "body2"
+        }
+      ]
+    }
+  },
+  "q084": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "accepted_assignments": [
+        {
+          "A": "body1",
+          "B": "body1",
+          "C": "body2",
+          "D": "body2",
+          "E": "body2"
+        }
+      ]
+    }
+  },
+  "q085": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Portugal",
+        "Italy",
+        "UK",
+        "USA"
+      ],
+      "accepted_assignments": [
+        {
+          "Portugal": "body1",
+          "Italy": "body1",
+          "UK": "body2",
+          "USA": "body2"
+        }
+      ]
+    }
+  },
+  "q086": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Quy mô dân số",
+        "Tỷ lệ nam và nữ",
+        "Birth rate",
+        "Growth rate",
+        "65+"
+      ],
+      "accepted_assignments": [
+        {
+          "Quy mô dân số": "body1",
+          "Tỷ lệ nam và nữ": "body1",
+          "Birth rate": "body2",
+          "Growth rate": "body2",
+          "65+": "body2"
+        }
+      ]
+    }
+  },
+  "q087": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Cơ cấu năm 1987",
+        "Cơ cấu năm 2007",
+        "Các thay đổi chính"
+      ],
+      "accepted_assignments": [
+        {
+          "Cơ cấu năm 1987": "body1",
+          "Cơ cấu năm 2007": "body2",
+          "Các thay đổi chính": "body2"
+        }
+      ]
+    }
+  },
+  "q090": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Argentina · 2003–2005",
+        "Australia · 2003–2005",
+        "Thailand · 2003–2005",
+        "Argentina · 2005–2009",
+        "Australia · 2005–2009",
+        "Thailand · 2005–2009"
+      ],
+      "accepted_assignments": [
+        {
+          "Argentina · 2003–2005": "body1",
+          "Australia · 2003–2005": "body1",
+          "Thailand · 2003–2005": "body1",
+          "Argentina · 2005–2009": "body2",
+          "Australia · 2005–2009": "body2",
+          "Thailand · 2005–2009": "body2"
+        }
+      ]
+    }
+  },
+  "q091": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Great Barrier Reef",
+        "Central Eastern Rainforest Reserve",
+        "Bốn di sản còn lại"
+      ],
+      "accepted_assignments": [
+        {
+          "Great Barrier Reef": "body1",
+          "Central Eastern Rainforest Reserve": "body1",
+          "Bốn di sản còn lại": "body2"
+        }
+      ]
+    }
+  },
+  "q094": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "full-time",
+        "part-time"
+      ],
+      "accepted_assignments": [
+        {
+          "full-time": "body1",
+          "part-time": "body2"
+        }
+      ]
+    }
+  },
+  "q095": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Số sinh viên qua thời gian",
+        "Chi tiêu qua thời gian",
+        "Cơ cấu thu nhập năm 1991"
+      ],
+      "accepted_assignments": [
+        {
+          "Số sinh viên qua thời gian": "body1",
+          "Chi tiêu qua thời gian": "body1",
+          "Cơ cấu thu nhập năm 1991": "body2"
+        }
+      ]
+    }
+  },
+  "q096": {
+    "grouping": {
+      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "items": [
+        "Bố cục cũ",
+        "Các thay đổi hiện tại"
+      ],
+      "accepted_assignments": [
+        {
+          "Bố cục cũ": "body1",
+          "Các thay đổi hiện tại": "body2"
+        }
+      ]
+    }
+  }
+}

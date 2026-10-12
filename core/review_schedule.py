@@ -23,6 +23,7 @@ def reviews_from_attempts(attempts):
         if attempt['grading_type'] not in ('quiz','memory','flashcard'):
             continue
         key = attempt['exercise_id'] + ':' + attempt['task_id']
-        passed = attempt['score'] == attempt['max_score']
+        passed = (attempt.get('self_assessed_passed',False) if attempt['grading_type']=='flashcard'
+                  else attempt['score'] == attempt['max_score'])
         reviews[key] = dict(schedule(reviews.get(key),passed,datetime.fromisoformat(attempt['submitted_at']).astimezone(TZ),attempt['grading_type']),exercise_id=attempt['exercise_id'],task_id=attempt['task_id'])
     return reviews

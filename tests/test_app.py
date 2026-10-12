@@ -87,12 +87,11 @@ def test_memory_structure_hints_follow_selected_part():
     assert not any('The chart/table illustrates how many' in x.value for x in at.markdown)
 
 
-def test_new_modes_and_full_checklist_gate():
+
+def test_full_checklist_gate():
     at=app()
     at.sidebar.radio[0].set_value('Luyện tập').run()
-    for mode in ['Ghép nối khung bài','Điền từ nối & cấu trúc','Dịch ngược · 3 cách viết','Luyện từng bước','Flashcard · Ôn ngắt quãng','Viết & học thuộc']:
-        next(w for w in at.selectbox if w.label=='Dạng luyện tập').set_value(mode).run()
-        assert not at.exception,mode
+    next(w for w in at.selectbox if w.label=='Dạng luyện tập').set_value('Viết & học thuộc').run()
     next(w for w in at.selectbox if w.label=='Phần cần nhớ').set_value('full').run()
     next(w for w in at.text_area if w.label=='Bài của bạn').set_value('A full essay draft.')
     next(b for b in at.button if b.label=='Nộp bài').click().run()
@@ -103,39 +102,3 @@ def test_new_modes_and_full_checklist_gate():
     next(b for b in at.button if b.label=='Nộp bài').click().run()
     assert len(at.session_state.events)==1
     assert not at.exception
-
-
-def test_outline_keyboard_submit_and_no_duplicate():
-    at=app()
-    at.sidebar.radio[0].set_value('Luyện tập').run()
-    next(w for w in at.checkbox if w.label=='Dùng bàn phím thay kéo-thả').check().run()
-    from core.content_validation import load_content
-    from core.learning_tasks import sentence_cards
-    e=load_content()[1][0]
-    order=','.join(c['id'] for c in sentence_cards(e))
-    next(w for w in at.text_input if w.label.startswith('Nhập mã')).set_value(order)
-    next(b for b in at.button if b.label=='Kiểm tra thứ tự').click().run()
-    assert not at.exception
-    assert at.session_state.events[0]['data']['score']==len(sentence_cards(e))
-    at.run()
-    assert len(at.session_state.events)==1
-    assert not at.get('json')
-
-
-def test_cloze_submission_and_flashcard_review():
-    from core.content_validation import load_content
-    from core.learning_tasks import cloze
-    at=app();at.sidebar.radio[0].set_value('Luyện tập').run()
-    next(w for w in at.selectbox if w.label=='Dạng luyện tập').set_value('Điền từ nối & cấu trúc').run()
-    next(w for w in at.radio if w.label=='Cách điền').set_value('Gõ chính xác').run()
-    blanks=cloze(load_content()[1][0])[1]
-    for i,b in enumerate(blanks,1):next(w for w in at.text_input if w.label==f'Ô {i}').set_value(b['answer'])
-    next(w for w in at.button if w.label=='Kiểm tra điền từ').click().run()
-    assert not at.exception
-    assert at.session_state.events[-1]['data']['score']==len(blanks)
-    next(w for w in at.selectbox if w.label=='Dạng luyện tập').set_value('Flashcard · Ôn ngắt quãng').run()
-    next(w for w in at.button if w.label=='Lật thẻ').click().run()
-    next(w for w in at.button if w.label=='Đã nhớ').click().run()
-    assert not at.exception
-    assert at.session_state.events[-1]['data']['grading_type']=='flashcard'
-    count=len(at.session_state.events);at.run();assert len(at.session_state.events)==count

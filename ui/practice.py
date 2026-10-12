@@ -23,7 +23,7 @@ def show_model(exercise, structures):
     st.markdown('**Cấu trúc mục tiêu và cách dùng**')
     for item in structures:
         if item['structure_id'] in exercise['target_structure_ids']:
-            st.code(item['template'],language=None,wrap_lines=True)
+            st.info(item['template'])
             st.write(item['explanation_vi'])
             st.caption(item['usage_conditions'])
 
@@ -153,8 +153,8 @@ def answer_panel(e,structures,chosen):
             st.dataframe(result['changes'],hide_index=True,width='stretch')
         if quiz:
             st.markdown('**Đáp án**')
-            from ui.learning_modes import readable_answer
-            readable_answer(quiz['accepted_answers'])
+            from ui.readable import show_answer
+            show_answer(quiz['accepted_answers'],quiz.get('options') if quiz['kind']=='order' else None)
             st.write(quiz['explanation_vi'])
         else:
             st.markdown('**Mẫu để đối chiếu**'); st.write(result['reference_snapshot'])

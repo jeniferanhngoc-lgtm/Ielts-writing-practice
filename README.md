@@ -2,6 +2,12 @@
 
 Ứng dụng Streamlit một người học, giao diện tiếng Việt. Học thuộc khung câu rồi vận dụng vào đề mới; không tích hợp AI và không quy đổi điểm luyện tập thành band IELTS.
 
+## Bản cập nhật: 5 chế độ luyện
+
+Luyện tập có thêm **Ghép khung & kéo-thả**, **Điền khung cấu trúc**, **Dịch ngược — 3 cách**, **Quy trình 4 bước** và **Flashcard & ôn lại**. Đáp án hiển thị bằng văn bản, không còn dạng danh sách JSON/code.
+
+Xem [UPDATE_GUIDE.md](UPDATE_GUIDE.md) để biết cách thay file, phạm vi chấm và kiểm tra sau triển khai. Phân loại chức năng câu tự động hiện có nhãn biên tập cho q014; các đề khác tự đối chiếu. Bộ gom nhóm theo dàn ý mẫu có cho 71 đề sẵn sàng.
+
 ## Nội dung hiện có
 
 - Đã rà soát 100 ảnh: **71 đề có full bài, dàn ý, giải thích và quiz; 3 ảnh lặp; 26 ảnh cần xác nhận nguồn**. Xem [CONTENT_REVIEW.md](CONTENT_REVIEW.md).
@@ -105,9 +111,9 @@ Luyện tập đặt đề bên trái và bài làm bên phải, mỗi khung cu�
 ## Các dạng luyện tập mới
 
 - Ghép nối khung bài: kéo-thả câu của toàn bài, phân loại vào introduction/overview/body 1/body 2; có lựa chọn bàn phím. Chấm theo bài mẫu, không kết luận các thứ tự khác đều sai tiếng Anh.
-- Điền cấu trúc: toàn bài được đục lỗ tối đa ba cụm mỗi đoạn, có chọn cụm hoặc gõ lại và gợi ý tiếng Việt.
-- Dịch ngược: ba khung và ba câu tham khảo; hiện dùng các ví dụ bổ sung theo nhóm dạng, có nhãn rõ ràng, chưa có bộ dịch riêng cho mọi ảnh đề.
-- Luyện bốn bước: introduction → hai ý overview → gom thẻ thông tin vào body → viết đoạn. Thời lượng 2/3/3/10 phút là gợi ý, không phải giới hạn nộp bài. Gom nhóm hiện dùng câu chứa thông tin trong bài mẫu, chưa có nhãn dữ liệu độc lập được biên tập cho từng ảnh.
+- Điền cấu trúc: toàn bài được đục lỗ tối đa bốn cụm mỗi đoạn, có chọn cụm hoặc gõ lại và gợi ý tiếng Việt.
+- Dịch ngược: ba khung và ba câu tham khảo; dùng số liệu đầu–cuối của đề khi có dữ liệu phù hợp; các đề còn lại dùng ví dụ bổ sung có bảng/sơ đồ riêng và nhãn rõ ràng.
+- Luyện bốn bước: introduction → hai ý overview → gom thẻ thông tin vào body → viết đoạn. Thời lượng 2/3/3/10 phút là gợi ý, không phải giới hạn nộp bài. Gom nhóm dùng dữ liệu biên tập trong content/learning_tasks.json; đề mới chưa có metadata sẽ chuyển sang tự đối chiếu.
 - Flashcard: lọc theo dạng, lật xem cấu trúc và ví dụ, tự đánh giá để lên lịch 1–3–7–14 ngày. Không cộng điểm tự đánh giá vào độ chính xác quiz.
 - Viết & học thuộc: giữ chức năng cũ. Checklist chỉ ở bài hoàn chỉnh, kiểm tra đủ trước khi ghi nhận lần nộp. Làm lại tạo checklist mới.
 
