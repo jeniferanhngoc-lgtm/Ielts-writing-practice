@@ -6,7 +6,7 @@ import streamlit as st
 CORE=[
  ('1 · Introduction', 'The chart illustrates how many [plural noun] [verb] … . / how much [uncountable noun] [verb] … .', 'Đếm được: how many cars were produced; không đếm được: how much electricity was generated. Chi tiêu: how much people spent. Với % giữ the percentage/proportion of … .'),
  ('2 · Overview', 'Overall, there was an increase/decline in [A], while [B] … . In addition, [C] had the highest/lowest figure.', 'Nêu xu hướng chung + điểm nổi bật. So sánh tĩnh bỏ xu hướng, viết Overall, A had the highest figure, while B had the lowest. Không dùng consistently nếu có ngoại lệ.'),
- ('3 · Body — khung chính', 'The figure for [A] started at [X], after which it rose/fell to [Y], before ending the period at [Z].', 'Dùng khi có đủ các mốc và diễn biến phù hợp. Chỉ hai mốc: The figure for A rose/fell from X to Y. Không tạo thêm mốc giữa.'),
+ ('3 · Body — khung chính', 'The figure for [A] started at [X], after which it experienced a rise/decline to [Y], before ending the period at [Z].', 'Dùng khi có đủ các mốc và diễn biến phù hợp. Chỉ hai mốc: The figure for A rose/fell from X to Y. Không tạo thêm mốc giữa.'),
  ('4 · Body — tránh lặp', '[Initial data], with a subsequent increase/decline to [Y] and a final rise/fall to [Z].', 'Sau with là cụm danh từ. Học một khung thay thế này trước; không cần học hết các biến thể.'),
  ('5 · So sánh và nối nhóm', '…, while … . / …, compared with … . / The figures for A and B were X and Y respectively.', 'While nối mệnh đề; compared with + đối tượng/số liệu tương ứng; respectively ghép đúng thứ tự. Dùng cho biểu đồ theo thời gian, tĩnh và kết hợp.'),
 ]
@@ -43,6 +43,19 @@ def framework_panel(category='all'):
     for title,template,note in CORE:
         with st.expander(title,expanded=title.startswith('1')):
             show_highlighted(template);st.caption(note)
+    if category in ('all','cot_4','cot_lt4','cot_5plus','two_years','future','mixed'):
+        with st.expander('Overview — chọn 1 trong 3 tình huống theo ghi chú của bạn'):
+            show_highlighted('Cùng xu hướng: Overall, there was an increase/decline in [measure] in all [groups] examined. In addition, [A] consistently had the highest figures, while [B] had the lowest.')
+            show_highlighted('Khác xu hướng: Overall, there was a decline in [measure] in [group 1], while a rise was seen in [group 2]. In addition, [A] generally had the highest figures.')
+            show_highlighted('Vượt lên dẫn đầu: Overall, the figure for [A] increased to surpass that of [B], making it the most [used/consumed] [category] from [year] onwards.')
+            st.caption('Nếu cần nhấn mạnh mức tăng: with the most dramatic rise being seen in the figures for A. Despite this chỉ dùng nếu nhận xét tiếp theo thực sự tương phản. Chỉ nói dẫn đầu từ một năm khi hình xác nhận vị trí đó.')
+        with st.expander('Body — biến thể bổ sung, chưa cần học hết'):
+            show_highlighted('Similar changes, but to a lesser/greater extent, were seen in the figure for [B], which [verb] … .')
+            show_highlighted('[A] rose to a peak of [X] in [year], before falling to [Y].')
+            show_highlighted('[A] started at [X], after which it fluctuated until [year], before ending the period at [Y].')
+            show_highlighted('[A] started at [X] and continued to rise, reaching [Y] in the final year.')
+            show_highlighted('Conversely, the figure for [B] fell to [Y].')
+            st.caption('Chuẩn hóa từ ghi chú Introduction: experienced (quá khứ); reach a peak of / peak at; a slight decrease (danh từ), decreased slightly (động từ). Mẫu số liệu phải kiểm tra lại ảnh trước khi học thuộc.')
     for key,(title,template,note) in EXTRA.items():
         if category in ('all',key):
             with st.expander('Khung riêng · '+title):
