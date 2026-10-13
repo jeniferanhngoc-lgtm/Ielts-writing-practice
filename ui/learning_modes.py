@@ -15,7 +15,7 @@ from ui.core_framework import show_highlighted
 from ui.drag_component import drag_board
 
 MODES = ['Ghép khung & kéo-thả','Điền khung cấu trúc','Dịch ngược — 3 cách',
-         'Quy trình 4 bước','Flashcard & ôn lại']
+         'Quy trình 4 bước','Flashcard & ôn lại','Phân tích & viết overview']
 
 
 def task_state(e, task_id):
@@ -62,6 +62,10 @@ def retry(key,state,label='Làm lại bài này'):
 def learning_panel(e, structures, mode=None):
     if mode is None:
         mode=st.selectbox('Dạng luyện tập',MODES+['Viết & học thuộc'],key='learning_mode')
+    if mode=='Phân tích & viết overview':
+        from ui.overview_lab import overview_lab
+        overview_lab(e)
+        return
     if mode=='Viết & học thuộc':
         from ui.practice import answer_panel
         answer_panel(e,structures,e['exercise_id'])

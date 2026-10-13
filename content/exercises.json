@@ -332,7 +332,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Đọc từ ảnh gốc. Số ước lượng được ghi about/approximately trong bài.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -376,7 +376,7 @@
     "source_sha256": "012e9cea8f53f77a86190d3e37312493665bffc6dfe5ee742d57b828c6ec1654",
     "paragraphs": {
       "introduction": "The table compares the value of New Zealand kiwi fruit exports to five countries in 2010, 2011 and 2012, measured in New Zealand dollars.",
-      "overview": "Overall, Japan was by far the largest market in all three years, followed by China. Export values increased in these two countries and Russia, whereas the figures for Mexico and Saudi Arabia ended below their starting levels.",
+      "overview": "Overall, there was an increase in the value of exports to Japan, China and Russia, while the figures for Mexico and Saudi Arabia declined overall. In addition, Japan consistently had by far the highest figure, whereas Saudi Arabia had the lowest.",
       "body1": "Exports to Japan were worth $271.1 million in 2010, after which they rose to $287.4 million in 2011 and $325.3 million in 2012. A similar increase was seen in China, where the value went from $74.9 million to $84.8 million before reaching $94 million. These two markets were much larger than the other three throughout the period.",
       "body2": "In contrast, the value for Mexico fell from $6 million to $2.4 million, before recovering to $3.3 million in 2012. Russia recorded steady growth across the three figures, from $968,000 to $1.585 million and then $2.404 million. Saudi Arabia remained the smallest market: exports initially rose from $290,000 to $407,000, but then dropped sharply to just $82,000."
     },
@@ -384,7 +384,7 @@
     "outline_vi": "Body 1: hai thị trường lớn Nhật–Trung. Body 2: ba thị trường nhỏ.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. Nhật lớn nhất, Trung Quốc thứ hai; Mexico giảm rồi hồi; Saudi Arabia nhỏ nhất. Giữ NZ$, không nhầm triệu/nghìn.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Nhật lớn nhất, Trung Quốc thứ hai; Mexico giảm rồi hồi; Saudi Arabia nhỏ nhất. Giữ NZ$, không nhầm triệu/nghìn.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Body 1: hai thị trường lớn Nhật–Trung. Body 2: ba thị trường nhỏ.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -395,22 +395,22 @@
         "prompt": "Chọn overview phù hợp với đề.",
         "options": [
           "Overall, all the figures were the same and there were no important differences.",
-          "Overall, Japan was by far the largest market in all three years, followed by China. Export values increased in these two countries and Russia, whereas the figures for Mexico and Saudi Arabia ended below their starting levels.",
+          "Overall, there was an increase in the value of exports to Japan, China and Russia, while the figures for Mexico and Saudi Arabia declined overall. In addition, Japan consistently had by far the highest figure, whereas Saudi Arabia had the lowest.",
           "Overall, the diagram explains why people preferred these changes."
         ],
         "accepted_answers": [
-          "Overall, Japan was by far the largest market in all three years, followed by China. Export values increased in these two countries and Russia, whereas the figures for Mexico and Saudi Arabia ended below their starting levels."
+          "Overall, there was an increase in the value of exports to Japan, China and Russia, while the figures for Mexico and Saudi Arabia declined overall. In addition, Japan consistently had by far the highest figure, whereas Saudi Arabia had the lowest."
         ],
         "explanation_vi": "Nhật lớn nhất, Trung Quốc thứ hai; Mexico giảm rồi hồi; Saudi Arabia nhỏ nhất. Giữ NZ$, không nhầm triệu/nghìn. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: ____, Japan was by far the largest market in all three years, followed by China. Export values increased in these two countries and Russia, whereas the figures for Mexico and Saudi Arabia ended below their starting levels.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was an increase in the value of exports to Japan, China and Russia, ____ the figures for Mexico and Saudi Arabia declined overall. In addition, Japan consistently had by far the highest figure, whereas Saudi Arabia had the lowest.",
         "accepted_answers": [
-          "Overall"
+          "while"
         ],
-        "explanation_vi": "Từ trong mẫu là Overall. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -495,6 +495,14 @@
       {
         "sentence": "Saudi Arabia remained the smallest market: exports initially rose from $290,000 to $407,000, but then dropped sharply to just $82,000.",
         "explanation_vi": "from đánh dấu số/mốc khởi đầu; đi với to để nêu mốc cuối."
+      },
+      {
+        "sentence": "Overall, there was an increase in the value of exports to Japan, China and Russia, while the figures for Mexico and Saudi Arabia declined overall.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Nhật lớn nhất, Trung Quốc thứ hai; Mexico giảm rồi hồi; Saudi Arabia nhỏ nhất. Giữ NZ$, không nhầm triệu/nghìn."
+      },
+      {
+        "sentence": "In addition, Japan consistently had by far the highest figure, whereas Saudi Arabia had the lowest.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Nhật lớn nhất, Trung Quốc thứ hai; Mexico giảm rồi hồi; Saudi Arabia nhỏ nhất. Giữ NZ$, không nhầm triệu/nghìn."
       }
     ],
     "checklist_vi": [
@@ -997,7 +1005,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Đọc từ ảnh gốc. Số ước lượng được ghi about/approximately trong bài.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -1047,7 +1055,7 @@
     "source_sha256": "880a759aff264b6accc6df5db414b3d96013af6aecfde01d21fe5b14a76fc02d",
     "paragraphs": {
       "introduction": "The line graph shows the percentage of people in four age groups who went to the cinema once a month in Great Britain between 1984 and 2000.",
-      "overview": "Overall, cinema attendance increased in all four groups over the period. People aged 15–24 had the highest percentages throughout, while those aged 35 and over consistently recorded the lowest figures.",
+      "overview": "Overall, there was an increase in cinema attendance in all four age groups, with the largest rise in percentage points being seen among 15–24-year-olds. In addition, this group consistently had the highest figures, while those aged 35 and over had the lowest.",
       "body1": "Among 15–24-year-olds, the proportion started at about 17% in 1984 and rose to 30% in 1989. It then increased further to 40% in 1994 and approximately 55% in 1999, before ending at around 58%. The figure for children aged 7–14 also rose, from 10% to about 37% between 1984 and 1999, but fell to roughly 32% in the final year.",
       "body2": "The percentage for the 25–35 age group began at approximately 4%. It increased to around 25% in 1994, remained at that level in 1999, and then reached about 32% in 2000, matching the youngest group. Meanwhile, attendance among people aged 35 and over grew from around 1% to 5% between 1984 and 1994, before reaching roughly 15% by the end."
     },
@@ -1055,7 +1063,7 @@
     "outline_vi": "Body 1: hai nhóm trẻ 7–14 và 15–24. Body 2: 25–35 và 35+.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. Cả bốn nhóm tăng đầu–cuối; 15–24 cao nhất. Dữ liệu ảnh: nhóm 15–24 bắt đầu khoảng 17%, không lấy 26% từ phần ghi chép PDF.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Cả bốn nhóm tăng đầu–cuối; 15–24 cao nhất. Dữ liệu ảnh: nhóm 15–24 bắt đầu khoảng 17%, không lấy 26% từ phần ghi chép PDF.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Body 1: hai nhóm trẻ 7–14 và 15–24. Body 2: 25–35 và 35+.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -1066,22 +1074,22 @@
         "prompt": "Chọn overview phù hợp với đề.",
         "options": [
           "Overall, all the figures were the same and there were no important differences.",
-          "Overall, cinema attendance increased in all four groups over the period. People aged 15–24 had the highest percentages throughout, while those aged 35 and over consistently recorded the lowest figures.",
+          "Overall, there was an increase in cinema attendance in all four age groups, with the largest rise in percentage points being seen among 15–24-year-olds. In addition, this group consistently had the highest figures, while those aged 35 and over had the lowest.",
           "Overall, the diagram explains why people preferred these changes."
         ],
         "accepted_answers": [
-          "Overall, cinema attendance increased in all four groups over the period. People aged 15–24 had the highest percentages throughout, while those aged 35 and over consistently recorded the lowest figures."
+          "Overall, there was an increase in cinema attendance in all four age groups, with the largest rise in percentage points being seen among 15–24-year-olds. In addition, this group consistently had the highest figures, while those aged 35 and over had the lowest."
         ],
         "explanation_vi": "Cả bốn nhóm tăng đầu–cuối; 15–24 cao nhất. Dữ liệu ảnh: nhóm 15–24 bắt đầu khoảng 17%, không lấy 26% từ phần ghi chép PDF. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, cinema attendance increased in all four groups over the period. People aged 15–24 had the highest percentages throughout, ____ those aged 35 and over consistently recorded the lowest figures.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was an increase in cinema attendance in all four age groups, with the largest rise in percentage points being seen among 15–24-year-olds. In addition, this group consistently had the highest figures, ____ those aged 35 and over had the lowest.",
         "accepted_answers": [
           "while"
         ],
-        "explanation_vi": "Từ trong mẫu là while. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -1166,6 +1174,14 @@
       {
         "sentence": "Meanwhile, attendance among people aged 35 and over grew from around 1% to 5% between 1984 and 1994, before reaching roughly 15% by the end.",
         "explanation_vi": "from đánh dấu số/mốc khởi đầu; đi với to để nêu mốc cuối."
+      },
+      {
+        "sentence": "Overall, there was an increase in cinema attendance in all four age groups, with the largest rise in percentage points being seen among 15–24-year-olds.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Cả bốn nhóm tăng đầu–cuối; 15–24 cao nhất. Dữ liệu ảnh: nhóm 15–24 bắt đầu khoảng 17%, không lấy 26% từ phần ghi chép PDF."
+      },
+      {
+        "sentence": "In addition, this group consistently had the highest figures, while those aged 35 and over had the lowest.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Cả bốn nhóm tăng đầu–cuối; 15–24 cao nhất. Dữ liệu ảnh: nhóm 15–24 bắt đầu khoảng 17%, không lấy 26% từ phần ghi chép PDF."
       }
     ],
     "checklist_vi": [
@@ -1186,7 +1202,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Đọc từ ảnh gốc. Số ước lượng được ghi about/approximately trong bài.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -1198,7 +1214,7 @@
     "source_sha256": "6951d772ebf653b30018ed2b12defeb42a67e413763fcbf855e750f2cc3734a6",
     "paragraphs": {
       "introduction": "The line graph compares spending on books in Germany, France, Italy and Austria between 1995 and 2005, in millions of US dollars.",
-      "overview": "Overall, spending increased in all four countries over the period. Germany remained the largest spender, while Austria experienced the greatest overall rise and moved above Italy by the final year.",
+      "overview": "Overall, there was an increase in spending on books in all four countries, with the greatest overall rise being seen in Austria. In addition, Germany consistently had the highest figures, while Austria overtook Italy by the end of the period.",
       "body1": "Germany spent about $80 million on books in 1995. This figure rose to $90 million in 1999, before falling slightly to around $85 million in 2003 and then reaching approximately $95 million in 2005. France showed a more consistent upward pattern, with spending increasing from about $55 million to $60 million between 1995 and 1999, and then to roughly $75 million at the end.",
       "body2": "Italy began at $50 million and increased to around $55 million in 1997, but returned to $50 million two years later. Spending then recovered gradually to just over $60 million in 2005. Austria had the lowest initial figure, at $30 million. It rose to $40 million in 1999 and stayed unchanged in 2001, before climbing sharply to about $70 million by 2005."
     },
@@ -1206,7 +1222,7 @@
     "outline_vi": "Body 1: Germany và France. Body 2: Italy và Austria.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. Tất cả tăng đầu–cuối; Đức luôn lớn nhất; Áo tăng mạnh nhất. Dùng US$ million, không phải số sách.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Tất cả tăng đầu–cuối; Đức luôn lớn nhất; Áo tăng mạnh nhất. Dùng US$ million, không phải số sách.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Body 1: Germany và France. Body 2: Italy và Austria.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -1218,21 +1234,21 @@
         "options": [
           "Overall, the diagram explains why people preferred these changes.",
           "Overall, all the figures were the same and there were no important differences.",
-          "Overall, spending increased in all four countries over the period. Germany remained the largest spender, while Austria experienced the greatest overall rise and moved above Italy by the final year."
+          "Overall, there was an increase in spending on books in all four countries, with the greatest overall rise being seen in Austria. In addition, Germany consistently had the highest figures, while Austria overtook Italy by the end of the period."
         ],
         "accepted_answers": [
-          "Overall, spending increased in all four countries over the period. Germany remained the largest spender, while Austria experienced the greatest overall rise and moved above Italy by the final year."
+          "Overall, there was an increase in spending on books in all four countries, with the greatest overall rise being seen in Austria. In addition, Germany consistently had the highest figures, while Austria overtook Italy by the end of the period."
         ],
         "explanation_vi": "Tất cả tăng đầu–cuối; Đức luôn lớn nhất; Áo tăng mạnh nhất. Dùng US$ million, không phải số sách. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, spending increased in all four countries over the period. Germany remained the largest spender, ____ Austria experienced the greatest overall rise and moved above Italy by the final year.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was an increase in spending on books in all four countries, with the greatest overall rise being seen in Austria. In addition, Germany consistently had the highest figures, ____ Austria overtook Italy by the end of the period.",
         "accepted_answers": [
           "while"
         ],
-        "explanation_vi": "Từ trong mẫu là while. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -1311,6 +1327,14 @@
       {
         "sentence": "It rose to $40 million in 1999 and stayed unchanged in 2001, before climbing sharply to about $70 million by 2005.",
         "explanation_vi": "to chỉ mốc đạt tới; by chỉ mức chênh lệch."
+      },
+      {
+        "sentence": "Overall, there was an increase in spending on books in all four countries, with the greatest overall rise being seen in Austria.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Tất cả tăng đầu–cuối; Đức luôn lớn nhất; Áo tăng mạnh nhất. Dùng US$ million, không phải số sách."
+      },
+      {
+        "sentence": "In addition, Germany consistently had the highest figures, while Austria overtook Italy by the end of the period.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Tất cả tăng đầu–cuối; Đức luôn lớn nhất; Áo tăng mạnh nhất. Dùng US$ million, không phải số sách."
       }
     ],
     "checklist_vi": [
@@ -1346,7 +1370,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Đọc từ ảnh gốc. Số ước lượng được ghi about/approximately trong bài.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -1358,7 +1382,7 @@
     "source_sha256": "f8540dccb8e67dbcd9e5d2695cad9f7c5f8bb3375050a0472893dba1df721a17",
     "paragraphs": {
       "introduction": "The bar chart compares the percentage of households with no car, one car, or two or more cars in a European country in 1971, 1981, 1991 and 2001.",
-      "overview": "Overall, the proportion of households without a car declined, while car ownership became more common. One-car households formed the largest group in the final two years, replacing households with no car as the leading category.",
+      "overview": "Overall, there was a decline in the proportion of households without a car, while the shares owning one or more cars increased overall. In addition, one-car households became the largest group in the final two years, replacing households without a car.",
       "body1": "In 1971, approximately 47% of households had no car, compared with around 35% owning one car and 16% owning at least two. Ten years later, the share without a car had fallen to about 42%. The figure for one-car households also decreased, to roughly 31%, whereas the proportion with two or more cars increased to approximately 28%.",
       "body2": "By 1991, one-car ownership had risen sharply to about 47%, the highest figure shown for this category. At the same time, the shares with no car and at least two cars were around 30% and 21% respectively. In 2001, the one-car figure fell slightly to roughly 43%, but it remained the largest category. The other two groups were almost equal, at around 28% each."
     },
@@ -1366,7 +1390,7 @@
     "outline_vi": "Dưới 4 nhóm: Body 1 cho 1971–1981, Body 2 cho 1991–2001.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. Ba nhóm theo số xe/hộ; no car giảm, one car lớn nhất về cuối. Giá trị đọc xấp xỉ từ cột.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Ba nhóm theo số xe/hộ; no car giảm, one car lớn nhất về cuối. Giá trị đọc xấp xỉ từ cột.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Dưới 4 nhóm: Body 1 cho 1971–1981, Body 2 cho 1991–2001.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -1377,22 +1401,22 @@
         "prompt": "Chọn overview phù hợp với đề.",
         "options": [
           "Overall, the diagram explains why people preferred these changes.",
-          "Overall, the proportion of households without a car declined, while car ownership became more common. One-car households formed the largest group in the final two years, replacing households with no car as the leading category.",
+          "Overall, there was a decline in the proportion of households without a car, while the shares owning one or more cars increased overall. In addition, one-car households became the largest group in the final two years, replacing households without a car.",
           "Overall, all the figures were the same and there were no important differences."
         ],
         "accepted_answers": [
-          "Overall, the proportion of households without a car declined, while car ownership became more common. One-car households formed the largest group in the final two years, replacing households with no car as the leading category."
+          "Overall, there was a decline in the proportion of households without a car, while the shares owning one or more cars increased overall. In addition, one-car households became the largest group in the final two years, replacing households without a car."
         ],
         "explanation_vi": "Ba nhóm theo số xe/hộ; no car giảm, one car lớn nhất về cuối. Giá trị đọc xấp xỉ từ cột. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, the proportion of households without a car declined, ____ car ownership became more common. One-car households formed the largest group in the final two years, replacing households with no car as the leading category.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was a decline in the proportion of households without a car, ____ the shares owning one or more cars increased overall. In addition, one-car households became the largest group in the final two years, replacing households without a car.",
         "accepted_answers": [
           "while"
         ],
-        "explanation_vi": "Từ trong mẫu là while. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -1471,6 +1495,14 @@
       {
         "sentence": "The other two groups were almost equal, at around 28% each.",
         "explanation_vi": "at dùng trước mức số liệu hoặc vị trí phù hợp với câu."
+      },
+      {
+        "sentence": "Overall, there was a decline in the proportion of households without a car, while the shares owning one or more cars increased overall.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Ba nhóm theo số xe/hộ; no car giảm, one car lớn nhất về cuối. Giá trị đọc xấp xỉ từ cột."
+      },
+      {
+        "sentence": "In addition, one-car households became the largest group in the final two years, replacing households without a car.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Ba nhóm theo số xe/hộ; no car giảm, one car lớn nhất về cuối. Giá trị đọc xấp xỉ từ cột."
       }
     ],
     "checklist_vi": [
@@ -1491,7 +1523,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Đọc từ ảnh gốc. Số ước lượng được ghi about/approximately trong bài.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -1526,7 +1558,7 @@
     "source_sha256": "fb43072595ccea299c159fd352ce6989eef3aab3b46ae73f7f2e9b0f631adebb",
     "paragraphs": {
       "introduction": "The table shows the number of cars produced in Argentina, Australia and Thailand in 2003, 2006 and 2009.",
-      "overview": "Overall, production increased in Argentina but declined in Australia. Thailand produced by far the most cars in all three years, although its output fell after reaching a peak in 2006.",
+      "overview": "Overall, there was an increase in car production in Argentina and Thailand over the period, while a decline was seen in Australia. In addition, Thailand consistently had by far the highest figures, despite a fall after its peak in 2006.",
       "body1": "In 2003, Thailand manufactured 735,852 cars, compared with 452,163 in Australia and 235,088 in Argentina. Over the next three years, Thai production rose sharply to 1,162,356 vehicles. A similar change was seen in Argentina, where the figure increased to 352,759. In contrast, the number of cars made in Australia fell to 341,268, putting it slightly below Argentina in 2006.",
       "body2": "Between 2006 and 2009, Argentina continued to increase its production, reaching 466,089 cars. This was almost twice its figure at the start of the period. Meanwhile, output in Thailand dropped to 999,963 vehicles, but remained above the 2003 level and higher than the combined total for the other two countries. Australia recorded a further decline to 245,624 cars, leaving it with the lowest output in the final year."
     },
@@ -1534,7 +1566,7 @@
     "outline_vi": "Dưới 4 nhóm: Body 1 từ 2003 đến 2006; Body 2 từ 2006 đến 2009.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. Thailand luôn cao nhất; Argentina tăng liên tục, Australia giảm. Đã dùng số từ ảnh: 452,163 và 466,089, khác một số chữ số trong PDF.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Thailand luôn cao nhất; Argentina tăng liên tục, Australia giảm. Đã dùng số từ ảnh: 452,163 và 466,089, khác một số chữ số trong PDF.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Dưới 4 nhóm: Body 1 từ 2003 đến 2006; Body 2 từ 2006 đến 2009.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -1545,22 +1577,22 @@
         "prompt": "Chọn overview phù hợp với đề.",
         "options": [
           "Overall, the diagram explains why people preferred these changes.",
-          "Overall, production increased in Argentina but declined in Australia. Thailand produced by far the most cars in all three years, although its output fell after reaching a peak in 2006.",
+          "Overall, there was an increase in car production in Argentina and Thailand over the period, while a decline was seen in Australia. In addition, Thailand consistently had by far the highest figures, despite a fall after its peak in 2006.",
           "Overall, all the figures were the same and there were no important differences."
         ],
         "accepted_answers": [
-          "Overall, production increased in Argentina but declined in Australia. Thailand produced by far the most cars in all three years, although its output fell after reaching a peak in 2006."
+          "Overall, there was an increase in car production in Argentina and Thailand over the period, while a decline was seen in Australia. In addition, Thailand consistently had by far the highest figures, despite a fall after its peak in 2006."
         ],
         "explanation_vi": "Thailand luôn cao nhất; Argentina tăng liên tục, Australia giảm. Đã dùng số từ ảnh: 452,163 và 466,089, khác một số chữ số trong PDF. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, production increased in Argentina but declined in Australia. Thailand produced by far the most cars in all three years, although its output fell ____ reaching a peak in 2006.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was an increase in car production in Argentina and Thailand over the period, ____ a decline was seen in Australia. In addition, Thailand consistently had by far the highest figures, despite a fall after its peak in 2006.",
         "accepted_answers": [
-          "after"
+          "while"
         ],
-        "explanation_vi": "Từ trong mẫu là after. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -1653,6 +1685,14 @@
       {
         "sentence": "Australia recorded a further decline to 245,624 cars, leaving it with the lowest output in the final year.",
         "explanation_vi": "to chỉ mốc đạt tới; by chỉ mức chênh lệch."
+      },
+      {
+        "sentence": "Overall, there was an increase in car production in Argentina and Thailand over the period, while a decline was seen in Australia.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Thailand luôn cao nhất; Argentina tăng liên tục, Australia giảm. Đã dùng số từ ảnh: 452,163 và 466,089, khác một số chữ số trong PDF."
+      },
+      {
+        "sentence": "In addition, Thailand consistently had by far the highest figures, despite a fall after its peak in 2006.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Thailand luôn cao nhất; Argentina tăng liên tục, Australia giảm. Đã dùng số từ ảnh: 452,163 và 466,089, khác một số chữ số trong PDF."
       }
     ],
     "checklist_vi": [
@@ -2358,7 +2398,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Đọc từ ảnh gốc. Số ước lượng được ghi about/approximately trong bài.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -2370,7 +2410,7 @@
     "source_sha256": "b47e17d3501228df6ed277d8a5aaaed04cb12f1a6d9fa134579465659a5b96b3",
     "paragraphs": {
       "introduction": "The line graph compares the weekly consumption of chicken, beef, lamb and fish in a European country between 1979 and 2004, measured in grams per person.",
-      "overview": "Overall, chicken consumption increased, while the amounts of beef, lamb and fish eaten declined. Chicken became the most consumed item during the period, whereas fish remained the least popular throughout.",
+      "overview": "Overall, there was a decline in the consumption of beef, lamb and fish, while an increase was seen in chicken consumption. In addition, chicken became the most consumed item during the period, whereas fish consistently had the lowest figures.",
       "body1": "In 1979, beef consumption stood at about 220 grams per person per week, making it the highest figure. It fluctuated during the following years, but then fell overall to around 110 grams in 2004. Chicken showed the opposite pattern. Its figure started at approximately 150 grams and increased despite some fluctuations, overtaking beef around the late 1980s and reaching about 250 grams at the end.",
       "body2": "Lamb consumption also began at around 150 grams per person per week. It fell overall, with several short-term rises, and ended at approximately 60 grams in 2004. Fish was consumed in much smaller quantities than the three meats. Its figure decreased from about 60 grams to around 40 grams over the period, and the changes were relatively small compared with those for beef and lamb."
     },
@@ -2378,7 +2418,7 @@
     "outline_vi": "Body 1: chicken và beef đối lập. Body 2: lamb và fish giảm.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. Đơn vị grams/person/week; chicken tăng còn ba loại kia giảm. Không dùng amount of people hoặc suy đoán lý do ăn uống.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Đơn vị grams/person/week; chicken tăng còn ba loại kia giảm. Không dùng amount of people hoặc suy đoán lý do ăn uống.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Body 1: chicken và beef đối lập. Body 2: lamb và fish giảm.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -2388,23 +2428,23 @@
         "kind": "single",
         "prompt": "Chọn overview phù hợp với đề.",
         "options": [
-          "Overall, chicken consumption increased, while the amounts of beef, lamb and fish eaten declined. Chicken became the most consumed item during the period, whereas fish remained the least popular throughout.",
+          "Overall, there was a decline in the consumption of beef, lamb and fish, while an increase was seen in chicken consumption. In addition, chicken became the most consumed item during the period, whereas fish consistently had the lowest figures.",
           "Overall, all the figures were the same and there were no important differences.",
           "Overall, the diagram explains why people preferred these changes."
         ],
         "accepted_answers": [
-          "Overall, chicken consumption increased, while the amounts of beef, lamb and fish eaten declined. Chicken became the most consumed item during the period, whereas fish remained the least popular throughout."
+          "Overall, there was a decline in the consumption of beef, lamb and fish, while an increase was seen in chicken consumption. In addition, chicken became the most consumed item during the period, whereas fish consistently had the lowest figures."
         ],
         "explanation_vi": "Đơn vị grams/person/week; chicken tăng còn ba loại kia giảm. Không dùng amount of people hoặc suy đoán lý do ăn uống. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, chicken consumption increased, ____ the amounts of beef, lamb and fish eaten declined. Chicken became the most consumed item during the period, whereas fish remained the least popular throughout.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was a decline in the consumption of beef, lamb and fish, ____ an increase was seen in chicken consumption. In addition, chicken became the most consumed item during the period, whereas fish consistently had the lowest figures.",
         "accepted_answers": [
           "while"
         ],
-        "explanation_vi": "Từ trong mẫu là while. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -2483,6 +2523,14 @@
       {
         "sentence": "Its figure decreased from about 60 grams to around 40 grams over the period, and the changes were relatively small compared with those for beef and lamb.",
         "explanation_vi": "from đánh dấu số/mốc khởi đầu; đi với to để nêu mốc cuối."
+      },
+      {
+        "sentence": "Overall, there was a decline in the consumption of beef, lamb and fish, while an increase was seen in chicken consumption.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Đơn vị grams/person/week; chicken tăng còn ba loại kia giảm. Không dùng amount of people hoặc suy đoán lý do ăn uống."
+      },
+      {
+        "sentence": "In addition, chicken became the most consumed item during the period, whereas fish consistently had the lowest figures.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Đơn vị grams/person/week; chicken tăng còn ba loại kia giảm. Không dùng amount of people hoặc suy đoán lý do ăn uống."
       }
     ],
     "checklist_vi": [
@@ -2503,7 +2551,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Đọc từ ảnh gốc. Số ước lượng được ghi about/approximately trong bài.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -2554,7 +2602,7 @@
     "source_sha256": "acf57fde04c14f0fa4265b74c28928f8e2012ad8e29508a89efc037d177afe83",
     "paragraphs": {
       "introduction": "The line chart compares the percentage of female members of parliament in Germany, Italy, France, the UK and Belgium between 2000 and 2012.",
-      "overview": "Overall, all five countries ended with higher percentages than they started with. Italy overtook Germany to record the highest figure in 2012, while the UK showed the largest increase and finished at approximately the same level as Belgium.",
+      "overview": "Overall, there was an increase in the proportion of female members of parliament in all five countries, with the largest rise being seen in the UK. In addition, Italy overtook Germany to record the highest figure in the final year, while the UK ended at approximately the same level as Belgium.",
       "body1": "Germany had the highest initial proportion, at about 33% in 2000. Its figure rose gradually to around 37% in 2012. Italy increased more strongly, from approximately 27% to 39%, moving above Germany in the final year. France also followed an upward trend, although its rise was smaller, from about 25% to 32% over the period.",
       "body2": "The UK began with by far the lowest figure, at roughly 3%. This increased to around 9% in 2004 and 20% in 2008, before reaching approximately 23% in 2012. Belgium started at about 17% and rose to 23% in 2004. After a small further increase in 2008, its figure slipped back to around 23%, leaving it level with the UK at the end."
     },
@@ -2562,7 +2610,7 @@
     "outline_vi": "Body 1: Germany–Italy–France. Body 2: UK–Belgium.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. Dùng ảnh đề: Italy cao nhất cuối kỳ, UK bằng Belgium cuối kỳ. Không sao chép nhận định UK luôn thấp nhất từ PDF vì cuối kỳ bằng nhau.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Dùng ảnh đề: Italy cao nhất cuối kỳ, UK bằng Belgium cuối kỳ. Không sao chép nhận định UK luôn thấp nhất từ PDF vì cuối kỳ bằng nhau.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Body 1: Germany–Italy–France. Body 2: UK–Belgium.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -2574,21 +2622,21 @@
         "options": [
           "Overall, the diagram explains why people preferred these changes.",
           "Overall, all the figures were the same and there were no important differences.",
-          "Overall, all five countries ended with higher percentages than they started with. Italy overtook Germany to record the highest figure in 2012, while the UK showed the largest increase and finished at approximately the same level as Belgium."
+          "Overall, there was an increase in the proportion of female members of parliament in all five countries, with the largest rise being seen in the UK. In addition, Italy overtook Germany to record the highest figure in the final year, while the UK ended at approximately the same level as Belgium."
         ],
         "accepted_answers": [
-          "Overall, all five countries ended with higher percentages than they started with. Italy overtook Germany to record the highest figure in 2012, while the UK showed the largest increase and finished at approximately the same level as Belgium."
+          "Overall, there was an increase in the proportion of female members of parliament in all five countries, with the largest rise being seen in the UK. In addition, Italy overtook Germany to record the highest figure in the final year, while the UK ended at approximately the same level as Belgium."
         ],
         "explanation_vi": "Dùng ảnh đề: Italy cao nhất cuối kỳ, UK bằng Belgium cuối kỳ. Không sao chép nhận định UK luôn thấp nhất từ PDF vì cuối kỳ bằng nhau. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, all five countries ended with higher percentages than they started with. Italy overtook Germany to record the highest figure in 2012, ____ the UK showed the largest increase and finished at approximately the same level as Belgium.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was an increase in the proportion of female members of parliament in all five countries, with the largest rise being seen in the UK. In addition, Italy overtook Germany to record the highest figure in the final year, ____ the UK ended at approximately the same level as Belgium.",
         "accepted_answers": [
           "while"
         ],
-        "explanation_vi": "Từ trong mẫu là while. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -2671,6 +2719,14 @@
       {
         "sentence": "After a small further increase in 2008, its figure slipped back to around 23%, leaving it level with the UK at the end.",
         "explanation_vi": "to chỉ mốc đạt tới; by chỉ mức chênh lệch."
+      },
+      {
+        "sentence": "Overall, there was an increase in the proportion of female members of parliament in all five countries, with the largest rise being seen in the UK.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Dùng ảnh đề: Italy cao nhất cuối kỳ, UK bằng Belgium cuối kỳ. Không sao chép nhận định UK luôn thấp nhất từ PDF vì cuối kỳ bằng nhau."
+      },
+      {
+        "sentence": "In addition, Italy overtook Germany to record the highest figure in the final year, while the UK ended at approximately the same level as Belgium.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Dùng ảnh đề: Italy cao nhất cuối kỳ, UK bằng Belgium cuối kỳ. Không sao chép nhận định UK luôn thấp nhất từ PDF vì cuối kỳ bằng nhau."
       }
     ],
     "checklist_vi": [
@@ -2893,7 +2949,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Đọc từ ảnh gốc. Số ước lượng được ghi about/approximately trong bài.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -2927,7 +2983,7 @@
     "source_sha256": "a018cd50691299af896e3a2a2369b11747c34ed9770df03f1a4b8a0fbf1f83a3",
     "paragraphs": {
       "introduction": "The bar chart compares female unemployment rates in England, Wales, Scotland and Northern Ireland in 2013 and 2014.",
-      "overview": "Overall, unemployment among women fell in three of the four countries, with Scotland being the only exception. England had the highest rate in 2013, but Scotland recorded the highest figure in 2014. Northern Ireland experienced the largest decline.",
+      "overview": "Overall, there was a decline in female unemployment in three countries, while a rise was seen in Scotland. In addition, the highest rate shifted from England to Scotland, with the largest decline being recorded in Northern Ireland.",
       "body1": "In England, the female unemployment rate decreased slightly from 6.8% in 2013 to 6.5% in 2014. Despite this fall, the figure remained above those for Wales and Northern Ireland. Scotland followed the opposite pattern, with its rate rising from 6.1% to 6.7%. This increase of 0.6 percentage points meant that Scotland moved ahead of England by the second year.",
       "body2": "The rates in the other two countries were lower. In Wales, unemployment among women fell from 5.4% to 5%, a reduction of 0.4 percentage points. Northern Ireland saw a larger drop, from 5.6% in 2013 to 4.6% in 2014. It therefore changed from having a slightly higher rate than Wales to having the lowest rate among all four countries."
     },
@@ -2935,7 +2991,7 @@
     "outline_vi": "Body 1: England–Scotland cao hơn. Body 2: Wales–Northern Ireland.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. Chỉ Scotland tăng; Northern Ireland giảm nhiều nhất (1 điểm phần trăm). Hai mốc không chứng minh xu hướng liên tục.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Chỉ Scotland tăng; Northern Ireland giảm nhiều nhất (1 điểm phần trăm). Hai mốc không chứng minh xu hướng liên tục.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Body 1: England–Scotland cao hơn. Body 2: Wales–Northern Ireland.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -2946,22 +3002,22 @@
         "prompt": "Chọn overview phù hợp với đề.",
         "options": [
           "Overall, the diagram explains why people preferred these changes.",
-          "Overall, unemployment among women fell in three of the four countries, with Scotland being the only exception. England had the highest rate in 2013, but Scotland recorded the highest figure in 2014. Northern Ireland experienced the largest decline.",
+          "Overall, there was a decline in female unemployment in three countries, while a rise was seen in Scotland. In addition, the highest rate shifted from England to Scotland, with the largest decline being recorded in Northern Ireland.",
           "Overall, all the figures were the same and there were no important differences."
         ],
         "accepted_answers": [
-          "Overall, unemployment among women fell in three of the four countries, with Scotland being the only exception. England had the highest rate in 2013, but Scotland recorded the highest figure in 2014. Northern Ireland experienced the largest decline."
+          "Overall, there was a decline in female unemployment in three countries, while a rise was seen in Scotland. In addition, the highest rate shifted from England to Scotland, with the largest decline being recorded in Northern Ireland."
         ],
         "explanation_vi": "Chỉ Scotland tăng; Northern Ireland giảm nhiều nhất (1 điểm phần trăm). Hai mốc không chứng minh xu hướng liên tục. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, unemployment among women fell in three of the four countries, ____ Scotland being the only exception. England had the highest rate in 2013, but Scotland recorded the highest figure in 2014. Northern Ireland experienced the largest decline.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was a decline in female unemployment in three countries, ____ a rise was seen in Scotland. In addition, the highest rate shifted from England to Scotland, with the largest decline being recorded in Northern Ireland.",
         "accepted_answers": [
-          "with"
+          "while"
         ],
-        "explanation_vi": "Từ trong mẫu là with. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -3050,6 +3106,14 @@
       {
         "sentence": "It therefore changed from having a slightly higher rate than Wales to having the lowest rate among all four countries.",
         "explanation_vi": "from đánh dấu số/mốc khởi đầu; đi với to để nêu mốc cuối."
+      },
+      {
+        "sentence": "Overall, there was a decline in female unemployment in three countries, while a rise was seen in Scotland.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Chỉ Scotland tăng; Northern Ireland giảm nhiều nhất (1 điểm phần trăm). Hai mốc không chứng minh xu hướng liên tục."
+      },
+      {
+        "sentence": "In addition, the highest rate shifted from England to Scotland, with the largest decline being recorded in Northern Ireland.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Chỉ Scotland tăng; Northern Ireland giảm nhiều nhất (1 điểm phần trăm). Hai mốc không chứng minh xu hướng liên tục."
       }
     ],
     "checklist_vi": [
@@ -3224,7 +3288,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Đọc từ ảnh gốc. Số ước lượng được ghi about/approximately trong bài.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -3271,7 +3335,7 @@
     "source_sha256": "a59a46f2189dfb36d4eb8dc44b375a48462c9804397ba9e6444dbf6275c19387",
     "paragraphs": {
       "introduction": "The line graph compares coffee exports from Brazil, Colombia and Costa Rica between 2002 and 2012, measured in millions of kilograms.",
-      "overview": "Overall, all three countries exported more coffee at the end than at the beginning. Brazil became the largest exporter, while Colombia showed the sharpest fluctuations and remained below the other two countries in 2012.",
+      "overview": "Overall, there was an increase in coffee exports in all three countries over the period. In addition, Brazil became the largest exporter, while Colombia showed the sharpest fluctuations and had the lowest figure in the final year.",
       "body1": "Brazil exported approximately 12 million kilograms in 2002. Its figure rose to about 15 million in 2006 and 20 million in 2008, before slipping to around 18 million in 2010. It then climbed to 25 million in 2012. Costa Rica started higher, at 15 million kilograms, but its exports fell to roughly 7 million in 2006. They subsequently recovered, reaching 20 million in the final year.",
       "body2": "Colombia had the lowest initial figure, at 5 million kilograms. Exports increased to around 7 million in 2004 and 12 million in 2006, briefly exceeding Costa Rica. However, this was followed by a sharp fall to only 2 million in 2008. The figure then recovered to about 8 million in 2010 and 15 million in 2012, three times its starting level."
     },
@@ -3279,7 +3343,7 @@
     "outline_vi": "Body 1: Brazil–Costa Rica. Body 2: Colombia nhiều biến động.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. Brazil lớn nhất cuối kỳ; cả ba tăng đầu–cuối; Colombia có đáy sâu năm 2008. Đơn vị triệu kg.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Brazil lớn nhất cuối kỳ; cả ba tăng đầu–cuối; Colombia có đáy sâu năm 2008. Đơn vị triệu kg.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Body 1: Brazil–Costa Rica. Body 2: Colombia nhiều biến động.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -3291,21 +3355,21 @@
         "options": [
           "Overall, all the figures were the same and there were no important differences.",
           "Overall, the diagram explains why people preferred these changes.",
-          "Overall, all three countries exported more coffee at the end than at the beginning. Brazil became the largest exporter, while Colombia showed the sharpest fluctuations and remained below the other two countries in 2012."
+          "Overall, there was an increase in coffee exports in all three countries over the period. In addition, Brazil became the largest exporter, while Colombia showed the sharpest fluctuations and had the lowest figure in the final year."
         ],
         "accepted_answers": [
-          "Overall, all three countries exported more coffee at the end than at the beginning. Brazil became the largest exporter, while Colombia showed the sharpest fluctuations and remained below the other two countries in 2012."
+          "Overall, there was an increase in coffee exports in all three countries over the period. In addition, Brazil became the largest exporter, while Colombia showed the sharpest fluctuations and had the lowest figure in the final year."
         ],
         "explanation_vi": "Brazil lớn nhất cuối kỳ; cả ba tăng đầu–cuối; Colombia có đáy sâu năm 2008. Đơn vị triệu kg. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, all three countries exported more coffee at the end than at the beginning. Brazil became the largest exporter, ____ Colombia showed the sharpest fluctuations and remained below the other two countries in 2012.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was an increase in coffee exports in all three countries over the period. In addition, Brazil became the largest exporter, ____ Colombia showed the sharpest fluctuations and had the lowest figure in the final year.",
         "accepted_answers": [
           "while"
         ],
-        "explanation_vi": "Từ trong mẫu là while. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -3392,6 +3456,14 @@
       {
         "sentence": "The figure then recovered to about 8 million in 2010 and 15 million in 2012, three times its starting level.",
         "explanation_vi": "to chỉ mốc đạt tới; by chỉ mức chênh lệch."
+      },
+      {
+        "sentence": "Overall, there was an increase in coffee exports in all three countries over the period.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Brazil lớn nhất cuối kỳ; cả ba tăng đầu–cuối; Colombia có đáy sâu năm 2008. Đơn vị triệu kg."
+      },
+      {
+        "sentence": "In addition, Brazil became the largest exporter, while Colombia showed the sharpest fluctuations and had the lowest figure in the final year.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Brazil lớn nhất cuối kỳ; cả ba tăng đầu–cuối; Colombia có đáy sâu năm 2008. Đơn vị triệu kg."
       }
     ],
     "checklist_vi": [
@@ -3918,7 +3990,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Đọc từ ảnh gốc. Số ước lượng được ghi about/approximately trong bài.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -3930,7 +4002,7 @@
     "source_sha256": "137bb5e8ee871882ac46cb17eb2320fb05d08f96865bf934cf659023c0e9c1e1",
     "paragraphs": {
       "introduction": "The line graph compares the percentage of total energy generated from renewable sources in six countries between 2010 and 2013.",
-      "overview": "Overall, all six countries ended with higher percentages than they began with. Germany showed the greatest rise and became the leading country, while the USA remained at the bottom of the group throughout the period.",
+      "overview": "Overall, there was an increase in the renewable-energy share in all six countries, with the greatest rise being seen in Germany. In addition, Germany became the leading country, while the USA consistently had the lowest figures.",
       "body1": "In 2010, China had the highest proportion, at approximately 19%, compared with about 17% in Germany. China’s figure fell to around 17% in 2011, before recovering to just over 20% in 2013. Germany followed a stronger upward trend, increasing to about 20% in 2011 and 25% at the end. India also rose overall, from roughly 17% to around 17.5%, after a small fall in the second year.",
       "body2": "The other three countries recorded lower figures. Spain increased gradually from about 13% to approximately 15.5%, while France moved from around 12.5% to 15%. The USA started at roughly 10%, rose to about 12.5% in 2011, and then dipped slightly. By 2013, its proportion had recovered to around 13%, still below those of all the other countries."
     },
@@ -3938,7 +4010,7 @@
     "outline_vi": "Body 1: Germany, China, India. Body 2: Spain, France, USA.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. Germany tăng mạnh nhất; USA thấp nhất. Số liệu đường được đọc xấp xỉ, không dùng quiz yêu cầu số thập phân chính xác.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Germany tăng mạnh nhất; USA thấp nhất. Số liệu đường được đọc xấp xỉ, không dùng quiz yêu cầu số thập phân chính xác.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Body 1: Germany, China, India. Body 2: Spain, France, USA.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -3949,22 +4021,22 @@
         "prompt": "Chọn overview phù hợp với đề.",
         "options": [
           "Overall, all the figures were the same and there were no important differences.",
-          "Overall, all six countries ended with higher percentages than they began with. Germany showed the greatest rise and became the leading country, while the USA remained at the bottom of the group throughout the period.",
+          "Overall, there was an increase in the renewable-energy share in all six countries, with the greatest rise being seen in Germany. In addition, Germany became the leading country, while the USA consistently had the lowest figures.",
           "Overall, the diagram explains why people preferred these changes."
         ],
         "accepted_answers": [
-          "Overall, all six countries ended with higher percentages than they began with. Germany showed the greatest rise and became the leading country, while the USA remained at the bottom of the group throughout the period."
+          "Overall, there was an increase in the renewable-energy share in all six countries, with the greatest rise being seen in Germany. In addition, Germany became the leading country, while the USA consistently had the lowest figures."
         ],
         "explanation_vi": "Germany tăng mạnh nhất; USA thấp nhất. Số liệu đường được đọc xấp xỉ, không dùng quiz yêu cầu số thập phân chính xác. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, all six countries ended with higher percentages than they began with. Germany showed the greatest rise and became the leading country, ____ the USA remained at the bottom of the group throughout the period.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was an increase in the renewable-energy share in all six countries, with the greatest rise being seen in Germany. In addition, Germany became the leading country, ____ the USA consistently had the lowest figures.",
         "accepted_answers": [
           "while"
         ],
-        "explanation_vi": "Từ trong mẫu là while. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -4043,6 +4115,14 @@
       {
         "sentence": "By 2013, its proportion had recovered to around 13%, still below those of all the other countries.",
         "explanation_vi": "to chỉ mốc đạt tới; by chỉ mức chênh lệch."
+      },
+      {
+        "sentence": "Overall, there was an increase in the renewable-energy share in all six countries, with the greatest rise being seen in Germany.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Germany tăng mạnh nhất; USA thấp nhất. Số liệu đường được đọc xấp xỉ, không dùng quiz yêu cầu số thập phân chính xác."
+      },
+      {
+        "sentence": "In addition, Germany became the leading country, while the USA consistently had the lowest figures.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Germany tăng mạnh nhất; USA thấp nhất. Số liệu đường được đọc xấp xỉ, không dùng quiz yêu cầu số thập phân chính xác."
       }
     ],
     "checklist_vi": [
@@ -4253,7 +4333,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Chú thích dưới hình ghi 1995–2004 nhưng trục và lời đề bắt đầu 1994. Bài theo trục năm/lời đề; đã ghi rõ khác biệt.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -4279,7 +4359,7 @@
     "source_sha256": "81fc9aed592ba09fa49f24236b82c1ebe35ccfbe4d0341164e03cb7869e79313",
     "paragraphs": {
       "introduction": "The line graph compares mobile and fixed-line telephone subscriptions in Africa between 1994 and 2004, measured per 100 inhabitants.",
-      "overview": "Overall, both types of subscription increased, but mobile use grew much faster. Fixed lines were more common at the beginning, whereas mobile subscriptions overtook them around 2001 and finished far ahead.",
+      "overview": "Overall, there was an increase in both types of telephone subscription, with much stronger growth being seen in mobile use. In addition, mobile subscriptions overtook fixed lines around 2001 and finished well ahead.",
       "body1": "In 1994, there were approximately 1.7 fixed-line subscriptions per 100 inhabitants, compared with only 0.06 mobile subscriptions. The fixed-line figure increased slowly, reaching about 2 subscriptions in the late 1990s and around 2.5 by 2000. It then changed relatively little before rising to 3.1 per 100 inhabitants in 2004.",
       "body2": "Mobile subscriptions remained below one per 100 inhabitants until the late 1990s. They then increased more quickly, reaching roughly 2 in 2000 and 3 in 2001, when they moved above fixed lines. This growth continued, with approximately 4.5 mobile subscriptions per 100 people in 2002 and 6 in 2003. By 2004, the figure had reached 8.8, nearly three times the fixed-line figure and far above its very low starting point."
     },
@@ -4287,7 +4367,7 @@
     "outline_vi": "Body 1: fixed line tăng chậm. Body 2: mobile tăng mạnh và vượt.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. Đơn vị subscriptions/100 inhabitants, không đồng nhất với phần trăm người sở hữu vì một người có thể có nhiều thuê bao. Trục bắt đầu 1994.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Đơn vị subscriptions/100 inhabitants, không đồng nhất với phần trăm người sở hữu vì một người có thể có nhiều thuê bao. Trục bắt đầu 1994.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Body 1: fixed line tăng chậm. Body 2: mobile tăng mạnh và vượt.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -4298,22 +4378,22 @@
         "prompt": "Chọn overview phù hợp với đề.",
         "options": [
           "Overall, the diagram explains why people preferred these changes.",
-          "Overall, both types of subscription increased, but mobile use grew much faster. Fixed lines were more common at the beginning, whereas mobile subscriptions overtook them around 2001 and finished far ahead.",
+          "Overall, there was an increase in both types of telephone subscription, with much stronger growth being seen in mobile use. In addition, mobile subscriptions overtook fixed lines around 2001 and finished well ahead.",
           "Overall, all the figures were the same and there were no important differences."
         ],
         "accepted_answers": [
-          "Overall, both types of subscription increased, but mobile use grew much faster. Fixed lines were more common at the beginning, whereas mobile subscriptions overtook them around 2001 and finished far ahead."
+          "Overall, there was an increase in both types of telephone subscription, with much stronger growth being seen in mobile use. In addition, mobile subscriptions overtook fixed lines around 2001 and finished well ahead."
         ],
         "explanation_vi": "Đơn vị subscriptions/100 inhabitants, không đồng nhất với phần trăm người sở hữu vì một người có thể có nhiều thuê bao. Trục bắt đầu 1994. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: ____, both types of subscription increased, but mobile use grew much faster. Fixed lines were more common at the beginning, whereas mobile subscriptions overtook them around 2001 and finished far ahead.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was an increase in both types of telephone subscription, ____ much stronger growth being seen in mobile use. In addition, mobile subscriptions overtook fixed lines around 2001 and finished well ahead.",
         "accepted_answers": [
-          "Overall"
+          "with"
         ],
-        "explanation_vi": "Từ trong mẫu là Overall. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: with. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -4384,6 +4464,14 @@
       {
         "sentence": "This growth continued, with approximately 4.5 mobile subscriptions per 100 people in 2002 and 6 in 2003.",
         "explanation_vi": "with + cụm danh từ để bổ sung thông tin hoặc số liệu."
+      },
+      {
+        "sentence": "Overall, there was an increase in both types of telephone subscription, with much stronger growth being seen in mobile use.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Đơn vị subscriptions/100 inhabitants, không đồng nhất với phần trăm người sở hữu vì một người có thể có nhiều thuê bao. Trục bắt đầu 1994."
+      },
+      {
+        "sentence": "In addition, mobile subscriptions overtook fixed lines around 2001 and finished well ahead.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Đơn vị subscriptions/100 inhabitants, không đồng nhất với phần trăm người sở hữu vì một người có thể có nhiều thuê bao. Trục bắt đầu 1994."
       }
     ],
     "checklist_vi": [
@@ -5060,7 +5148,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Đọc từ ảnh gốc. Số ước lượng được ghi about/approximately trong bài.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -5095,7 +5183,7 @@
     "source_sha256": "b801393ee678ae31bde46c8880ad0580bc3ad3f60f827b97694cdeea5cef583c",
     "paragraphs": {
       "introduction": "The line graph compares the production of paper and packaging, wood pulp and sawn wood in the UK between 1980 and 2000, in millions of tonnes.",
-      "overview": "Overall, paper and packaging had the highest output throughout and increased considerably. Sawn wood production declined, while wood pulp fell initially and then recovered slightly, ending below its starting level.",
+      "overview": "Overall, there was an increase in paper and packaging production, while sawn wood and wood pulp ended below their initial levels. In addition, paper and packaging consistently had the highest output, whereas wood pulp showed a partial recovery towards the end.",
       "body1": "In 1980, paper and packaging production was approximately 230 million tonnes, compared with 200 million tonnes of sawn wood and about 170 million tonnes of wood pulp. Over the next ten years, the figure for paper and packaging rose modestly to 250 million tonnes. In contrast, both of the other products declined, reaching the same level of around 150 million tonnes in 1990.",
       "body2": "The patterns became more different in the second half of the period. Paper and packaging output increased sharply from 250 million tonnes to 350 million in 2000. Wood pulp also rose, but only slightly, ending at about 160 million tonnes. Sawn wood continued to fall, reaching roughly 130 million tonnes. By the final year, paper and packaging output was more than twice that of either of the other products."
     },
@@ -5103,7 +5191,7 @@
     "outline_vi": "Body 1: 1980–1990. Body 2: 1990–2000.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. Dùng số gần đúng theo ảnh (230/170/130); không lấy số khác trong bài mẫu PDF. Sawn wood giảm, wood pulp giảm rồi hồi.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Dùng số gần đúng theo ảnh (230/170/130); không lấy số khác trong bài mẫu PDF. Sawn wood giảm, wood pulp giảm rồi hồi.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Body 1: 1980–1990. Body 2: 1990–2000.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -5113,23 +5201,23 @@
         "kind": "single",
         "prompt": "Chọn overview phù hợp với đề.",
         "options": [
-          "Overall, paper and packaging had the highest output throughout and increased considerably. Sawn wood production declined, while wood pulp fell initially and then recovered slightly, ending below its starting level.",
+          "Overall, there was an increase in paper and packaging production, while sawn wood and wood pulp ended below their initial levels. In addition, paper and packaging consistently had the highest output, whereas wood pulp showed a partial recovery towards the end.",
           "Overall, the diagram explains why people preferred these changes.",
           "Overall, all the figures were the same and there were no important differences."
         ],
         "accepted_answers": [
-          "Overall, paper and packaging had the highest output throughout and increased considerably. Sawn wood production declined, while wood pulp fell initially and then recovered slightly, ending below its starting level."
+          "Overall, there was an increase in paper and packaging production, while sawn wood and wood pulp ended below their initial levels. In addition, paper and packaging consistently had the highest output, whereas wood pulp showed a partial recovery towards the end."
         ],
         "explanation_vi": "Dùng số gần đúng theo ảnh (230/170/130); không lấy số khác trong bài mẫu PDF. Sawn wood giảm, wood pulp giảm rồi hồi. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, paper and packaging had the highest output throughout and increased considerably. Sawn wood production declined, ____ wood pulp fell initially and then recovered slightly, ending below its starting level.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was an increase in paper and packaging production, ____ sawn wood and wood pulp ended below their initial levels. In addition, paper and packaging consistently had the highest output, whereas wood pulp showed a partial recovery towards the end.",
         "accepted_answers": [
           "while"
         ],
-        "explanation_vi": "Từ trong mẫu là while. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -5212,6 +5300,14 @@
       {
         "sentence": "By the final year, paper and packaging output was more than twice that of either of the other products.",
         "explanation_vi": "was là động từ be số ít, quá khứ; không dùng were với chủ ngữ số ít."
+      },
+      {
+        "sentence": "Overall, there was an increase in paper and packaging production, while sawn wood and wood pulp ended below their initial levels.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Dùng số gần đúng theo ảnh (230/170/130); không lấy số khác trong bài mẫu PDF. Sawn wood giảm, wood pulp giảm rồi hồi."
+      },
+      {
+        "sentence": "In addition, paper and packaging consistently had the highest output, whereas wood pulp showed a partial recovery towards the end.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Dùng số gần đúng theo ảnh (230/170/130); không lấy số khác trong bài mẫu PDF. Sawn wood giảm, wood pulp giảm rồi hồi."
       }
     ],
     "checklist_vi": [
@@ -5562,7 +5658,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Đọc từ ảnh gốc. Số ước lượng được ghi about/approximately trong bài.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -5611,7 +5707,7 @@
     "source_sha256": "63178729f20ca85775789d1c24277f2e5067ba7bd86a753db807db27da0da5b4",
     "paragraphs": {
       "introduction": "The table shows the percentages of Australian women aged 40–44 who had different numbers of children in 1981, 1986, 1996 and 2006.",
-      "overview": "Overall, having two children became increasingly common and was the largest category in every year shown. The shares with no children or one child increased, whereas the proportions with three or at least four children declined.",
+      "overview": "Overall, there was an increase in the shares of women with no children, one child or two children, while the shares with three or more children declined. In addition, having two children consistently remained the largest category.",
       "body1": "In 1981, 29% of women in this age group had two children. This figure rose to 35.6% in 1986 and 38.2% in 1996, before reaching 38.3% in 2006. The percentage with no children also increased steadily, from 8.5% to 15.9% over the whole period. Similarly, the share with one child grew from 7.6% in 1981 to 13.2% in 2006.",
       "body2": "Larger families showed the opposite pattern. Women with three children accounted for 27.4% in 1981, slightly below the two-child figure. Their share then fell to 27% in 1986, 24.6% in 1996 and 21.5% in 2006. The decline was much greater among women with four or more children, whose proportion dropped from 27.6% to 11%, leaving this as the smallest category in the final year."
     },
@@ -5619,7 +5715,7 @@
     "outline_vi": "Body 1: 0–2 children tăng. Body 2: 3 và 4+ giảm.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. Đọc theo thứ tự năm tăng dần, dù bảng in năm mới nhất trước. Đối tượng là women aged 40–44, không phải mọi phụ nữ.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Đọc theo thứ tự năm tăng dần, dù bảng in năm mới nhất trước. Đối tượng là women aged 40–44, không phải mọi phụ nữ.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Body 1: 0–2 children tăng. Body 2: 3 và 4+ giảm.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -5630,22 +5726,22 @@
         "prompt": "Chọn overview phù hợp với đề.",
         "options": [
           "Overall, the diagram explains why people preferred these changes.",
-          "Overall, having two children became increasingly common and was the largest category in every year shown. The shares with no children or one child increased, whereas the proportions with three or at least four children declined.",
+          "Overall, there was an increase in the shares of women with no children, one child or two children, while the shares with three or more children declined. In addition, having two children consistently remained the largest category.",
           "Overall, all the figures were the same and there were no important differences."
         ],
         "accepted_answers": [
-          "Overall, having two children became increasingly common and was the largest category in every year shown. The shares with no children or one child increased, whereas the proportions with three or at least four children declined."
+          "Overall, there was an increase in the shares of women with no children, one child or two children, while the shares with three or more children declined. In addition, having two children consistently remained the largest category."
         ],
         "explanation_vi": "Đọc theo thứ tự năm tăng dần, dù bảng in năm mới nhất trước. Đối tượng là women aged 40–44, không phải mọi phụ nữ. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, having two children became increasingly common and was the largest category in every year shown. The shares ____ no children or one child increased, whereas the proportions with three or at least four children declined.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was an increase in the shares of women with no children, one child or two children, ____ the shares with three or more children declined. In addition, having two children consistently remained the largest category.",
         "accepted_answers": [
-          "with"
+          "while"
         ],
-        "explanation_vi": "Từ trong mẫu là with. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -5734,6 +5830,14 @@
       {
         "sentence": "The decline was much greater among women with four or more children, whose proportion dropped from 27.6% to 11%, leaving this as the smallest category in the final year.",
         "explanation_vi": "from đánh dấu số/mốc khởi đầu; đi với to để nêu mốc cuối."
+      },
+      {
+        "sentence": "Overall, there was an increase in the shares of women with no children, one child or two children, while the shares with three or more children declined.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Đọc theo thứ tự năm tăng dần, dù bảng in năm mới nhất trước. Đối tượng là women aged 40–44, không phải mọi phụ nữ."
+      },
+      {
+        "sentence": "In addition, having two children consistently remained the largest category.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Đọc theo thứ tự năm tăng dần, dù bảng in năm mới nhất trước. Đối tượng là women aged 40–44, không phải mọi phụ nữ."
       }
     ],
     "checklist_vi": [
@@ -6453,7 +6557,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Đọc từ ảnh gốc. Số ước lượng được ghi about/approximately trong bài.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -6465,7 +6569,7 @@
     "source_sha256": "4804f15259be2139170b6b9f2bff5714b710c51778b6065faed93e44a7091bc4",
     "paragraphs": {
       "introduction": "The bar chart compares the percentage of young people in higher education in four countries in 2000, 2005 and 2010.",
-      "overview": "Overall, participation increased clearly in Countries A and D, while Countries B and C changed relatively little. Country D had the highest proportion in every year and also recorded the largest overall rise.",
+      "overview": "Overall, there was a clear increase in higher-education participation in Countries A and D, while the figures for B and C changed relatively little. In addition, Country D consistently had the highest proportion and recorded the largest overall rise.",
       "body1": "In Country D, around 60% of young people were in higher education in 2000. This figure rose to approximately 65% in 2005 and then reached 80% in 2010. Country A also experienced substantial growth, from roughly 37% at the start to 48% in 2005 and 58% in the final year. As a result, Country A moved from the lowest position to the second highest.",
       "body2": "The other two countries showed much smaller changes. Country C began at 50% and increased slightly to around 53% in 2005, remaining at about the same level in 2010. Country B recorded approximately 40% in 2000, followed by a small fall in 2005 and a return to around 40% in 2010. It therefore had the lowest figure in the final year."
     },
@@ -6473,7 +6577,7 @@
     "outline_vi": "Body 1: A và D tăng rõ. Body 2: B và C ít thay đổi.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. D cao nhất và tăng mạnh nhất; B gần như không đổi đầu–cuối; A vượt C cuối kỳ. Dùng country labels A–D, không tự gán tên nước.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. D cao nhất và tăng mạnh nhất; B gần như không đổi đầu–cuối; A vượt C cuối kỳ. Dùng country labels A–D, không tự gán tên nước.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Body 1: A và D tăng rõ. Body 2: B và C ít thay đổi.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -6484,22 +6588,22 @@
         "prompt": "Chọn overview phù hợp với đề.",
         "options": [
           "Overall, all the figures were the same and there were no important differences.",
-          "Overall, participation increased clearly in Countries A and D, while Countries B and C changed relatively little. Country D had the highest proportion in every year and also recorded the largest overall rise.",
+          "Overall, there was a clear increase in higher-education participation in Countries A and D, while the figures for B and C changed relatively little. In addition, Country D consistently had the highest proportion and recorded the largest overall rise.",
           "Overall, the diagram explains why people preferred these changes."
         ],
         "accepted_answers": [
-          "Overall, participation increased clearly in Countries A and D, while Countries B and C changed relatively little. Country D had the highest proportion in every year and also recorded the largest overall rise."
+          "Overall, there was a clear increase in higher-education participation in Countries A and D, while the figures for B and C changed relatively little. In addition, Country D consistently had the highest proportion and recorded the largest overall rise."
         ],
         "explanation_vi": "D cao nhất và tăng mạnh nhất; B gần như không đổi đầu–cuối; A vượt C cuối kỳ. Dùng country labels A–D, không tự gán tên nước. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, participation increased clearly in Countries A and D, ____ Countries B and C changed relatively little. Country D had the highest proportion in every year and also recorded the largest overall rise.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was a clear increase in higher-education participation in Countries A and D, ____ the figures for B and C changed relatively little. In addition, Country D consistently had the highest proportion and recorded the largest overall rise.",
         "accepted_answers": [
           "while"
         ],
-        "explanation_vi": "Từ trong mẫu là while. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -6578,6 +6682,14 @@
       {
         "sentence": "It therefore had the lowest figure in the final year.",
         "explanation_vi": "in dùng trước năm, giai đoạn hoặc địa điểm trong câu này."
+      },
+      {
+        "sentence": "Overall, there was a clear increase in higher-education participation in Countries A and D, while the figures for B and C changed relatively little.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. D cao nhất và tăng mạnh nhất; B gần như không đổi đầu–cuối; A vượt C cuối kỳ. Dùng country labels A–D, không tự gán tên nước."
+      },
+      {
+        "sentence": "In addition, Country D consistently had the highest proportion and recorded the largest overall rise.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. D cao nhất và tăng mạnh nhất; B gần như không đổi đầu–cuối; A vượt C cuối kỳ. Dùng country labels A–D, không tự gán tên nước."
       }
     ],
     "checklist_vi": [
@@ -7628,7 +7740,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Đọc từ ảnh gốc. Số ước lượng được ghi about/approximately trong bài.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -7640,7 +7752,7 @@
     "source_sha256": "d27dfb04b37f2ca53a8ed479c5304129c3b76ccb2e71033a886e36a34faa8134",
     "paragraphs": {
       "introduction": "The line graph compares smoking rates among men and women in Someland between 1960 and 2000, measured per 1,000 people.",
-      "overview": "Overall, the male smoking rate fell throughout the period, while the female rate rose initially and then declined. Men had higher rates in every year, but the difference between the two groups narrowed considerably.",
+      "overview": "Overall, there was a decline in the male smoking rate, while the female rate rose initially before falling. In addition, men consistently had higher rates, although the gap between the two groups narrowed considerably.",
       "body1": "In 1960, about 600 men per 1,000 people smoked, compared with fewer than 100 women. The male figure decreased gradually to around 560 in 1970, before falling more quickly to 500 in 1975 and 400 in 1985. It continued downwards, reaching approximately 280 in 1995 and 250 at the end of the period.",
       "body2": "The female rate followed a different pattern in the earlier years. It increased from about 80 per 1,000 in 1960 to 180 in 1965 and remained around that level in 1970. It then rose to roughly 320 in 1975 and stayed stable until 1980. After that, the figure declined gradually to about 200 in 2000. By the final year, the gap between men and women had fallen to approximately 50 per 1,000."
     },
@@ -7648,7 +7760,7 @@
     "outline_vi": "Body 1: nam. Body 2: nữ và khoảng cách cuối kỳ.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. Rate per 1,000 không phải số tuyệt đối dân số; nữ tăng rồi giảm nhưng cuối kỳ vẫn cao hơn đầu kỳ.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Rate per 1,000 không phải số tuyệt đối dân số; nữ tăng rồi giảm nhưng cuối kỳ vẫn cao hơn đầu kỳ.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Body 1: nam. Body 2: nữ và khoảng cách cuối kỳ.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -7658,23 +7770,23 @@
         "kind": "single",
         "prompt": "Chọn overview phù hợp với đề.",
         "options": [
-          "Overall, the male smoking rate fell throughout the period, while the female rate rose initially and then declined. Men had higher rates in every year, but the difference between the two groups narrowed considerably.",
+          "Overall, there was a decline in the male smoking rate, while the female rate rose initially before falling. In addition, men consistently had higher rates, although the gap between the two groups narrowed considerably.",
           "Overall, all the figures were the same and there were no important differences.",
           "Overall, the diagram explains why people preferred these changes."
         ],
         "accepted_answers": [
-          "Overall, the male smoking rate fell throughout the period, while the female rate rose initially and then declined. Men had higher rates in every year, but the difference between the two groups narrowed considerably."
+          "Overall, there was a decline in the male smoking rate, while the female rate rose initially before falling. In addition, men consistently had higher rates, although the gap between the two groups narrowed considerably."
         ],
         "explanation_vi": "Rate per 1,000 không phải số tuyệt đối dân số; nữ tăng rồi giảm nhưng cuối kỳ vẫn cao hơn đầu kỳ. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, the male smoking rate fell throughout the period, ____ the female rate rose initially and then declined. Men had higher rates in every year, but the difference between the two groups narrowed considerably.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was a decline in the male smoking rate, ____ the female rate rose initially before falling. In addition, men consistently had higher rates, although the gap between the two groups narrowed considerably.",
         "accepted_answers": [
           "while"
         ],
-        "explanation_vi": "Từ trong mẫu là while. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -7757,6 +7869,14 @@
       {
         "sentence": "By the final year, the gap between men and women had fallen to approximately 50 per 1,000.",
         "explanation_vi": "to chỉ mốc đạt tới; by chỉ mức chênh lệch."
+      },
+      {
+        "sentence": "Overall, there was a decline in the male smoking rate, while the female rate rose initially before falling.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Rate per 1,000 không phải số tuyệt đối dân số; nữ tăng rồi giảm nhưng cuối kỳ vẫn cao hơn đầu kỳ."
+      },
+      {
+        "sentence": "In addition, men consistently had higher rates, although the gap between the two groups narrowed considerably.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Rate per 1,000 không phải số tuyệt đối dân số; nữ tăng rồi giảm nhưng cuối kỳ vẫn cao hơn đầu kỳ."
       }
     ],
     "checklist_vi": [
@@ -7969,7 +8089,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Đọc từ ảnh gốc. Số ước lượng được ghi about/approximately trong bài.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -8003,7 +8123,7 @@
     "source_sha256": "8c9e99ba4446244fa29d95dc5ffeb2af96e571ba5558c4f18f46c6d83fd23535",
     "paragraphs": {
       "introduction": "The pie charts compare the shares of online retail sales accounted for by four sectors in Canada in 2005 and 2010.",
-      "overview": "Overall, food and beverages and video games increased their shares, while electronics and appliances and home furnishings declined. Food and beverages replaced electronics and appliances as the largest online retail sector by 2010.",
+      "overview": "Overall, there was an increase in the shares of food and beverages and video games, while electronics and appliances and home furnishings declined. In addition, food and beverages replaced electronics and appliances as the largest online retail sector.",
       "body1": "In 2005, electronics and appliances made up 35% of online sales, the highest proportion among the four sectors. Home furnishings ranked second at 25%, followed by food and beverages at 22%. Video games had the smallest share, at 18%. Together, electronics and appliances and home furnishings represented three fifths of the total in that year.",
       "body2": "By 2010, the share for food and beverages had risen by ten percentage points to 32%, putting it slightly ahead of electronics and appliances, which fell to 30%. Video games also grew, reaching 23% and moving above home furnishings. The latter category experienced the largest decline, from 25% to 15%, and became the smallest sector. These changes describe the distribution of online sales rather than changes in the total value of sales."
     },
@@ -8011,7 +8131,7 @@
     "outline_vi": "Body 1: cơ cấu 2005. Body 2: 2010 và mức thay đổi.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. Hai năm, cơ cấu doanh số; tăng share không chứng minh tiền doanh số tăng nếu chưa biết tổng.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Hai năm, cơ cấu doanh số; tăng share không chứng minh tiền doanh số tăng nếu chưa biết tổng.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Body 1: cơ cấu 2005. Body 2: 2010 và mức thay đổi.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -8022,22 +8142,22 @@
         "prompt": "Chọn overview phù hợp với đề.",
         "options": [
           "Overall, all the figures were the same and there were no important differences.",
-          "Overall, food and beverages and video games increased their shares, while electronics and appliances and home furnishings declined. Food and beverages replaced electronics and appliances as the largest online retail sector by 2010.",
+          "Overall, there was an increase in the shares of food and beverages and video games, while electronics and appliances and home furnishings declined. In addition, food and beverages replaced electronics and appliances as the largest online retail sector.",
           "Overall, the diagram explains why people preferred these changes."
         ],
         "accepted_answers": [
-          "Overall, food and beverages and video games increased their shares, while electronics and appliances and home furnishings declined. Food and beverages replaced electronics and appliances as the largest online retail sector by 2010."
+          "Overall, there was an increase in the shares of food and beverages and video games, while electronics and appliances and home furnishings declined. In addition, food and beverages replaced electronics and appliances as the largest online retail sector."
         ],
         "explanation_vi": "Hai năm, cơ cấu doanh số; tăng share không chứng minh tiền doanh số tăng nếu chưa biết tổng. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, food and beverages and video games increased their shares, ____ electronics and appliances and home furnishings declined. Food and beverages replaced electronics and appliances as the largest online retail sector by 2010.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was an increase in the shares of food and beverages and video games, ____ electronics and appliances and home furnishings declined. In addition, food and beverages replaced electronics and appliances as the largest online retail sector.",
         "accepted_answers": [
           "while"
         ],
-        "explanation_vi": "Từ trong mẫu là while. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -8122,6 +8242,14 @@
       {
         "sentence": "These changes describe the distribution of online sales rather than changes in the total value of sales.",
         "explanation_vi": "in dùng trước năm, giai đoạn hoặc địa điểm trong câu này."
+      },
+      {
+        "sentence": "Overall, there was an increase in the shares of food and beverages and video games, while electronics and appliances and home furnishings declined.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Hai năm, cơ cấu doanh số; tăng share không chứng minh tiền doanh số tăng nếu chưa biết tổng."
+      },
+      {
+        "sentence": "In addition, food and beverages replaced electronics and appliances as the largest online retail sector.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Hai năm, cơ cấu doanh số; tăng share không chứng minh tiền doanh số tăng nếu chưa biết tổng."
       }
     ],
     "checklist_vi": [
@@ -10136,7 +10264,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Đọc từ ảnh gốc. Số ước lượng được ghi about/approximately trong bài.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -10148,7 +10276,7 @@
     "source_sha256": "19311e0f6dd1b8611d67ebcce33d21460b9111ff11369808f2d9ff5732de0e10",
     "paragraphs": {
       "introduction": "The bar chart compares the proportion of renewable energy in the total energy supply of Australia, Sweden, Iceland and Turkey in 1997, 2000 and 2010.",
-      "overview": "Overall, Iceland had the highest renewable-energy share in every year and recorded the largest increase. Sweden also rose, while Australia declined and Turkey ended below its initial level after an early rise.",
+      "overview": "Overall, there was an increase in the renewable-energy shares of Iceland and Sweden, while Australia and Turkey ended below their initial levels. In addition, Iceland consistently had the highest figures and recorded the largest rise.",
       "body1": "In Iceland, renewable sources supplied approximately 45% of energy in 1997. This figure increased to 60% in 2000 and 70% in 2010, widening its lead over the other countries. Turkey had the second highest figures, starting at around 38%. Its share rose to about 40% in 2000 but then fell to approximately 32% by the end of the period.",
       "body2": "The proportions in Australia and Sweden were much smaller, remaining below 10% throughout. Australia’s share fell from roughly 9% in 1997 to 7% in 2000 and 5% in 2010. Sweden showed the opposite overall pattern, increasing from around 6% to 7% and then 9%. Thus, Australia began slightly above Sweden, but their positions were reversed in the final year."
     },
@@ -10156,7 +10284,7 @@
     "outline_vi": "Body 1: Iceland–Turkey. Body 2: Australia–Sweden.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. Đơn vị % nguồn cung năng lượng; Iceland cao nhất, Australia giảm. Các cột nhỏ được đọc xấp xỉ.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Đơn vị % nguồn cung năng lượng; Iceland cao nhất, Australia giảm. Các cột nhỏ được đọc xấp xỉ.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Body 1: Iceland–Turkey. Body 2: Australia–Sweden.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -10167,22 +10295,22 @@
         "prompt": "Chọn overview phù hợp với đề.",
         "options": [
           "Overall, all the figures were the same and there were no important differences.",
-          "Overall, Iceland had the highest renewable-energy share in every year and recorded the largest increase. Sweden also rose, while Australia declined and Turkey ended below its initial level after an early rise.",
+          "Overall, there was an increase in the renewable-energy shares of Iceland and Sweden, while Australia and Turkey ended below their initial levels. In addition, Iceland consistently had the highest figures and recorded the largest rise.",
           "Overall, the diagram explains why people preferred these changes."
         ],
         "accepted_answers": [
-          "Overall, Iceland had the highest renewable-energy share in every year and recorded the largest increase. Sweden also rose, while Australia declined and Turkey ended below its initial level after an early rise."
+          "Overall, there was an increase in the renewable-energy shares of Iceland and Sweden, while Australia and Turkey ended below their initial levels. In addition, Iceland consistently had the highest figures and recorded the largest rise."
         ],
         "explanation_vi": "Đơn vị % nguồn cung năng lượng; Iceland cao nhất, Australia giảm. Các cột nhỏ được đọc xấp xỉ. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, Iceland had the highest renewable-energy share in every year and recorded the largest increase. Sweden also rose, ____ Australia declined and Turkey ended below its initial level after an early rise.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was an increase in the renewable-energy shares of Iceland and Sweden, ____ Australia and Turkey ended below their initial levels. In addition, Iceland consistently had the highest figures and recorded the largest rise.",
         "accepted_answers": [
           "while"
         ],
-        "explanation_vi": "Từ trong mẫu là while. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -10265,6 +10393,14 @@
       {
         "sentence": "Thus, Australia began slightly above Sweden, but their positions were reversed in the final year.",
         "explanation_vi": "in dùng trước năm, giai đoạn hoặc địa điểm trong câu này."
+      },
+      {
+        "sentence": "Overall, there was an increase in the renewable-energy shares of Iceland and Sweden, while Australia and Turkey ended below their initial levels.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Đơn vị % nguồn cung năng lượng; Iceland cao nhất, Australia giảm. Các cột nhỏ được đọc xấp xỉ."
+      },
+      {
+        "sentence": "In addition, Iceland consistently had the highest figures and recorded the largest rise.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Đơn vị % nguồn cung năng lượng; Iceland cao nhất, Australia giảm. Các cột nhỏ được đọc xấp xỉ."
       }
     ],
     "checklist_vi": [
@@ -10375,7 +10511,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Đọc từ ảnh gốc. Số ước lượng được ghi about/approximately trong bài.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -10413,7 +10549,7 @@
     "source_sha256": "78b25feafb1f23dbd354259ef007d1ef31c30566935933eee895c17a238ea433",
     "paragraphs": {
       "introduction": "The pie charts compare the main forms of transport used by people travelling to a university in 2004 and 2009.",
-      "overview": "Overall, the share travelling by car fell substantially, while all four other forms of transport increased. Bus travel replaced the car as the most common choice in 2009, although it did not account for a majority.",
+      "overview": "Overall, there was a decline in the proportion of students travelling by car, while a rise was seen in all four other modes of transport. In addition, buses replaced cars as the most common choice in 2009, although their share remained below half.",
       "body1": "In 2004, cars were used by 51% of people travelling to the university, making this the only category with more than half of the total. Buses were the second most popular option, at 33%. Bicycles accounted for 9%, while walking and train travel were much less common, with shares of 4% and 3% respectively.",
       "body2": "By 2009, the proportion using cars had fallen by 23 percentage points to 28%. In contrast, bus use rose to 46%, putting it well ahead of every other option. Cycling also became more common, increasing from 9% to 16%. The changes in the two smallest categories were more modest: walking rose to 6% and train travel to 4%. Together, these two forms still represented only one tenth of journeys in the final year."
     },
@@ -10421,7 +10557,7 @@
     "outline_vi": "Body 1: cơ cấu 2004. Body 2: thay đổi 2009.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. Bus 46% là nhóm lớn nhất, không phải majority. Car 51% năm 2004 mới là majority; train3→4 và walking4→6.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Bus 46% là nhóm lớn nhất, không phải majority. Car 51% năm 2004 mới là majority; train3→4 và walking4→6.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Body 1: cơ cấu 2004. Body 2: thay đổi 2009.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -10432,22 +10568,22 @@
         "prompt": "Chọn overview phù hợp với đề.",
         "options": [
           "Overall, all the figures were the same and there were no important differences.",
-          "Overall, the share travelling by car fell substantially, while all four other forms of transport increased. Bus travel replaced the car as the most common choice in 2009, although it did not account for a majority.",
+          "Overall, there was a decline in the proportion of students travelling by car, while a rise was seen in all four other modes of transport. In addition, buses replaced cars as the most common choice in 2009, although their share remained below half.",
           "Overall, the diagram explains why people preferred these changes."
         ],
         "accepted_answers": [
-          "Overall, the share travelling by car fell substantially, while all four other forms of transport increased. Bus travel replaced the car as the most common choice in 2009, although it did not account for a majority."
+          "Overall, there was a decline in the proportion of students travelling by car, while a rise was seen in all four other modes of transport. In addition, buses replaced cars as the most common choice in 2009, although their share remained below half."
         ],
         "explanation_vi": "Bus 46% là nhóm lớn nhất, không phải majority. Car 51% năm 2004 mới là majority; train3→4 và walking4→6. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, the share travelling by car fell substantially, ____ all four other forms of transport increased. Bus travel replaced the car as the most common choice in 2009, although it did not account for a majority.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was a decline in the proportion of students travelling by car, ____ a rise was seen in all four other modes of transport. In addition, buses replaced cars as the most common choice in 2009, although their share remained below half.",
         "accepted_answers": [
           "while"
         ],
-        "explanation_vi": "Từ trong mẫu là while. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -10540,6 +10676,14 @@
       {
         "sentence": "Together, these two forms still represented only one tenth of journeys in the final year.",
         "explanation_vi": "in dùng trước năm, giai đoạn hoặc địa điểm trong câu này."
+      },
+      {
+        "sentence": "Overall, there was a decline in the proportion of students travelling by car, while a rise was seen in all four other modes of transport.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Bus 46% là nhóm lớn nhất, không phải majority. Car 51% năm 2004 mới là majority; train3→4 và walking4→6."
+      },
+      {
+        "sentence": "In addition, buses replaced cars as the most common choice in 2009, although their share remained below half.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Bus 46% là nhóm lớn nhất, không phải majority. Car 51% năm 2004 mới là majority; train3→4 và walking4→6."
       }
     ],
     "checklist_vi": [
@@ -10560,7 +10704,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Đọc từ ảnh gốc. Số ước lượng được ghi about/approximately trong bài.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -10572,7 +10716,7 @@
     "source_sha256": "d37b04945a007b8e8870436186385c56cc4cfbec682751cede9a41a4cfcaa114",
     "paragraphs": {
       "introduction": "The bar chart compares the number of films produced in five countries, labelled A to E, in 2007, 2008 and 2009.",
-      "overview": "Overall, Country A produced the most films in every year, while Country B was consistently second. Production increased in Countries B, C and E, whereas Country A declined at the end and Country D fluctuated.",
+      "overview": "Overall, there was an increase in film production in Countries B, C and E, while Country A declined at the end and Country D fluctuated. In addition, Country A consistently had the highest figures, followed by Country B.",
       "body1": "Country A made approximately 85 films in both 2007 and 2008, before its output fell to around 78 in 2009. Country B followed a different pattern, producing just under 50 films in 2007 and about 50 in 2008. Its figure then rose sharply to roughly 68 in the final year, narrowing the gap with Country A.",
       "body2": "The remaining three countries produced far fewer films. Country C increased from around 7 films in 2007 to 12 in 2008 and 15 in 2009, more than doubling its output. Country D began at approximately 14, fell to about 9 and then recovered to around 12. Country E showed the smallest changes, rising from roughly 9 to 10 and then 11 films, while remaining close to the bottom of the group."
     },
@@ -10580,7 +10724,7 @@
     "outline_vi": "Body 1: A/B lớn. Body 2: C/D/E nhỏ.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. A cao nhất, B thứ hai; C tăng từ nền thấp. Các giá trị không in số nên dùng approximately/about.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. A cao nhất, B thứ hai; C tăng từ nền thấp. Các giá trị không in số nên dùng approximately/about.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Body 1: A/B lớn. Body 2: C/D/E nhỏ.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -10590,23 +10734,23 @@
         "kind": "single",
         "prompt": "Chọn overview phù hợp với đề.",
         "options": [
-          "Overall, Country A produced the most films in every year, while Country B was consistently second. Production increased in Countries B, C and E, whereas Country A declined at the end and Country D fluctuated.",
+          "Overall, there was an increase in film production in Countries B, C and E, while Country A declined at the end and Country D fluctuated. In addition, Country A consistently had the highest figures, followed by Country B.",
           "Overall, all the figures were the same and there were no important differences.",
           "Overall, the diagram explains why people preferred these changes."
         ],
         "accepted_answers": [
-          "Overall, Country A produced the most films in every year, while Country B was consistently second. Production increased in Countries B, C and E, whereas Country A declined at the end and Country D fluctuated."
+          "Overall, there was an increase in film production in Countries B, C and E, while Country A declined at the end and Country D fluctuated. In addition, Country A consistently had the highest figures, followed by Country B."
         ],
         "explanation_vi": "A cao nhất, B thứ hai; C tăng từ nền thấp. Các giá trị không in số nên dùng approximately/about. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, Country A produced the most films in every year, ____ Country B was consistently second. Production increased in Countries B, C and E, whereas Country A declined at the end and Country D fluctuated.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was an increase in film production in Countries B, C and E, ____ Country A declined at the end and Country D fluctuated. In addition, Country A consistently had the highest figures, followed by Country B.",
         "accepted_answers": [
           "while"
         ],
-        "explanation_vi": "Từ trong mẫu là while. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -10681,6 +10825,14 @@
       {
         "sentence": "Country E showed the smallest changes, rising from roughly 9 to 10 and then 11 films, while remaining close to the bottom of the group.",
         "explanation_vi": "while nối hai mệnh đề tương phản hoặc hai đặc điểm cần đối chiếu."
+      },
+      {
+        "sentence": "Overall, there was an increase in film production in Countries B, C and E, while Country A declined at the end and Country D fluctuated.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. A cao nhất, B thứ hai; C tăng từ nền thấp. Các giá trị không in số nên dùng approximately/about."
+      },
+      {
+        "sentence": "In addition, Country A consistently had the highest figures, followed by Country B.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. A cao nhất, B thứ hai; C tăng từ nền thấp. Các giá trị không in số nên dùng approximately/about."
       }
     ],
     "checklist_vi": [
@@ -10701,7 +10853,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Đọc từ ảnh gốc. Số ước lượng được ghi about/approximately trong bài.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -10713,7 +10865,7 @@
     "source_sha256": "75b3d17aaf76c7ab8c5849dee3d88d38ca3666921ff9b3211e6bf6a38922bfb9",
     "paragraphs": {
       "introduction": "The bar chart compares the percentage of government spending devoted to roads and transport in Italy, Portugal, the UK and the USA in 1990, 1995, 2000 and 2005.",
-      "overview": "Overall, the shares declined in Italy, Portugal and the UK, while the USA recorded an increase. Portugal generally allocated the highest proportion, although Italy was slightly ahead in 2000. The UK had the lowest figures throughout.",
+      "overview": "Overall, there was a decline in the proportion of government spending on roads and transport in Italy, Portugal and the UK, while a rise was seen in the USA. In addition, Portugal generally had the highest figures, although Italy overtook it in 2000, while the UK consistently recorded the lowest proportions.",
       "body1": "Portugal’s share fell from approximately 27% in 1990 to 24% in 1995 and 22% in 2000, before ending at 20%. Italy started at around 22%, then dropped to 20% in 1995. Its figure recovered to about 24% in 2000, briefly overtaking Portugal, but declined again to roughly 19% in the final year.",
       "body2": "The UK devoted a much smaller proportion to roads and transport, beginning at around 10%. This fell slightly in 1995, rose to approximately 12% in 2000 and then dropped to about 8% in 2005. The USA started at roughly 11% and also experienced a small initial fall. However, its share subsequently increased to around 14% in 2000 and 15% in 2005, closing some of the gap with Italy and Portugal."
     },
@@ -10721,7 +10873,7 @@
     "outline_vi": "Body 1: Portugal–Italy cao. Body 2: UK–USA thấp.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. Portugal generally, không consistently cao nhất vì Italy vượt năm 2000. Dữ liệu là share ngân sách, không phải tiền tuyệt đối.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Portugal generally, không consistently cao nhất vì Italy vượt năm 2000. Dữ liệu là share ngân sách, không phải tiền tuyệt đối.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Body 1: Portugal–Italy cao. Body 2: UK–USA thấp.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -10732,22 +10884,22 @@
         "prompt": "Chọn overview phù hợp với đề.",
         "options": [
           "Overall, the diagram explains why people preferred these changes.",
-          "Overall, the shares declined in Italy, Portugal and the UK, while the USA recorded an increase. Portugal generally allocated the highest proportion, although Italy was slightly ahead in 2000. The UK had the lowest figures throughout.",
+          "Overall, there was a decline in the proportion of government spending on roads and transport in Italy, Portugal and the UK, while a rise was seen in the USA. In addition, Portugal generally had the highest figures, although Italy overtook it in 2000, while the UK consistently recorded the lowest proportions.",
           "Overall, all the figures were the same and there were no important differences."
         ],
         "accepted_answers": [
-          "Overall, the shares declined in Italy, Portugal and the UK, while the USA recorded an increase. Portugal generally allocated the highest proportion, although Italy was slightly ahead in 2000. The UK had the lowest figures throughout."
+          "Overall, there was a decline in the proportion of government spending on roads and transport in Italy, Portugal and the UK, while a rise was seen in the USA. In addition, Portugal generally had the highest figures, although Italy overtook it in 2000, while the UK consistently recorded the lowest proportions."
         ],
         "explanation_vi": "Portugal generally, không consistently cao nhất vì Italy vượt năm 2000. Dữ liệu là share ngân sách, không phải tiền tuyệt đối. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, the shares declined in Italy, Portugal and the UK, ____ the USA recorded an increase. Portugal generally allocated the highest proportion, although Italy was slightly ahead in 2000. The UK had the lowest figures throughout.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was a decline in the proportion of government spending on roads and transport in Italy, Portugal and the UK, ____ a rise was seen in the USA. In addition, Portugal generally had the highest figures, although Italy overtook it in 2000, while the UK consistently recorded the lowest proportions.",
         "accepted_answers": [
           "while"
         ],
-        "explanation_vi": "Từ trong mẫu là while. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -10826,6 +10978,14 @@
       {
         "sentence": "However, its share subsequently increased to around 14% in 2000 and 15% in 2005, closing some of the gap with Italy and Portugal.",
         "explanation_vi": "to chỉ mốc đạt tới; by chỉ mức chênh lệch."
+      },
+      {
+        "sentence": "Overall, there was a decline in the proportion of government spending on roads and transport in Italy, Portugal and the UK, while a rise was seen in the USA.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Portugal generally, không consistently cao nhất vì Italy vượt năm 2000. Dữ liệu là share ngân sách, không phải tiền tuyệt đối."
+      },
+      {
+        "sentence": "In addition, Portugal generally had the highest figures, although Italy overtook it in 2000, while the UK consistently recorded the lowest proportions.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Portugal generally, không consistently cao nhất vì Italy vượt năm 2000. Dữ liệu là share ngân sách, không phải tiền tuyệt đối."
       }
     ],
     "checklist_vi": [
@@ -11265,7 +11425,7 @@
     "source_label": "Ngân hàng đề người dùng cung cấp",
     "source_note": "Cùng các số với q014 nhưng năm giữa khác. Mẫu mô tả đúng bản ảnh này, chưa khẳng định bản nào là đề gốc.",
     "status": "verified",
-    "content_version": "2026-10-12.1",
+    "content_version": "2026-10-13.overview-2",
     "target_structure_ids": [
       "intro",
       "overview-trend",
@@ -11299,7 +11459,7 @@
     "source_sha256": "86ec43e8c639bad08b0f787fb4dd8b0c8d1029e769ef117ce0ac426246524291",
     "paragraphs": {
       "introduction": "The table compares the number of cars manufactured in Argentina, Australia and Thailand in 2003, 2005 and 2009.",
-      "overview": "Overall, Argentina increased its production throughout the period, while Australia recorded a continuous decline across the years shown. Thailand remained the largest producer, despite a fall after its peak in 2005.",
+      "overview": "Overall, there was an increase in car production in Argentina and Thailand over the period, while a decline was seen in Australia. In addition, Thailand consistently had the highest figures, despite a fall after its peak in 2005.",
       "body1": "In 2003, Thailand produced 735,852 cars, well ahead of Australia at 452,163 and Argentina at 235,088. By 2005, the Thai figure had risen sharply to 1,162,356. Argentina also increased its output, reaching 352,759 cars. In contrast, production in Australia fell to 341,268, which meant that Argentina moved slightly ahead of it at the middle point of the table.",
       "body2": "Between 2005 and 2009, the number of cars made in Argentina continued to grow, ending at 466,089. This was almost double its initial figure. Thailand’s output decreased to 999,963, although it remained higher than in 2003 and exceeded the combined output of the other two countries. Australia experienced another fall, to 245,624 cars, and therefore finished with the lowest production figure among the three."
     },
@@ -11307,7 +11467,7 @@
     "outline_vi": "Body 1: 2003–2005. Body 2: 2005–2009.",
     "paragraph_notes": {
       "introduction": "Nêu đúng nội dung, thời gian và đơn vị; dùng shows/compares để diễn đạt đơn giản.",
-      "overview": "Tóm tắt điểm nổi bật từ đề; không thêm nguyên nhân. Bản q090 ghi năm giữa 2005, khác q014 là 2006. Bài này giữ nguyên nhãn ảnh; không dùng chung câu chỉ năm.",
+      "overview": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Bản q090 ghi năm giữa 2005, khác q014 là 2006. Bài này giữ nguyên nhãn ảnh; không dùng chung câu chỉ năm.",
       "body1": "Triển khai nhóm thứ nhất bằng số liệu/chi tiết cụ thể. Body 1: 2003–2005. Body 2: 2005–2009.",
       "body2": "Hoàn thành nhóm còn lại; giữ đơn vị và thứ tự thông tin."
     },
@@ -11317,23 +11477,23 @@
         "kind": "single",
         "prompt": "Chọn overview phù hợp với đề.",
         "options": [
-          "Overall, Argentina increased its production throughout the period, while Australia recorded a continuous decline across the years shown. Thailand remained the largest producer, despite a fall after its peak in 2005.",
+          "Overall, there was an increase in car production in Argentina and Thailand over the period, while a decline was seen in Australia. In addition, Thailand consistently had the highest figures, despite a fall after its peak in 2005.",
           "Overall, the diagram explains why people preferred these changes.",
           "Overall, all the figures were the same and there were no important differences."
         ],
         "accepted_answers": [
-          "Overall, Argentina increased its production throughout the period, while Australia recorded a continuous decline across the years shown. Thailand remained the largest producer, despite a fall after its peak in 2005."
+          "Overall, there was an increase in car production in Argentina and Thailand over the period, while a decline was seen in Australia. In addition, Thailand consistently had the highest figures, despite a fall after its peak in 2005."
         ],
         "explanation_vi": "Bản q090 ghi năm giữa 2005, khác q014 là 2006. Bài này giữ nguyên nhãn ảnh; không dùng chung câu chỉ năm. Overview cần tổng hợp đặc điểm chính; không nói mọi số giống nhau hoặc tự giải thích nguyên nhân."
       },
       {
         "quiz_id": "fill-overview",
         "kind": "fill",
-        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, Argentina increased its production throughout the period, ____ Australia recorded a continuous decline across the years shown. Thailand remained the largest producer, despite a fall after its peak in 2005.",
+        "prompt": "Điền đúng MỘT từ theo mẫu đang học: Overall, there was an increase in car production in Argentina and Thailand over the period, ____ a decline was seen in Australia. In addition, Thailand consistently had the highest figures, despite a fall after its peak in 2005.",
         "accepted_answers": [
           "while"
         ],
-        "explanation_vi": "Từ trong mẫu là while. Chọn xu hướng chính và một điểm so sánh nổi bật."
+        "explanation_vi": "Từ trong mẫu: while. while nối hai mệnh đề; with đi với cụm danh từ để bổ sung đặc điểm."
       },
       {
         "quiz_id": "fill-body-1",
@@ -11422,6 +11582,14 @@
       {
         "sentence": "Australia experienced another fall, to 245,624 cars, and therefore finished with the lowest production figure among the three.",
         "explanation_vi": "to chỉ mốc đạt tới; by chỉ mức chênh lệch."
+      },
+      {
+        "sentence": "Overall, there was an increase in car production in Argentina and Thailand over the period, while a decline was seen in Australia.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Bản q090 ghi năm giữa 2005, khác q014 là 2006. Bài này giữ nguyên nhãn ảnh; không dùng chung câu chỉ năm."
+      },
+      {
+        "sentence": "In addition, Thailand consistently had the highest figures, despite a fall after its peak in 2005.",
+        "explanation_vi": "Xu hướng chính → đặc điểm nổi bật. Consistently chỉ khi đúng tại mọi mốc; generally khi có ngoại lệ. Bản q090 ghi năm giữa 2005, khác q014 là 2006. Bài này giữ nguyên nhãn ảnh; không dùng chung câu chỉ năm."
       }
     ],
     "checklist_vi": [

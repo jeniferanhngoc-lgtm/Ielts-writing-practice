@@ -26,6 +26,7 @@ def apply_route():
 
 
 def task_name(task):
+    if task=='overview-analysis':return 'Phân tích và viết overview'
     if task.startswith('flash-'):return 'Ôn flashcard'
     if task.startswith('structure-'):return 'Nhớ cấu trúc'
     if task.startswith('micro-'):return 'Luyện từng bước'

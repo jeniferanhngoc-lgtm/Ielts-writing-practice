@@ -127,3 +127,10 @@ Trang chủ dùng thẻ nhiệm vụ và nút học/kiểm tra. Chuỗi ngày t�
 Chế độ Ôn tập giữ năm dạng bài và gợi ý. Chế độ Kiểm tra độc lập hiện kiểm tra nhớ mẫu theo phần/cả bài: ẩn gợi ý, chỉ mở mẫu khi nộp, tùy chọn đếm ngược. Hết giờ vẫn giữ bản nháp và cho nộp với nhãn quá giờ. Đồng hồ bắt đầu khi bấm Bắt đầu làm bài; đổi tùy chọn sau đó không thay giới hạn của lượt đang làm.
 
 Lần ôn có hỗ trợ được lưu nhưng không tăng lịch thành thạo; kiểm tra độc lập cập nhật lịch, flashcard vẫn dùng tự đánh giá. Dữ liệu cũ giữ cách tính trước cập nhật và có nhãn lịch sử cũ. Điểm chỉ đo khớp mẫu, không phải chấm ngữ pháp hay band IELTS. Bản nháp chưa nộp nằm trong phiên, không bảo đảm còn khi đóng/tải lại trình duyệt.
+
+
+## Phân tích overview
+
+Ôn tập → Phân tích & viết overview: ghi có/không thay đổi theo thời gian, xu hướng chung, cao/thấp nhất, thay đổi mạnh nhất, ổn định, xu hướng giống/ngược; chọn 2–3 ý rồi viết overview. Nhận xét được lưu dạng tự đối chiếu, không chấm so chuỗi. q085 có đáp án chi tiết tám mục; các đề khác đối chiếu phân tích, body và overview đã biên tập, chưa có đáp án đóng cho từng mục. Có thể ghi Không áp dụng với quy trình/bản đồ hoặc tiêu chí không có trong đề.
+
+Ngày 13/10/2026 cập nhật 21 overview số liệu theo khung xu hướng + đặc điểm nổi bật, đồng bộ quiz và tăng phiên bản nội dung. Bản mẫu trong lịch sử cũ được giữ nguyên. Các overview bản đồ, quy trình và so sánh tĩnh giữ khung đúng loại đề. Meanwhile có thể nối bằng dấu chấm phẩy hoặc đứng đầu câu mới; consistently chỉ khi đúng tại mọi mốc, generally khi có ngoại lệ.
