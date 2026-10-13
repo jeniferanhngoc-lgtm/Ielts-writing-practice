@@ -118,3 +118,12 @@ Luyện tập đặt đề bên trái và bài làm bên phải, mỗi khung cu�
 - Viết & học thuộc: giữ chức năng cũ. Checklist chỉ ở bài hoàn chỉnh, kiểm tra đủ trước khi ghi nhận lần nộp. Làm lại tạo checklist mới.
 
 Các dạng mới lưu lịch sử bằng cùng kho local/Sheets đang cấu hình. Dạng luyện và kết quả được lưu riêng; chưa gửi bài thì không tạo lần làm.
+
+
+## Giao diện học tập và kiểm tra
+
+Trang chủ dùng thẻ nhiệm vụ và nút học/kiểm tra. Chuỗi ngày tính theo ngày có lần nộp; mục tiêu 5 lượt/ngày là gợi ý. Thư viện hiển thị khung, điều kiện, ví dụ và nút luyện hoặc kiểm tra câu ví dụ riêng. Bộ cốt lõi có Conversely; Maps, Process, Mixed chart có khung riêng.
+
+Chế độ Ôn tập giữ năm dạng bài và gợi ý. Chế độ Kiểm tra độc lập hiện kiểm tra nhớ mẫu theo phần/cả bài: ẩn gợi ý, chỉ mở mẫu khi nộp, tùy chọn đếm ngược. Hết giờ vẫn giữ bản nháp và cho nộp với nhãn quá giờ. Đồng hồ bắt đầu khi bấm Bắt đầu làm bài; đổi tùy chọn sau đó không thay giới hạn của lượt đang làm.
+
+Lần ôn có hỗ trợ được lưu nhưng không tăng lịch thành thạo; kiểm tra độc lập cập nhật lịch, flashcard vẫn dùng tự đánh giá. Dữ liệu cũ giữ cách tính trước cập nhật và có nhãn lịch sử cũ. Điểm chỉ đo khớp mẫu, không phải chấm ngữ pháp hay band IELTS. Bản nháp chưa nộp nằm trong phiên, không bảo đảm còn khi đóng/tải lại trình duyệt.

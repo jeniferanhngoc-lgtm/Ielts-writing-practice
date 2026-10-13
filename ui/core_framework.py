@@ -8,9 +8,10 @@ CORE=[
  ('2 · Overview', 'Overall, there was an increase/decline in [A], while [B] … . In addition, [C] had the highest/lowest figure.', 'Nêu xu hướng chung + điểm nổi bật. So sánh tĩnh bỏ xu hướng, viết Overall, A had the highest figure, while B had the lowest. Không dùng consistently nếu có ngoại lệ.'),
  ('3 · Body — khung chính', 'The figure for [A] started at [X], after which it experienced a rise/decline to [Y], before ending the period at [Z].', 'Dùng khi có đủ các mốc và diễn biến phù hợp. Chỉ hai mốc: The figure for A rose/fell from X to Y. Không tạo thêm mốc giữa.'),
  ('4 · Body — tránh lặp', '[Initial data], with a subsequent increase/decline to [Y] and a final rise/fall to [Z].', 'Sau with là cụm danh từ. Học một khung thay thế này trước; không cần học hết các biến thể.'),
- ('5 · So sánh và nối nhóm', '…, while … . / …, compared with … . / The figures for A and B were X and Y respectively.', 'While nối mệnh đề; compared with + đối tượng/số liệu tương ứng; respectively ghép đúng thứ tự. Dùng cho biểu đồ theo thời gian, tĩnh và kết hợp.'),
+ ('5 · So sánh và nối nhóm', 'Similarly, … . / Conversely, … . / …, while … . / …, compared with … . / The figures for A and B were X and Y respectively.', 'Conversely dùng khi ngược xu hướng; Similarly khi tương tự. While nối mệnh đề; compared with + đối tượng/số liệu tương ứng; respectively ghép đúng thứ tự. Dùng cho biểu đồ theo thời gian, tĩnh và kết hợp.'),
 ]
 EXTRA={
+ 'mixed':('Mixed chart', 'The [first chart] illustrates …, while the [second chart] shows … . Overall, [main feature 1]. In addition, [main feature 2]. Body 1: [first chart]. Body 2: [second chart].', 'Dùng lại khung xu hướng hoặc so sánh trong từng body; giữ đúng đơn vị của từng biểu đồ.'),
  'maps':('Maps', 'The maps illustrate how [place] changed … . Overall, … . [A] was replaced by / converted into [B], while [C] remained unchanged.', 'Chia body theo khu vực. Quá khứ: was/were; kế hoạch: is planned to be … .'),
  'process':('Process', 'The diagram illustrates how [product] is produced. Overall, the process begins with … and ends with … . First, …, after which … . Finally, … .', 'Hiện tại đơn cho quy trình nói chung; bị động khi chủ ngữ nhận tác động: is/are + V3.'),
  'natural_process':('Natural process', 'The diagram illustrates how [organism] develops. Overall, … . First, …, after which … . The cycle then begins again.', 'Chỉ dùng cycle khi có vòng lặp. Ưu tiên chủ động cho phát triển tự nhiên, nhưng chọn thể theo từng hành động.'),
@@ -20,7 +21,7 @@ EXTRA={
 }
 
 # Identify literal scaffold phrases, not grammar correctness or complete sentence parsing.
-PATTERN=re.compile(r"\b(?:the (?:chart|charts|graph|graphs|table|diagram|diagrams|maps?) (?:illustrates?|shows?|compares?)|how many|how much|the (?:number|amount|percentage|proportion) of|the figures? for|overall|there (?:was|were|is|are) an? (?:increase|decrease|rise|fall|decline)|in addition|started at|after which|before ending the period at|ending (?:the period )?at|with a subsequent|followed by|compared (?:with|to)|respectively|while|whereas|similarly|by contrast|meanwhile|(?:is|are) (?:expected|projected|predicted) to|(?:was|were|is|are) (?:replaced by|converted into)|remained unchanged|(?:begins?|beginning) with|(?:ends?|ending) with|the process continues with|once|first|finally|rose|fell|increased|decreased|from|to)\b",re.I)
+PATTERN=re.compile(r"\b(?:the (?:chart|charts|graph|graphs|table|diagram|diagrams|maps?) (?:illustrates?|shows?|compares?)|how many|how much|the (?:number|amount|percentage|proportion) of|the figures? for|overall|there (?:was|were|is|are) an? (?:increase|decrease|rise|fall|decline)|in addition|started at|after which|before ending the period at|ending (?:the period )?at|with a subsequent|followed by|compared (?:with|to)|respectively|while|whereas|similarly|conversely|by contrast|meanwhile|(?:is|are) (?:expected|projected|predicted) to|(?:was|were|is|are) (?:replaced by|converted into)|remained unchanged|(?:begins?|beginning) with|(?:ends?|ending) with|the process continues with|once|first|finally|rose|fell|increased|decreased|from|to)\b",re.I)
 
 
 def highlighted_html(text):

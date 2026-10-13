@@ -2,7 +2,8 @@ import streamlit as st
 from core.content_validation import load_content
 from ui.state import initialize, save_banner
 from ui.practice import practice
-from ui.screens import today, library, corrections, progress, settings_page
+from ui.screens import corrections, progress, settings_page
+from ui.journey import today, library, apply_route
 
 st.set_page_config(page_title='Task 1 · Mỗi ngày một bước tiến',page_icon='✍️',layout='wide')
 st.markdown('''<style>
@@ -15,16 +16,17 @@ div.stButton>button {border-radius:9px}
 initialize()
 structures,exercises=load_content()
 exercises+=st.session_state.get('extra_exercises',[])
+apply_route()
 with st.sidebar:
     st.title('✍️ Task 1 Studio')
     st.caption('HỌC HIỂU · NHỚ MẪU · TỰ VIẾT')
-    page=st.radio('Không gian học',['Hôm nay','Thư viện cấu trúc','Luyện tập','Chữa bài & viết lại','Lịch sử & sổ lỗi','Cài đặt & dữ liệu'],label_visibility='collapsed')
+    page=st.radio('Không gian học',['Hôm nay','Thư viện cấu trúc','Luyện tập','Chữa bài & viết lại','Lịch sử & sổ lỗi','Cài đặt & dữ liệu'],label_visibility='collapsed',key='page')
     st.divider()
     st.caption('Một người học · Giờ Việt Nam\n\nKhông tích hợp AI. Điểm luyện tập không phải band IELTS.')
     if st.session_state.timer.get('running_since') is not None:
         st.info('Đồng hồ buổi học đang chạy. Về Hôm nay để tạm dừng.')
-if page=='Hôm nay': today(exercises)
-elif page=='Thư viện cấu trúc': library(structures)
+if page=='Hôm nay': today(exercises,structures)
+elif page=='Thư viện cấu trúc': library(structures,exercises)
 elif page=='Luyện tập': practice(exercises,structures)
 elif page=='Chữa bài & viết lại': corrections(exercises,structures)
 elif page=='Lịch sử & sổ lỗi': progress(exercises)

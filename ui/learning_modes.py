@@ -29,7 +29,7 @@ def task_state(e, task_id):
 def submit(e, task_id, state, answer, reference, score=None, maximum=None,
            grading_type='open', **extra):
     ident=state['attempt_id']
-    result=dict(attempt_id=ident,learner_id=st.session_state.settings['learner_id'],
+    result=dict(learning_mode='study',assisted=True,attempt_id=ident,learner_id=st.session_state.settings['learner_id'],
                 exercise_id=e['exercise_id'],task_id=task_id,
                 content_version=e['content_version'],submitted_at=now().isoformat(),
                 answer=answer,reference_snapshot=reference,

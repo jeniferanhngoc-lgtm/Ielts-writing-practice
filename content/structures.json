@@ -3,11 +3,13 @@
     "structure_id": "intro",
     "title": "Giới thiệu đúng nội dung",
     "paragraph_role": "introduction",
-    "template": "The chart/table shows the number/percentage/amount of … in … .",
-    "explanation_vi": "Nêu đối tượng, đơn vị và thời gian. Có thể dùng shows; không cần thay mọi từ bằng từ khó.",
+    "template": "The chart illustrates how many [plural noun] [verb] … . / how much [uncountable noun] [verb] … . / the percentage of [group] … .",
+    "explanation_vi": "Số lượng đếm được dùng how many; lượng không đếm được dùng how much. Tỷ lệ dùng the percentage/proportion of. Chủ động: people spent; bị động: cars were produced. Thì của dữ liệu theo đề.",
     "usage_conditions": "number + danh từ đếm được số nhiều; amount + không đếm được; percentage phải giữ nghĩa tỷ lệ.",
     "examples": [
-      "The table shows the number of cars made in three countries in 2003, 2006 and 2009."
+      "The table illustrates how many cars were produced in three countries in 2003, 2006 and 2009.",
+      "The chart illustrates how much electricity was generated in 2010.",
+      "The chart illustrates how much people spent on food in 2010."
     ],
     "common_errors": "Không đổi percentage thành number; không dùng how much people cho số người.",
     "source_reference": "PDF thầy Kiên, trang PDF 11–14",
@@ -18,12 +20,7 @@
       "two_years",
       "future",
       "mixed",
-      "static",
-      "maps",
-      "process",
-      "natural_process",
-      "mechanism",
-      "odd"
+      "static"
     ],
     "status": "verified",
     "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."

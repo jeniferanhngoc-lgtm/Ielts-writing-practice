@@ -33,13 +33,14 @@ def show_model(exercise, structures):
 def practice(exercises,structures):
     st.title('Luyện tập')
     st.write('Hiểu mẫu → nhớ cấu trúc → đổi dữ liệu → tự viết.')
-    category=st.selectbox('Nhóm bài',['all']+list(CATEGORIES),format_func=lambda x:'Tất cả dạng bài' if x=='all' else CATEGORIES[x])
+    purpose=st.radio('Chế độ học',['Ôn tập','Kiểm tra'],horizontal=True,key='study_mode')
+    category=st.selectbox('Nhóm bài',['all']+list(CATEGORIES),format_func=lambda x:'Tất cả dạng bài' if x=='all' else CATEGORIES[x],key='practice_category')
     pool=[e for e in exercises if e['status']!='duplicate' and (category=='all' or e['category']==category)]
     search=st.text_input('Tìm đề theo tên hoặc mã')
     pool=[e for e in pool if search.casefold() in (e['title']+' '+e['exercise_id']).casefold()]
     if not pool:
         st.info('Không có đề phù hợp bộ lọc.'); return
-    chosen=st.selectbox('Chọn đề',[e['exercise_id'] for e in pool],format_func=lambda x:next(f"{e['exercise_id']} · {e['title']} {'✓' if e['status']=='verified' else '— cần kiểm tra'}" for e in pool if e['exercise_id']==x))
+    chosen=st.selectbox('Chọn đề',[e['exercise_id'] for e in pool],format_func=lambda x:next(f"{e['exercise_id']} · {e['title']} {'✓' if e['status']=='verified' else '— cần kiểm tra'}" for e in pool if e['exercise_id']==x),key='practice_exercise')
     e=next(x for x in pool if x['exercise_id']==chosen)
     st.subheader(e['title'])
     left,right=st.columns([1,1],gap='large')
@@ -54,10 +55,11 @@ def practice(exercises,structures):
                 st.info('Ảnh chưa được đưa vào bản triển khai này.')
             st.write(e['prompt'])
             st.caption(e.get('source_note',''))
-            with st.expander('Gợi ý đọc đề và chia bài'):
-                st.write(e.get('analysis_vi','Đang kiểm tra dữ liệu.'))
-                st.write(e.get('outline_vi',''))
-            if e.get('data'):
+            if purpose=='Ôn tập':
+                with st.expander('Gợi ý đọc đề và chia bài'):
+                    st.write(e.get('analysis_vi','Đang kiểm tra dữ liệu.'))
+                    st.write(e.get('outline_vi',''))
+            if purpose=='Ôn tập' and e.get('data'):
                 with st.expander('Dữ liệu của đề'):
                     show_data(e['data'])
     with right:
@@ -66,18 +68,22 @@ def practice(exercises,structures):
             if e['status']!='verified':
                 st.warning(e.get('review_reason','Nội dung chưa được kiểm tra. Chưa mở bài học/chấm tự động.'))
                 return
-            from ui.learning_modes import learning_panel
-            learning_panel(e,structures)
+            if purpose=='Kiểm tra':
+                from ui.journey import test_panel
+                test_panel(e)
+            else:
+                from ui.learning_modes import learning_panel
+                learning_panel(e,structures)
 
 
 def answer_panel(e,structures,chosen):
-    mode=st.radio('Cách luyện',['Học thuộc','Vận dụng','Quiz'],horizontal=True)
+    mode=st.radio('Cách luyện',['Học thuộc','Vận dụng','Quiz'],horizontal=True,key='practice-mode')
     task_id=''
     reference=''
     quiz=None
     part=None
     if mode=='Quiz':
-        quiz=st.selectbox('Bài luyện',e['quizzes'],format_func=lambda q:q['prompt'])
+        quiz=st.selectbox('Bài luyện',e['quizzes'],index=next((i for i,q in enumerate(e['quizzes']) if q['quiz_id']==st.session_state.get('review_task')),0),format_func=lambda q:q['prompt'])
         task_id=quiz['quiz_id']
         st.markdown(quiz['prompt'])
         if quiz['kind']=='order':
@@ -85,7 +91,7 @@ def answer_panel(e,structures,chosen):
                 st.write(f'{number}. {clause}')
     elif mode=='Học thuộc':
         choices={**e['paragraphs'],'full':full_model(e)}
-        part=st.selectbox('Phần cần nhớ',list(choices),format_func=lambda x:LABELS.get(x,'Cả bài'))
+        part=st.selectbox('Phần cần nhớ',list(choices),format_func=lambda x:LABELS.get(x,'Cả bài'),key='memory_part')
         reference=choices[part]
         sentences=[s.strip() for s in __import__('re').split(r'(?<=[.!?])\s+(?=[A-Z])',reference) if s.strip()]
         if part!='full' and st.checkbox('Luyện từng câu'):
@@ -138,7 +144,7 @@ def answer_panel(e,structures,chosen):
                 result=grade_quiz(quiz,answer,e['status'])
             else:
                 result=dict(score=None,max_score=None,grading_type='open',outcome='self_review')
-            attempt=dict(attempt_id=state['attempt_id'],learner_id=st.session_state.settings['learner_id'],exercise_id=chosen,task_id=task_id,content_version=e['content_version'],submitted_at=now().isoformat(),answer=answer,duration_seconds=round(time.time()-state['started']),duration_basis='Thời gian từ lúc mở bài đến nộp, có thể gồm thời gian rời trang',retry_of=state['retry_of'],reference_snapshot=reference or quiz['accepted_answers'],**result)
+            attempt=dict(learning_mode='study',assisted=True,attempt_id=state['attempt_id'],learner_id=st.session_state.settings['learner_id'],exercise_id=chosen,task_id=task_id,content_version=e['content_version'],submitted_at=now().isoformat(),answer=answer,duration_seconds=round(time.time()-state['started']),duration_basis='Thời gian từ lúc mở bài đến nộp, có thể gồm thời gian rời trang',retry_of=state['retry_of'],reference_snapshot=reference or quiz['accepted_answers'],**result)
             if mode=='Học thuộc':
                 attempt['normalization_policy']={'case_sensitive':sensitive,'punctuation':punctuation}
             emit('attempt',attempt,event_id=attempt['attempt_id'])

@@ -22,6 +22,8 @@ def reviews_from_attempts(attempts):
     for attempt in sorted(attempts, key=lambda a:a['submitted_at']):
         if attempt['grading_type'] not in ('quiz','memory','flashcard'):
             continue
+        if attempt.get('assisted') and attempt['grading_type']!='flashcard':
+            continue
         key = attempt['exercise_id'] + ':' + attempt['task_id']
         passed = (attempt.get('self_assessed_passed',False) if attempt['grading_type']=='flashcard'
                   else attempt['score'] == attempt['max_score'])
