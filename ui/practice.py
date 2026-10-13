@@ -5,20 +5,22 @@ from core.content_validation import CATEGORIES, ROOT, full_model
 from core.grading import memory_grade, grade_quiz, word_count
 from core.review_schedule import now
 from ui.state import emit, records
+from ui.core_framework import show_highlighted
 
 LABELS={'introduction':'Introduction','overview':'Overview','body1':'Body 1','body2':'Body 2'}
 
 
 def show_model(exercise, structures):
+    st.caption('Màu cam + chữ đậm: cụm cấu trúc cần nhớ, không phải đánh dấu lỗi.')
     st.caption(f"Phiên bản nội dung: {exercise['content_version']} · Bài tham khảo biên soạn, không phải điểm giám khảo.")
     for part,text in exercise.get('paragraphs',{}).items():
         st.markdown(f'**{LABELS.get(part,part)}**')
-        st.write(text)
+        show_highlighted(text)
         st.caption(exercise.get('paragraph_notes',{}).get(part,''))
     st.caption(f"{word_count(full_model(exercise))} từ")
     with st.expander('Giải thích cách nối câu trong bài'):
         for item in exercise.get('sentence_notes',[]):
-            st.write(item['sentence'])
+            show_highlighted(item['sentence'])
             st.caption(item['explanation_vi'])
     st.markdown('**Cấu trúc mục tiêu và cách dùng**')
     for item in structures:
@@ -97,7 +99,7 @@ def answer_panel(e,structures,chosen):
         sensitive=st.checkbox('Phân biệt chữ hoa/thường',value=True)
         punctuation=st.checkbox('Tính dấu câu',value=True)
         if st.checkbox('Hiện mẫu để học',key='show'+chosen+task_id):
-            st.info(reference)
+            show_highlighted(reference)
     else:
         part=st.selectbox('Phần tự viết',['sentence','overview','body1','body2','full','transfer'],format_func=lambda x:{'sentence':'Một câu','full':'Bài hoàn chỉnh','transfer':'Đổi dữ liệu (bài bổ sung tự tạo)'}.get(x,LABELS.get(x,x)))
         task_id='open-'+part
@@ -157,7 +159,7 @@ def answer_panel(e,structures,chosen):
             show_answer(quiz['accepted_answers'],quiz.get('options') if quiz['kind']=='order' else None)
             st.write(quiz['explanation_vi'])
         else:
-            st.markdown('**Mẫu để đối chiếu**'); st.write(result['reference_snapshot'])
+            st.markdown('**Mẫu để đối chiếu**'); show_highlighted(result['reference_snapshot'])
             st.caption('Hãy kiểm tra số liệu, đơn vị, thì, overview và cấu trúc mục tiêu.')
         if st.button('Thử lại',key='retry'+key):
             st.session_state[key]={'attempt_id':str(uuid.uuid4()),'started':time.time(),'submitted':False,'retry_of':result['attempt_id']}

@@ -58,6 +58,10 @@ def library(structures):
     st.title('Thư viện cấu trúc')
     st.write('Ít từ khó hơn. Dùng đúng cấu trúc, đúng ngữ cảnh.')
     category=st.selectbox('Lọc dạng bài',['all']+list(CATEGORIES),format_func=lambda x:'Tất cả' if x=='all' else CATEGORIES[x])
+    from ui.core_framework import framework_panel
+    framework_panel(category)
+    st.divider()
+    st.caption('Các cấu trúc mở rộng bên dưới để tham khảo; ưu tiên bộ cốt lõi trước.')
     role=st.selectbox('Chức năng',['all','introduction','overview','body'])
     for s in structures:
         if (category!='all' and category not in s['categories']) or (role!='all' and role!=s['paragraph_role']):
@@ -83,6 +87,10 @@ def corrections(exercises,structures):
     e=next((e for e in exercises if e['exercise_id']==a['exercise_id']),None)
     if not e:
         st.warning('Không tìm thấy phiên bản đề này trong ngân hàng hiện tại.'); return
+    st.caption('Màu cam + chữ đậm là cụm cấu trúc nhận diện được; không khẳng định câu đúng ngữ pháp.')
+    with st.expander('Bài của bạn và mẫu — nhận diện cấu trúc',expanded=True):
+        st.markdown('**Bài đã nộp**'); show_answer(a['answer'])
+        st.markdown('**Mẫu tại thời điểm làm**'); show_answer(a.get('reference_snapshot',''))
     prompt=make_prompt(e,a,structures)
     st.text_area('Chọn và copy nội dung sau sang ChatGPT',prompt,height=220)
     st.download_button('Tải gói chữa bài TXT',prompt,file_name=a['exercise_id']+'-chua-bai.txt')
@@ -99,6 +107,8 @@ def corrections(exercises,structures):
     if submitted:
         emit('correction',dict(correction_id=str(uuid.uuid4()),attempt_id=a['attempt_id'],exercise_id=e['exercise_id'],external_feedback=feedback,error_tags=[t.strip() for t in tags.split(',') if t.strip()],rewritten_answer=rewritten,self_review_state=assessment,target_structures_used=targets,status='rewritten' if rewritten.strip() else ('corrected' if feedback.strip() else 'not_corrected'),updated_at=now().isoformat()))
         st.success('Đã ghi nhận trong phiên. Trạng thái lưu lâu dài hiển thị ở cuối trang.')
+    if rewritten.strip():
+        st.markdown('**Bản viết lại — cấu trúc màu cam**'); show_answer(rewritten)
 
 
 def progress(exercises):

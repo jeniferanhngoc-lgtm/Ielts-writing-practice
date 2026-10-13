@@ -11,6 +11,7 @@ from core.learning import (ROLES, sentence_cards, shuffled, grade_order, grade_c
 from core.review_schedule import now, reviews_from_attempts
 from ui.state import emit, records
 from ui.readable import show_answer
+from ui.core_framework import show_highlighted
 from ui.drag_component import drag_board
 
 MODES = ['Ghép khung & kéo-thả','Điền khung cấu trúc','Dịch ngược — 3 cách',
@@ -263,7 +264,7 @@ def reverse_panel(e):
         for i,(form,reference) in enumerate(zip(task['forms'],task['answers'])):
             st.markdown(f'**Cách {i+1} — {form}**')
             st.write('Bạn viết: '+state['result']['answer'][str(i+1)])
-            st.success(reference)
+            show_highlighted(reference)
         retry(key,state);return
     with st.form(key+str(state['round'])):
         answers={str(i+1):st.text_area(f'Cách {i+1}: {form}',height=80,max_chars=2000,
@@ -382,7 +383,7 @@ def flash_panel(structures):
     st.markdown('**Mặt trước**');st.info(card['front'])
     if state['submitted']:
         st.success('Đã lưu tự đánh giá và cập nhật lịch ôn.')
-        st.write(card['back']);st.caption(card['note'])
+        show_highlighted(card['back']);st.caption(card['note'])
         retry(key,state,'Ôn lại thẻ này');return
     shown=st.session_state.get(key+'shown-'+str(state['round']),False)
     if not shown:
@@ -390,8 +391,8 @@ def flash_panel(structures):
         if st.button('Lật thẻ — xem mặt sau',key=key+'flip'+str(state['round'])):
             st.session_state[key+'shown-'+str(state['round'])]=True;st.rerun()
     else:
-        st.markdown('**Mặt sau**');st.success(card['back'])
-        st.write(card['example']);st.caption(card['note'])
+        st.markdown('**Mặt sau**');show_highlighted(card['back'])
+        show_highlighted(card['example']);st.caption(card['note'])
         a,b=st.columns(2)
         for column,label,passed in [(a,'Cần ôn lại',False),(b,'Đã nhớ',True)]:
             if column.button(label,key=key+label+str(state['round'])):
