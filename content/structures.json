@@ -27,16 +27,16 @@
   },
   {
     "structure_id": "overview-trend",
-    "title": "Tổng quan xu hướng",
+    "title": "Overview B · xu hướng ngược nhau",
     "paragraph_role": "overview",
-    "template": "Overall, … increased, while … decreased. In addition, … had the highest figure(s).",
-    "explanation_vi": "Chọn xu hướng chính và một điểm so sánh nổi bật.",
-    "usage_conditions": "Chỉ dùng increased/decreased nếu có thay đổi theo thời gian. Dùng consistently khi đúng ở mọi mốc.",
+    "template": "Overall, there was a decline in [measure] in [group 1], while a rise was seen in [group 2]. In addition, [A] generally had the highest figures.",
+    "explanation_vi": "Nhóm giảm đối chiếu nhóm tăng; chọn generally hoặc consistently theo dữ liệu.",
+    "usage_conditions": "While nối hai mệnh đề. Meanwhile dùng sau dấu chấm phẩy hoặc đầu câu mới.",
     "examples": [
-      "Overall, car production increased in Argentina, while it decreased in Australia."
+      "Overall, there was a decline in spending in Italy, Portugal and the UK, while a rise was seen in the USA. In addition, Portugal generally had the highest figures."
     ],
-    "common_errors": "Không viết consistently nếu có ngoại lệ; không đưa nguyên nhân không có trong đề.",
-    "source_reference": "PDF thầy Kiên, trang PDF 4–7",
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
     "categories": [
       "cot_4",
       "cot_lt4",
@@ -46,7 +46,8 @@
       "mixed"
     ],
     "status": "verified",
-    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
   },
   {
     "structure_id": "from-to",
@@ -142,16 +143,16 @@
   },
   {
     "structure_id": "similar",
-    "title": "Xu hướng tương tự",
+    "title": "Body · cùng xu hướng, khác mức độ",
     "paragraph_role": "body",
-    "template": "A similar change was seen in …, which rose/fell from … to … .",
-    "explanation_vi": "Nối nhóm có cùng hướng thay đổi; vẫn ghi rõ số liệu riêng.",
-    "usage_conditions": "Cùng hướng không có nghĩa cùng mức độ. Có thể thêm to a lesser extent khi phù hợp.",
+    "template": "Similar changes, but to a greater/lesser extent, were seen in the figure for [B], which [verb] …, followed by [final change].",
+    "explanation_vi": "Dùng lại xu hướng đã nêu cho A rồi nói mức độ của B.",
+    "usage_conditions": "Cần có câu A trước. Chỉ dùng followed by nếu có mốc sau.",
     "examples": [
-      "A similar change was seen in France, where the figure rose from 30% to 40%."
+      "Sales in A rose sharply. Similar changes, but to a lesser extent, were seen in the figure for B, which rose to 30, followed by a final increase to 35."
     ],
-    "common_errors": "Không ghép nhóm tăng với nhóm giảm bằng similarly.",
-    "source_reference": "PDF thầy Kiên, trang PDF 7, 22–24",
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
     "categories": [
       "cot_4",
       "cot_lt4",
@@ -161,20 +162,21 @@
       "mixed"
     ],
     "status": "verified",
-    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
   },
   {
     "structure_id": "peak",
-    "title": "Nhấn mạnh đỉnh hoặc kết thúc",
+    "title": "Body · đạt đỉnh rồi giảm",
     "paragraph_role": "body",
-    "template": "… increased/decreased, reaching … / ending at … .",
-    "explanation_vi": "Dùng V-ing bổ sung kết quả cho biến động đã nêu.",
-    "usage_conditions": "reaching a peak of chỉ dùng khi thật sự là điểm cao nhất trong phạm vi đề.",
+    "template": "[A] started at [X] and rose to a peak of [Y] in [year], before falling to [Z] in [final year].",
+    "explanation_vi": "Chuỗi tăng → đỉnh → giảm; sửa lỗi nối hai động từ bằng dấu phẩy.",
+    "usage_conditions": "Reach a peak of / peak at; không viết reach at. Không gọi mốc cuối là đỉnh nếu mốc giữa cao hơn.",
     "examples": [
-      "Sales increased, reaching a peak of 50 million in 2010."
+      "The figure started at 20 and rose to a peak of 50 in 2005, before falling to 30 in 2010."
     ],
-    "common_errors": "Không viết reaching at; viết reaching 50 hoặc reaching a peak of 50.",
-    "source_reference": "PDF thầy Kiên, trang PDF 9–11",
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
     "categories": [
       "cot_4",
       "cot_lt4",
@@ -184,7 +186,8 @@
       "mixed"
     ],
     "status": "verified",
-    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
   },
   {
     "structure_id": "respectively",
@@ -306,43 +309,45 @@
   },
   {
     "structure_id": "process-overview",
-    "title": "Tổng quan quy trình",
+    "title": "Process · overview",
     "paragraph_role": "overview",
-    "template": "Overall, the process begins with … and ends with … .",
-    "explanation_vi": "Dùng danh từ/V-ing sau with. Nêu đầu–cuối hoặc chu kỳ nếu có.",
-    "usage_conditions": "Quá trình tự nhiên không mặc định là chu kỳ. Cách hoạt động có thể tóm tắt chức năng.",
+    "template": "Overall, the process comprises several stages, beginning with [noun/V-ing] and ending with [noun/V-ing].",
+    "explanation_vi": "Tóm tắt đầu–cuối hoặc các giai đoạn chính.",
+    "usage_conditions": "Với chu kỳ: nhấn mạnh vòng lặp; không áp dụng điểm kết thúc tuyệt đối.",
     "examples": [
-      "Overall, the process begins with collecting waste glass and ends with producing new bottles."
+      "Overall, the process comprises several stages, beginning with collecting bottles and ending with producing new ones."
     ],
-    "common_errors": "Không tự đếm bước khi sơ đồ có nhánh chưa rõ.",
-    "source_reference": "PDF thầy Kiên, trang PDF 42–46",
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
     "categories": [
       "process",
       "natural_process",
       "mechanism"
     ],
     "status": "verified",
-    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
   },
   {
     "structure_id": "process-order",
-    "title": "Nối các bước",
+    "title": "Process · nối bước",
     "paragraph_role": "body",
-    "template": "Once …, … . / …, after which … .",
-    "explanation_vi": "Once + mệnh đề; after which + mệnh đề để nối thứ tự.",
-    "usage_conditions": "Dùng bị động khi nguyên liệu chịu tác động, chủ động khi vật tự chuyển động/phát triển.",
+    "template": "At the beginning of the process, [S] is/are [V3], after which [S + V]. / Once [S + V], [S + V], at which point [S + V].",
+    "explanation_vi": "First/Once/After/after which/at which point để nối các bước.",
+    "usage_conditions": "Bị động theo hành động; chủ động cho tác nhân tự vận động. Once có cả chủ ngữ và động từ.",
     "examples": [
-      "The beans are dried, after which they are roasted."
+      "Once the fruit is washed, it is cut, at which point it is ready for packing."
     ],
-    "common_errors": "Không ép mọi câu quy trình thành bị động; chú ý thứ tự mũi tên.",
-    "source_reference": "PDF thầy Kiên, trang PDF 42–46",
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
     "categories": [
       "process",
       "natural_process",
       "mechanism"
     ],
     "status": "verified",
-    "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
   },
   {
     "structure_id": "location",
@@ -363,5 +368,438 @@
     ],
     "status": "verified",
     "editorial_note": "Đã chuẩn hóa ngữ pháp; ví dụ luyện bổ sung tự tạo."
+  },
+  {
+    "structure_id": "intro-count",
+    "title": "Introduction · how many",
+    "paragraph_role": "introduction",
+    "template": "The [chart/graph/table] illustrates how many [plural noun] [verb] in [place] between [year] and [year].",
+    "explanation_vi": "Số lượng đếm được; chủ động hoặc bị động theo chủ ngữ.",
+    "usage_conditions": "Dữ liệu quá khứ: people travelled / cars were produced; hiện tại: people travel / cars are produced.",
+    "examples": [
+      "The table illustrates how many cars were produced in three countries between 2003 and 2009."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "cot_4",
+      "cot_lt4",
+      "cot_5plus",
+      "two_years",
+      "future",
+      "mixed",
+      "static"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
+  },
+  {
+    "structure_id": "intro-amount",
+    "title": "Introduction · how much",
+    "paragraph_role": "introduction",
+    "template": "The chart illustrates how much [uncountable noun] was [V3] in [place] over a [X]-year period starting in [year].",
+    "explanation_vi": "Lượng, tiền hoặc năng lượng; khung bị động quá khứ.",
+    "usage_conditions": "Danh từ không đếm được số ít dùng was/is; không mặc định were. Chủ động chi tiêu: how much people spent on … .",
+    "examples": [
+      "The chart illustrates how much electricity was generated in a country over a ten-year period starting in 2000."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "cot_4",
+      "cot_lt4",
+      "cot_5plus",
+      "two_years",
+      "future",
+      "mixed",
+      "static"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
+  },
+  {
+    "structure_id": "intro-percentage",
+    "title": "Introduction · phần trăm",
+    "paragraph_role": "introduction",
+    "template": "The chart illustrates the percentage of [group] who/that [verb] … .",
+    "explanation_vi": "Giữ rõ đơn vị tỷ lệ; không thay percentage bằng số lượng.",
+    "usage_conditions": "Who chỉ người; với danh từ không chỉ người dùng that hoặc cụm danh từ phù hợp.",
+    "examples": [
+      "The graph illustrates the percentage of people who travelled by bus in 2010."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "cot_4",
+      "cot_lt4",
+      "cot_5plus",
+      "two_years",
+      "future",
+      "mixed",
+      "static"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
+  },
+  {
+    "structure_id": "overview-all",
+    "title": "Overview A · cùng xu hướng",
+    "paragraph_role": "overview",
+    "template": "Overall, there was an increase/decline in [measure] for all [groups] examined. In addition, [A] consistently had the highest figures, while [B] had the lowest throughout the period.",
+    "explanation_vi": "Xu hướng chung rồi đến vị trí cao/thấp.",
+    "usage_conditions": "Chỉ dùng all khi tất cả đúng; consistently khi vị trí đúng ở mọi mốc.",
+    "examples": [
+      "Overall, there was an increase in sales in all three countries. In addition, A consistently had the highest figures, while C had the lowest."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "cot_4",
+      "cot_lt4",
+      "cot_5plus",
+      "two_years",
+      "future",
+      "mixed"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
+  },
+  {
+    "structure_id": "overview-overtake",
+    "title": "Overview C · vượt lên",
+    "paragraph_role": "overview",
+    "template": "Overall, the figure for [A] increased to surpass that of [B], making it the most [used/consumed] [category] from [year] onwards.",
+    "explanation_vi": "Nêu giao điểm và vị trí dẫn đầu khi hình xác nhận.",
+    "usage_conditions": "Không bắt buộc B giảm. Chỉ nói most khi A cao hơn tất cả nhóm, không chỉ B.",
+    "examples": [
+      "Overall, chicken consumption increased to surpass beef consumption, making chicken the most consumed item from 1989 onwards."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "cot_4",
+      "cot_lt4",
+      "cot_5plus",
+      "two_years",
+      "future",
+      "mixed"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
+  },
+  {
+    "structure_id": "fluctuation",
+    "title": "Body · dao động rồi kết thúc",
+    "paragraph_role": "body",
+    "template": "[A] started at [X], after which it fluctuated until [year], before rising/falling to end the period at [Z].",
+    "explanation_vi": "Tóm tắt dao động rồi chốt chiều biến động cuối.",
+    "usage_conditions": "Cần nhiều mốc để nhận xét dao động, không suy từ hai mốc.",
+    "examples": [
+      "The figure started at 20, after which it fluctuated until 2005, before falling to end the period at 10."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "cot_4",
+      "cot_lt4",
+      "cot_5plus",
+      "two_years",
+      "future",
+      "mixed"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
+  },
+  {
+    "structure_id": "continued-rise",
+    "title": "Body · tăng đến cuối kỳ",
+    "paragraph_role": "body",
+    "template": "[A] started at [X] and rose to [Y] in [year], before reaching its highest point of [Z] in [final year].",
+    "explanation_vi": "Mốc cuối là cao nhất; giữ một khung câu hữu hạn rõ ràng.",
+    "usage_conditions": "Chỉ dùng continued to rise khi các mốc thể hiện tiếp tục tăng.",
+    "examples": [
+      "The figure started at 20 and rose to 40 in 2005, before reaching its highest point of 60 in 2010."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "cot_4",
+      "cot_lt4",
+      "cot_5plus",
+      "two_years",
+      "future",
+      "mixed"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
+  },
+  {
+    "structure_id": "conversely",
+    "title": "Body · Conversely",
+    "paragraph_role": "body",
+    "template": "[A + trend]. Conversely, the figure for [B] [opposite trend], ending at [value].",
+    "explanation_vi": "Hai nhóm ngược xu hướng; thuộc bộ cốt lõi.",
+    "usage_conditions": "Không dùng chỉ vì hai số khác nhau. Ngược mức độ không tự động là ngược xu hướng.",
+    "examples": [
+      "The figure for A rose to 50. Conversely, the figure for B declined, ending at 20."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "cot_4",
+      "cot_lt4",
+      "cot_5plus",
+      "two_years",
+      "future",
+      "mixed"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
+  },
+  {
+    "structure_id": "static-ranking",
+    "title": "Static · xếp hạng và respectively",
+    "paragraph_role": "body",
+    "template": "[A] had the highest figure, at [X], while the figures for [B] and [C] were lower, at [Y] and [Z] respectively.",
+    "explanation_vi": "Xếp hạng, ghép hai số theo đúng thứ tự.",
+    "usage_conditions": "Most popular chỉ dùng khi đại lượng thực sự là mức phổ biến. Chọn was/is theo đề.",
+    "examples": [
+      "A had the highest figure, at 70, while the figures for B and C were lower, at 35 and 20 respectively."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "static",
+      "mixed",
+      "two_years"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
+  },
+  {
+    "structure_id": "static-exceeds",
+    "title": "Static · vượt trội",
+    "paragraph_role": "body",
+    "template": "The figure for [A] exceeded those for [B] and [C], with respective figures of [X], [Y] and [Z].",
+    "explanation_vi": "So sánh một số với hai số: those for B and C.",
+    "usage_conditions": "Không viết that of B and C cho hai số độc lập. Far chỉ dùng khi chênh lệch rõ.",
+    "examples": [
+      "The figure for A exceeded those for B and C, with respective figures of 70, 35 and 20."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "static",
+      "mixed",
+      "two_years"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
+  },
+  {
+    "structure_id": "static-multiple",
+    "title": "Static · gấp nhiều lần",
+    "paragraph_role": "body",
+    "template": "[A] consumed/produced twice/three times as much [uncountable noun] as [B]. / The figure for A was double that for B.",
+    "explanation_vi": "Gấp hai/ba lần, không lẫn với chênh lệch.",
+    "usage_conditions": "Đếm được: twice as many cars as. Không thêm throughout the period nếu chỉ một thời điểm.",
+    "examples": [
+      "A consumed twice as much oil as B in 2010."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "static",
+      "mixed",
+      "two_years"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
+  },
+  {
+    "structure_id": "map-intro",
+    "title": "Maps · introduction",
+    "paragraph_role": "introduction",
+    "template": "The maps illustrate the changes that took place in [place] between [year] and [year].",
+    "explanation_vi": "Giới thiệu địa điểm và thời gian.",
+    "usage_conditions": "Quy hoạch: illustrate the proposed changes to …; không trình bày tương lai như quá khứ.",
+    "examples": [
+      "The maps illustrate the changes that took place in a town between 1990 and 2010."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "maps"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
+  },
+  {
+    "structure_id": "map-build",
+    "title": "Maps · xây và phá bỏ",
+    "paragraph_role": "body",
+    "template": "[A] was built/constructed. [B] was demolished to make way for [C].",
+    "explanation_vi": "Công trình mới và công trình bị dỡ bỏ.",
+    "usage_conditions": "Số nhiều were; đổi thì theo hai bản đồ.",
+    "examples": [
+      "A library was built, while the factory was demolished to make way for a park."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "maps"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
+  },
+  {
+    "structure_id": "map-trees",
+    "title": "Maps · cây xanh",
+    "paragraph_role": "body",
+    "template": "Trees were cut down/cleared to make way for [A]. New trees were planted.",
+    "explanation_vi": "Rừng/cây bị dọn hoặc trồng mới.",
+    "usage_conditions": "Trees số nhiều dùng were; a tree dùng was. Không suy đoán lý do ngoài hình.",
+    "examples": [
+      "Trees were cleared to make way for a car park."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "maps"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
+  },
+  {
+    "structure_id": "map-roads",
+    "title": "Maps · đường xá",
+    "paragraph_role": "body",
+    "template": "The road was extended/widened/reopened.",
+    "explanation_vi": "Kéo dài, mở rộng bề ngang hoặc mở lại tuyến.",
+    "usage_conditions": "Chọn động từ đúng thay đổi nhìn thấy; extended khác widened.",
+    "examples": [
+      "The main road was widened, while the railway was reopened."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "maps"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
+  },
+  {
+    "structure_id": "map-links",
+    "title": "Maps · nối các thay đổi",
+    "paragraph_role": "body",
+    "template": "The area saw several changes, with [A] being turned into [B] and [C] being converted into [D].",
+    "explanation_vi": "Gom thay đổi vào cùng một câu.",
+    "usage_conditions": "With + danh từ + being + V3. Không thêm phương hướng nếu hình không xác nhận.",
+    "examples": [
+      "The area saw several changes, with the shop being turned into a cafe and the office being converted into a library."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "maps"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
+  },
+  {
+    "structure_id": "map-accompanied",
+    "title": "Maps · thay thế và mở rộng",
+    "paragraph_role": "body",
+    "template": "[A] was built, replacing [B]. This was accompanied by the expansion of [C].",
+    "explanation_vi": "Nối thay thế với thay đổi kèm theo; tách hai câu cho dễ nhớ.",
+    "usage_conditions": "Chỉ dùng khi cả thay thế và mở rộng đều có trên hình.",
+    "examples": [
+      "A library was built, replacing the factory. This was accompanied by the expansion of the park."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "maps"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
+  },
+  {
+    "structure_id": "process-intro",
+    "title": "Process · introduction",
+    "paragraph_role": "introduction",
+    "template": "The diagram describes the process of [V-ing/noun]. / The diagram illustrates how [product] is produced.",
+    "explanation_vi": "Giới thiệu quy trình; tự nhiên dùng how … develops khi phù hợp.",
+    "usage_conditions": "Không ép quá trình tự nhiên thành sản xuất.",
+    "examples": [
+      "The diagram illustrates how coffee is produced."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "process",
+      "natural_process",
+      "mechanism"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
+  },
+  {
+    "structure_id": "process-purpose",
+    "title": "Process · mục đích",
+    "paragraph_role": "body",
+    "template": "[S] is/are [V3] in order to [verb]. / [S] is/are [V3] so that [S + V].",
+    "explanation_vi": "In order to + động từ nguyên mẫu; so that + mệnh đề.",
+    "usage_conditions": "Chỉ nêu mục đích hình cung cấp hoặc thể hiện rõ; không bịa công dụng.",
+    "examples": [
+      "The water is heated in order to produce steam."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "process",
+      "natural_process",
+      "mechanism"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
+  },
+  {
+    "structure_id": "mixed-intro",
+    "title": "Mixed chart · khung riêng",
+    "paragraph_role": "introduction",
+    "template": "The [first chart] illustrates [topic 1], while the [second chart] shows [topic 2].",
+    "explanation_vi": "Giới thiệu đủ hai biểu đồ; overview nêu điểm chính từng biểu đồ; thường body 1/2 chia theo biểu đồ.",
+    "usage_conditions": "Từng body dùng lại khung xu hướng hoặc static. Giữ riêng đơn vị và thời gian.",
+    "examples": [
+      "The line graph illustrates visitor numbers, while the bar chart shows their preferred destinations."
+    ],
+    "common_errors": "Giữ đúng nghĩa, đơn vị, thì và số ít/số nhiều. Không thêm dữ kiện ngoài hình.",
+    "source_reference": "Bộ khung người học chốt ngày 13/10/2026; đối chiếu ghi chú thầy Kiên",
+    "categories": [
+      "mixed"
+    ],
+    "status": "verified",
+    "editorial_note": "Đã chuẩn hóa ngữ pháp. Ví dụ bổ sung để học cấu trúc, không mặc định là số liệu đề đang mở.",
+    "curriculum": "Khung chuẩn đã chốt"
   }
 ]

@@ -34,7 +34,7 @@ def test_learning_content_and_closed_answers():
         grouping=metadata[e['exercise_id']]['grouping']
         assert len(grouping['items'])==len(set(grouping['items']))
         assert grouping_grade(grouping,grouping['accepted_assignments'][0])==(1,1)
-    assert len(flashcards(structures))==21
+    assert len(flashcards(structures))==len(structures)+4
     assert sentences('It rose to 1.4 million. It then fell.')==['It rose to 1.4 million.','It then fell.']
 
 

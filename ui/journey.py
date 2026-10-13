@@ -102,11 +102,13 @@ def library(structures,exercises):
     st.subheader('Chọn cấu trúc để luyện')
     role=st.selectbox('Chức năng',['all','introduction','overview','body'])
     pool=[s for s in structures if (category=='all' or category in s['categories']) and (role=='all' or role==s['paragraph_role'])]
+    pool.sort(key=lambda s:0 if s.get('curriculum') else 1)
     for s in pool:
         with st.container(border=True):
             st.markdown('### '+s['title'])
             show_highlighted(s['template'])
             st.write(s['explanation_vi']);st.caption(s['usage_conditions'])
+            st.caption('Khung chuẩn đã chốt' if s.get('curriculum') else 'Khung nền / tham khảo bổ sung')
             st.markdown('**Ví dụ luyện**')
             for example in s['examples']:show_highlighted(example)
             a,b=st.columns(2)

@@ -49,7 +49,7 @@ add(87,
 hold(88,'Trục tung không ghi đơn vị số thuê bao; không tự lấy million từ PDF vì cần xác nhận bản ảnh. Cần bổ sung đơn vị để viết bài định lượng.')
 duplicate(89,49)
 add(90,
-'The table compares the number of cars manufactured in Argentina, Australia and Thailand in 2003, 2005 and 2009.',
+'The table illustrates how many cars were produced in Argentina, Australia and Thailand in 2003, 2005 and 2009.',
 'Overall, there was an increase in car production in Argentina and Thailand over the period, while a decline was seen in Australia. In addition, Thailand consistently had the highest figures, despite a fall after its peak in 2005.',
 'In 2003, Thailand produced 735,852 cars, well ahead of Australia at 452,163 and Argentina at 235,088. By 2005, the Thai figure had risen sharply to 1,162,356. Argentina also increased its output, reaching 352,759 cars. In contrast, production in Australia fell to 341,268, which meant that Argentina moved slightly ahead of it at the middle point of the table.',
 'Between 2005 and 2009, the number of cars made in Argentina continued to grow, ending at 466,089. This was almost double its initial figure. Thailand’s output decreased to 999,963, although it remained higher than in 2003 and exceeded the combined output of the other two countries. Australia experienced another fall, to 245,624 cars, and therefore finished with the lowest production figure among the three.',

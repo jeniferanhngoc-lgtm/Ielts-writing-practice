@@ -134,3 +134,10 @@ Lần ôn có hỗ trợ được lưu nhưng không tăng lịch thành thạo;
 Ôn tập → Phân tích & viết overview: ghi có/không thay đổi theo thời gian, xu hướng chung, cao/thấp nhất, thay đổi mạnh nhất, ổn định, xu hướng giống/ngược; chọn 2–3 ý rồi viết overview. Nhận xét được lưu dạng tự đối chiếu, không chấm so chuỗi. q085 có đáp án chi tiết tám mục; các đề khác đối chiếu phân tích, body và overview đã biên tập, chưa có đáp án đóng cho từng mục. Có thể ghi Không áp dụng với quy trình/bản đồ hoặc tiêu chí không có trong đề.
 
 Ngày 13/10/2026 cập nhật 21 overview số liệu theo khung xu hướng + đặc điểm nổi bật, đồng bộ quiz và tăng phiên bản nội dung. Bản mẫu trong lịch sử cũ được giữ nguyên. Các overview bản đồ, quy trình và so sánh tĩnh giữ khung đúng loại đề. Meanwhile có thể nối bằng dấu chấm phẩy hoặc đứng đầu câu mới; consistently chỉ khi đúng tại mọi mốc, generally khi có ngoại lệ.
+
+
+## Bộ khung người học chốt
+
+Thư viện có 37 mục gồm khung chuẩn và khung nền giữ lại để tương thích lịch sử. Ưu tiên mục “Khung chuẩn đã chốt”; không cần học cả 37 ngay. Đã tách introduction đếm được/không đếm được/phần trăm, ba tình huống overview, năm phản xạ body, so sánh tĩnh, Maps, Process và Mixed chart. Luyện câu ví dụ, flashcard và gợi ý lấy cùng nguồn structures.json; structure_curriculum.json bảo toàn bộ khung khi chạy công cụ dựng nội dung.
+
+Đợt này đồng bộ introduction mẫu của q010, q011, q014 và q090. Không thay hàng loạt mọi bài bằng cùng một câu hoặc ép dùng khung không phù hợp dữ liệu. Mẫu trong các lần làm cũ vẫn giữ nguyên. Màu cam nhận diện cụm cấu trúc, không xác nhận câu đúng ngữ pháp.
