@@ -1,6 +1,10 @@
+# Bộ học thuộc cá nhân mới
+
+Mục **Học thuộc bài của tôi** có 18 bài từ Word và 18 ảnh đề mã 1.1–1.18, kèm 8 dạng học: đọc hiểu, thẻ cấu trúc, điền khuyết, nhớ câu, sắp xếp câu, viết lại, quiz giải thích và hỏi ChatGPT (API tùy chọn). Xem [hướng dẫn chạy và cấu hình](PERSONAL_BANK_GUIDE.md). Bài gốc được giữ nguyên, có lưu ý lỗi nguồn trước khi luyện; điểm nhớ không phải band IELTS.
+
 # IELTS Task 1 Studio
 
-Ứng dụng Streamlit một người học, giao diện tiếng Việt. Học thuộc khung câu rồi vận dụng vào đề mới; không tích hợp AI và không quy đổi điểm luyện tập thành band IELTS.
+Ứng dụng Streamlit một người học, giao diện tiếng Việt. Học thuộc khung câu rồi vận dụng vào đề mới; có gia sư OpenAI API tùy chọn trong mục Học thuộc bài của tôi, không quy đổi điểm luyện tập thành band IELTS.
 
 ## Bản cập nhật: 5 chế độ luyện
 

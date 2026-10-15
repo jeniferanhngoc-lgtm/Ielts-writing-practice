@@ -41,6 +41,8 @@ def task_name(task):
 def today(exercises,structures):
     st.title('Hôm nay bạn muốn học gì?')
     st.write('Học khung → tự nhớ → kiểm tra → ôn lại đúng lúc.')
+    if st.button('Học 18 bài từ tài liệu của tôi', width='stretch'):
+        navigate('Học thuộc bài của tôi')
     attempts=records('attempt'); day=now().date()
     days={date.fromisoformat(a['submitted_at'][:10]) for a in attempts}
     cursor=day if day in days else day-timedelta(days=1); streak=0
@@ -56,12 +58,14 @@ def today(exercises,structures):
     if b.button('Bắt đầu kiểm tra',width='stretch'):navigate('Luyện tập',study_mode='Kiểm tra')
     st.subheader('Nhiệm vụ đến hạn ôn')
     byid={e['exercise_id']:e for e in exercises}
+    from core.personal_bank import load_bank
+    personal_titles={'personal:'+x['id']:x['id']+' · '+x['title'] for x in load_bank()}
     due=[r for r in reviews_from_attempts(attempts).values() if r['next_review_date']<=day.isoformat()]
     if not due:st.info('Chưa có bài đến hạn. Học một khung mới hoặc làm kiểm tra đầu tiên bên trên.')
     for i,r in enumerate(due):
         e=byid.get(r['exercise_id'])
         with st.container(border=True):
-            st.markdown('### '+(e['title'] if e else 'Thẻ cấu trúc'))
+            st.markdown('### '+(e['title'] if e else personal_titles.get(r['exercise_id'],'Thẻ cấu trúc')))
             st.write(task_name(r['task_id'])+' · '+('Cần ôn lại' if r['mastery_state']=='learning' else 'Đến hạn củng cố'))
             st.caption('Lịch ôn: '+r['next_review_date'])
             a,b=st.columns(2)
@@ -72,9 +76,11 @@ def today(exercises,structures):
                     task=r['task_id']
                     mode=MODES[0] if 'outline' in task else MODES[1] if 'cloze' in task else MODES[2] if 'reverse' in task else MODES[3] if 'micro' in task else 'Viết & học thuộc'
                     navigate('Luyện tập',study_mode='Ôn tập',practice_category='all',practice_exercise=e['exercise_id'],learning_mode=mode,memory_part=part,review_task=task,**{'practice-mode':'Quiz' if any(q['quiz_id']==task for q in e['quizzes']) else 'Học thuộc'})
+                elif r['exercise_id'].startswith('personal:'):navigate('Học thuộc bài của tôi',**{'personal-lesson':r['exercise_id'].split(':',1)[1]})
                 else:navigate('Thư viện cấu trúc',structure_lesson=(r['exercise_id'].split(':',1)[1],'study')) if r['exercise_id'].startswith('structure:') else navigate('Thư viện cấu trúc')
             if b.button('Kiểm tra ngay',key=f'due-test-{i}'):
                 if e:navigate('Luyện tập',study_mode='Kiểm tra',practice_category='all',practice_exercise=e['exercise_id'],test_part=part)
+                elif r['exercise_id'].startswith('personal:'):navigate('Học thuộc bài của tôi',**{'personal-lesson':r['exercise_id'].split(':',1)[1]})
                 else:navigate('Thư viện cấu trúc',structure_lesson=(r['exercise_id'].split(':',1)[1],'test')) if r['exercise_id'].startswith('structure:') else navigate('Thư viện cấu trúc')
     st.subheader('Lộ trình ngắn để bắt đầu')
     for title,description in [('1 · Nắm khung','Introduction → Overview → hai body. Học ít cấu trúc, dùng lại nhiều lần.'),('2 · Luyện từng phần','Ghép câu, điền khung, dịch ngược hoặc quy trình bốn bước.'),('3 · Kiểm tra không gợi ý','Tự viết từ trí nhớ, đối chiếu mẫu màu cam rồi ôn lại.')]:

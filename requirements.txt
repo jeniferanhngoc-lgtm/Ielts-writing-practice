@@ -2,3 +2,4 @@ streamlit==1.65.0
 gspread==6.2.1
 Pillow==12.3.0
 tzdata==2026.5
+openai==3.31.0

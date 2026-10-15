@@ -115,6 +115,8 @@ def progress(exercises):
     st.title('Lịch sử & sổ lỗi')
     from ui.journey import task_name, navigate
     titles={e['exercise_id']:e['title'] for e in exercises}
+    from core.personal_bank import load_bank
+    titles.update({'personal:'+x['id']:x['id']+' · '+x['title'] for x in load_bank()})
     attempts=records('attempt'); sessions=records('session')
     quiz=[a for a in attempts if a['grading_type']=='quiz' and a['score'] is not None]
     seconds=sum(s['duration_seconds'] for s in sessions)
@@ -131,7 +133,10 @@ def progress(exercises):
         chosen=byid[selected]
         show_answer(chosen['answer'])
         if chosen['exercise_id'] in titles and st.button('Làm lại bài này'):
-            navigate('Luyện tập',study_mode='Kiểm tra',practice_category='all',practice_exercise=chosen['exercise_id'])
+            if chosen['exercise_id'].startswith('personal:'):
+                navigate('Học thuộc bài của tôi',**{'personal-lesson':chosen['exercise_id'].split(':',1)[1]})
+            else:
+                navigate('Luyện tập',study_mode='Kiểm tra',practice_category='all',practice_exercise=chosen['exercise_id'])
         with st.expander('Mẫu/đáp án tại thời điểm làm'):
             show_answer(chosen.get('reference_snapshot',''))
     if sessions:
@@ -146,7 +151,10 @@ def progress(exercises):
                 st.caption(f"Điểm nhớ mẫu: {a['score']}/{a['max_score']}")
                 if a['exercise_id'] in titles and st.button('Ôn lại bài này',key='missed-'+a['attempt_id']):
                     part=next((p for p in ['introduction','overview','body1','body2','full'] if p in a['task_id']),'introduction')
-                    navigate('Luyện tập',study_mode='Ôn tập',practice_category='all',practice_exercise=a['exercise_id'],learning_mode='Viết & học thuộc',memory_part=part)
+                    if a['exercise_id'].startswith('personal:'):
+                        navigate('Học thuộc bài của tôi',**{'personal-lesson':a['exercise_id'].split(':',1)[1]})
+                    else:
+                        navigate('Luyện tập',study_mode='Ôn tập',practice_category='all',practice_exercise=a['exercise_id'],learning_mode='Viết & học thuộc',memory_part=part)
     if records('correction'):
         st.subheader('Sổ lỗi và các lần viết lại')
         st.dataframe(records('correction'),hide_index=True,width='stretch')

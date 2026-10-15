@@ -4,6 +4,7 @@ from ui.state import initialize, save_banner
 from ui.practice import practice
 from ui.screens import corrections, progress, settings_page
 from ui.journey import today, library, apply_route
+from ui.personal_memory import personal_memory
 
 st.set_page_config(page_title='Task 1 · Mỗi ngày một bước tiến',page_icon='✍️',layout='wide')
 st.markdown('''<style>
@@ -20,12 +21,13 @@ apply_route()
 with st.sidebar:
     st.title('✍️ Task 1 Studio')
     st.caption('HỌC HIỂU · NHỚ MẪU · TỰ VIẾT')
-    page=st.radio('Không gian học',['Hôm nay','Thư viện cấu trúc','Luyện tập','Chữa bài & viết lại','Lịch sử & sổ lỗi','Cài đặt & dữ liệu'],label_visibility='collapsed',key='page')
+    page=st.radio('Không gian học',['Hôm nay','Học thuộc bài của tôi','Thư viện cấu trúc','Luyện tập','Chữa bài & viết lại','Lịch sử & sổ lỗi','Cài đặt & dữ liệu'],label_visibility='collapsed',key='page')
     st.divider()
-    st.caption('Một người học · Giờ Việt Nam\n\nKhông tích hợp AI. Điểm luyện tập không phải band IELTS.')
+    st.caption('Một người học · Giờ Việt Nam\n\nGia sư AI tùy chọn tại Học thuộc bài của tôi. Điểm luyện tập không phải band IELTS.')
     if st.session_state.timer.get('running_since') is not None:
         st.info('Đồng hồ buổi học đang chạy. Về Hôm nay để tạm dừng.')
 if page=='Hôm nay': today(exercises,structures)
+elif page=='Học thuộc bài của tôi': personal_memory()
 elif page=='Thư viện cấu trúc': library(structures,exercises)
 elif page=='Luyện tập': practice(exercises,structures)
 elif page=='Chữa bài & viết lại': corrections(exercises,structures)
