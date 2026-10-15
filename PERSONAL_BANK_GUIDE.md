@@ -1,6 +1,12 @@
 # Học thuộc bài Task 1 từ tài liệu cá nhân
 
-Giao diện mặc định có hai mục **Học cấu trúc** và **Học bài mẫu**. Chọn một khung hoặc một đoạn rồi học theo ba bước **Xem mẫu → Điền khuyết → Tự viết lại**. Mỗi cấu trúc có câu ví dụ và cách dùng; chọn **Cả bài** khi đã nhớ các đoạn. Ảnh đề và giải thích dài có thể mở khi cần.
+Giao diện mặc định có hai mục ở cột trái: **Học cấu trúc** và **Học thuộc bài**. Mọi lựa chọn dạng, bài và chế độ nằm trong cột trái; vùng chính dành cho câu hỏi hoặc bài viết.
+
+**Học cấu trúc:** chọn bộ Biểu đồ, Maps hoặc Process rồi trả lời câu hỏi trắc nghiệm. Sau khi nộp có đáp án, khung hoàn chỉnh, ví dụ và giải thích. Bấm **Cấu trúc tiếp theo** để học tiếp.
+
+**Học thuộc bài:** chọn **Ôn tập · Chép theo mẫu** để xem sẵn văn bản và chép vào ô nhập. Chọn **Luyện tập · Tự nhớ và viết** để ẩn mẫu đến khi nộp. Chọn dạng đề (line, bar, table, pie, mixed, maps, process, vòng đời), chọn một bài, rồi chọn Introduction/Overview/Body 1/Body 2 hoặc **Cả bài**. Bấm **Chọn bài ngẫu nhiên** để đổi sang bài khác trong dạng đang lọc; chọn **Tất cả** để lấy từ cả ngân hàng. Dạng chỉ có một bài sẽ không bật nút ngẫu nhiên.
+
+Bấm **Chấm bài** để xem độ khớp và phần thiếu/thừa/khác mẫu, cùng bài đã viết và mẫu đối chiếu. Không phân biệt hoa/thường và dấu câu. Điểm là độ nhớ theo văn bản gốc, không phải điểm IELTS. Lượt chép mẫu và lượt luyện lại sau khi đã xem đáp án được ghi là có hỗ trợ. Tiến độ dùng cơ chế lưu của ứng dụng; mặc định demo chỉ giữ trong phiên. Ảnh đề và lưu ý nguồn nằm trong mục có thể mở khi cần.
 
 Bộ bài lấy từ `dap an va bai lam .docx` và 18 ảnh trong `Quiz bank - task 1`, ghép theo mã 1.1–1.18. Toàn bộ văn bản gốc được giữ trong JSON và bản Word ở `assets/reference/personal-answers.docx`. Các chức năng mở rộng bên dưới vẫn ở **Công cụ khác → Học thuộc bài của tôi**. Lịch sử, cài đặt và sao lưu cũng nằm trong **Công cụ khác**.
 

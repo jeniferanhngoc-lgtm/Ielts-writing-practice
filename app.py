@@ -18,9 +18,9 @@ div.stButton>button {border-radius:9px}
 initialize()
 structures,exercises=load_content()
 exercises+=st.session_state.get('extra_exercises',[])
-if not st.session_state.get('focused_ui_v1'):
+if not st.session_state.get('focused_ui_v2'):
     st.session_state.page='Học bài mẫu'
-    st.session_state.focused_ui_v1=True
+    st.session_state.focused_ui_v2=True
 apply_route()
 with st.sidebar:
     st.title('✍️ Học thuộc Task 1')
@@ -28,16 +28,17 @@ with st.sidebar:
     def open_focus(destination):
         st.session_state.page=destination
     st.button('Học cấu trúc',on_click=open_focus,args=('Học cấu trúc',),width='stretch',type='primary' if st.session_state.get('page')=='Học cấu trúc' else 'secondary')
-    st.button('Học bài mẫu',on_click=open_focus,args=('Học bài mẫu',),width='stretch',type='primary' if st.session_state.get('page','Học bài mẫu')=='Học bài mẫu' else 'secondary')
+    st.button('Học thuộc bài',on_click=open_focus,args=('Học bài mẫu',),width='stretch',type='primary' if st.session_state.get('page','Học bài mẫu')=='Học bài mẫu' else 'secondary')
+    study_controls=st.container()
     with st.expander('Công cụ khác'):
         page=st.radio('Không gian học',['Học bài mẫu','Học cấu trúc','Hôm nay','Học thuộc bài của tôi','Thư viện cấu trúc','Luyện tập','Chữa bài & viết lại','Lịch sử & sổ lỗi','Cài đặt & dữ liệu'],label_visibility='collapsed',key='page')
         st.caption('Quiz, ChatGPT, lịch ôn, thư viện đầy đủ và sao lưu tiến độ.')
     st.divider()
-    st.caption('Xem mẫu → Điền khuyết → Tự viết lại')
+    st.caption('Cấu trúc: chọn đáp án. Bài mẫu: chép theo hoặc tự nhớ và viết.')
     if st.session_state.timer.get('running_since') is not None:
         st.info('Đồng hồ buổi học đang chạy. Về Hôm nay để tạm dừng.')
-if page=='Học cấu trúc': study_structures(structures)
-elif page=='Học bài mẫu': study_essays()
+if page=='Học cấu trúc': study_structures(structures,study_controls)
+elif page=='Học bài mẫu': study_essays(study_controls)
 elif page=='Hôm nay': today(exercises,structures)
 elif page=='Học thuộc bài của tôi': personal_memory()
 elif page=='Thư viện cấu trúc': library(structures,exercises)

@@ -1,6 +1,11 @@
 # Học thuộc cấu trúc và bài mẫu
 
-Giao diện chính chỉ có **Học cấu trúc** và **Học bài mẫu**. Mỗi lần học một khung hoặc một đoạn, theo ba bước **Xem mẫu → Điền khuyết → Tự viết lại**. Khung có ví dụ và giải thích; bài mẫu lấy từ tài liệu Word của bạn. Chọn **Cả bài** sau khi đã nhớ từng đoạn. Quiz, ChatGPT, thống kê và cài đặt được gom vào **Công cụ khác** trong thanh bên.
+Giao diện chính có hai mục ở cột trái:
+
+- **Học cấu trúc:** chọn đáp án trắc nghiệm để hoàn thành câu; sau khi nộp hiện khung, ví dụ và giải thích. Có bộ Biểu đồ, Maps và Process.
+- **Học thuộc bài:** chế độ **Ôn tập** hiện bài mẫu để chép theo; chế độ **Luyện tập** ẩn mẫu, tự nhớ và viết rồi chấm độ khớp. Chọn dạng đề, chọn bài, từng đoạn hoặc **Cả bài**. Nút **Chọn bài ngẫu nhiên** chọn trong dạng đang lọc; chọn **Tất cả** để lấy từ đủ 18 bài.
+
+Kết quả chỉ ra phần thiếu, thừa hoặc khác mẫu. Điểm đo trí nhớ theo từ, không phân biệt hoa/thường và dấu câu, không phải band IELTS. Lượt chép mẫu được ghi là có hỗ trợ. Các công cụ mở rộng, ChatGPT, thống kê và cài đặt nằm trong **Công cụ khác**.
 
 ## Bộ học thuộc cá nhân mở rộng
 

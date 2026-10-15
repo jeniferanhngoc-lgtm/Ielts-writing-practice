@@ -1,13 +1,13 @@
-"""Two focused learning routes, one item and one recall exercise at a time."""
+"""Structure multiple choice and essay copying/recall, with sidebar controls."""
 import uuid
 import streamlit as st
-from core.personal_bank import ROOT, PARTS, CAUTIONS, load_bank, reference, cloze, initials
-from core.grading import memory_grade, normalize
+from core.personal_bank import ROOT, PARTS, CAUTIONS, load_bank, reference
+from core.structure_choice import choice_question, filter_lessons, random_lesson
+from core.grading import memory_grade
 from core.review_schedule import now
 from ui.core_framework import show_highlighted
 from ui.state import emit
 
-STEPS = ['1 · Xem mẫu', '2 · Điền khuyết', '3 · Tự viết lại']
 GROUPS = {
     'Biểu đồ số liệu': ['intro-count', 'intro-amount', 'intro-percentage', 'overview-all',
                        'overview-trend', 'overview-overtake', 'from-to', 'sequence',
@@ -17,6 +17,12 @@ GROUPS = {
              'map-trees', 'map-roads', 'map-links', 'map-accompanied'],
     'Process': ['process-intro', 'process-overview', 'process-order', 'process-purpose'],
 }
+ESSAY_MODES = ['Ôn tập · Chép theo mẫu', 'Luyện tập · Tự nhớ và viết']
+TYPES = ['Tất cả', 'Line chart', 'Bar chart', 'Table', 'Pie chart', 'Mixed chart', 'Maps', 'Process', 'Vòng đời tự nhiên']
+CHOICE_TITLES = {'intro-count':'Introduction · Số lượng đếm được',
+                 'intro-amount':'Introduction · Lượng không đếm được',
+                 'conversely':'Body · Hai xu hướng đối lập',
+                 'respectively':'Ghép số liệu theo đúng thứ tự'}
 
 
 def record(exercise_id, task, answer, target, result, assisted):
@@ -27,125 +33,121 @@ def record(exercise_id, task, answer, target, result, assisted):
                         learning_mode='study' if assisted else 'test', **result), ident)
 
 
-def recall(exercise_id, task, target, key, step):
-    """Keep answers hidden until submission; never count a revealed retry as independent."""
-    key += ':'+str(step)
-    round_no = st.session_state.get(key+':round', 0)
-    prefix = key+':'+str(round_no)
+def study_structures(structures, controls=None):
+    controls = controls if controls is not None else st.sidebar
+    byid = {x['structure_id']: x for x in structures}
+    with controls:
+        st.caption('CHỌN CẤU TRÚC')
+        group = st.selectbox('Dạng cấu trúc', list(GROUPS), key='focus-structure-group')
+        ids = GROUPS[group]
+        if st.session_state.get('focus-structure') not in ids:
+            st.session_state['focus-structure'] = ids[0]
+        ident = st.selectbox('Cấu trúc cần nhớ', ids, format_func=lambda k: CHOICE_TITLES.get(k,byid[k]['title']), key='focus-structure')
+    item = byid[ident]
+    question = choice_question(item)
+    st.title('Học cấu trúc bằng trắc nghiệm')
+    st.caption('Chọn cụm đúng để hoàn thành câu. Sau khi nộp, xem khung và giải thích.')
+    st.subheader(CHOICE_TITLES.get(ident,item['title']))
+    show_highlighted(question['prompt'])
+    base = 'focus-choice:'+ident
+    round_no = st.session_state.get(base+':round', 0)
+    prefix = base+':'+str(round_no)
     saved = st.session_state.get(prefix+':result')
-    if saved is not None:
-        st.success(f"Đã nhớ {saved['percent']}% theo mẫu.")
-        show_highlighted(target)
-        if saved.get('changes'):
-            with st.expander('Xem chỗ thiếu hoặc khác mẫu'):
+    if saved is None:
+        with st.form(prefix+':form'):
+            selected = st.radio('Chọn đáp án', question['options'], index=None, key=prefix+':answer')
+            sent = st.form_submit_button('Kiểm tra đáp án', type='primary')
+        if sent:
+            if selected is None:
+                st.warning('Chọn một đáp án trước khi kiểm tra.')
+            else:
+                correct = selected == question['answer']
+                record('structure:'+ident, 'structure-choice-'+ident, selected, item['template'],
+                       dict(score=int(correct), max_score=1, grading_type='quiz'), round_no > 0)
+                st.session_state[prefix+':result'] = dict(correct=correct, answer=selected)
+                st.rerun()
+    else:
+        st.success('Đúng!') if saved['correct'] else st.info('Chưa đúng. Đáp án: '+question['answer'])
+        st.write(question['explanation'])
+        with st.container(border=True):
+            st.markdown('**Khung cần thuộc**'); show_highlighted(item['template'])
+            st.markdown('**Ví dụ hoàn chỉnh**'); show_highlighted(question['example'])
+            st.caption(item['usage_conditions'])
+        a, b = st.columns(2)
+        if a.button('Làm lại câu này', key=prefix+':again'):
+            st.session_state[base+':round'] = round_no+1
+            st.rerun()
+        def next_question():
+            st.session_state['focus-structure'] = ids[(ids.index(ident)+1) % len(ids)]
+        b.button('Cấu trúc tiếp theo →', on_click=next_question, key=prefix+':next', type='primary')
+
+
+def essay_controls(bank, controls):
+    with controls:
+        st.caption('CHỌN BÀI HỌC')
+        mode = st.selectbox('Chế độ học bài', ESSAY_MODES, key='focus-essay-mode')
+        category = st.selectbox('Dạng đề', TYPES, key='focus-essay-type')
+        pool = filter_lessons(bank, category)
+        byid = {x['id']:x for x in pool}
+        ids = list(byid)
+        if st.session_state.get('focus-essay') not in ids:
+            st.session_state['focus-essay'] = ids[0]
+        ident = st.selectbox('Bài cần thuộc', ids, format_func=lambda k:k+' · '+byid[k]['title'], key='focus-essay')
+        def randomize():
+            st.session_state['focus-essay'] = random_lesson(ids, st.session_state.get('focus-essay'))
+        st.button('🎲 Chọn bài ngẫu nhiên', on_click=randomize, key='focus-random', width='stretch', disabled=len(ids)<2)
+        part = st.selectbox('Học theo đoạn / toàn bài', list(PARTS), format_func=PARTS.get, key='focus-essay-part')
+        st.caption('Ngẫu nhiên chọn trong dạng đề đang lọc. Chọn Tất cả để lấy từ toàn bộ 18 bài.')
+    return byid[ident], part, mode
+
+
+def study_essays(controls=None):
+    controls = controls if controls is not None else st.sidebar
+    lesson, part, mode = essay_controls(load_bank(), controls)
+    ident = lesson['id']
+    copying = mode == ESSAY_MODES[0]
+    st.title('Ôn tập · Chép theo mẫu' if copying else 'Luyện tập · Tự nhớ và viết')
+    st.caption(ident+' · '+lesson['title']+' · '+PARTS[part])
+    with st.expander('Ảnh đề & lưu ý bài gốc'):
+        st.image(str(ROOT/lesson['image']), width=650)
+        st.write(CAUTIONS.get(ident, 'Bài gốc chưa được xác minh toàn bộ. Đối chiếu đơn vị, nhãn và số liệu với ảnh đề.'))
+    st.caption('Chép lại để quen câu chữ.' if copying else 'Mẫu được ẩn đến khi nộp. Tự nhớ rồi viết lại phần đã chọn.')
+    target = reference(lesson, part)
+    base = 'focused-essay:'+ident+':'+part+(':+copy' if copying else ':+recall')
+    round_no = st.session_state.get(base+':round', 0)
+    prefix = base+':'+str(round_no)
+    saved = st.session_state.get(prefix+':result')
+    if saved:
+        st.success(f"Độ khớp với mẫu: {saved['score']}%")
+        st.caption('Đo độ nhớ/chép đúng văn bản gốc; không phải band IELTS. Cách diễn đạt khác có thể vẫn đúng.')
+        with st.expander('Chỗ thiếu, thừa hoặc khác mẫu', expanded=bool(saved['changes'])):
+            if saved['changes']:
                 st.dataframe(saved['changes'], hide_index=True, width='stretch')
-        st.caption('Khác mẫu vẫn có thể đúng cách diễn đạt. Điểm này chỉ đo trí nhớ.')
-        if st.button('Luyện lại', key=prefix+':again', type='primary'):
-            st.session_state[key+':round'] = round_no+1
+            else:
+                st.write('Đã khớp toàn bộ từ theo mẫu; không phân biệt hoa/thường và dấu câu.')
+        left, right = st.columns(2)
+        with left:
+            st.markdown('**Bài bạn đã viết**'); st.write(saved['answer'])
+        with right:
+            st.markdown('**Bài mẫu đối chiếu**'); show_highlighted(target)
+        if st.button('Viết lại lần nữa', key=prefix+':again', type='primary'):
+            st.session_state[base+':round'] = round_no+1
             st.rerun()
         return
-    if step == STEPS[1]:
-        prompt, answers = cloze(target)
-        show_highlighted(prompt)
-        with st.form(prefix+':form'):
-            supplied = [st.text_input(f'Ô {i+1}', key=prefix+':blank-'+str(i)) for i in range(len(answers))]
-            sent = st.form_submit_button('Kiểm tra', type='primary')
-        if sent:
-            if not any(x.strip() for x in supplied):
-                st.warning('Điền câu trả lời trước khi kiểm tra.'); return
-            score = sum(normalize(a)==normalize(b) for a,b in zip(supplied, answers))
-            result = dict(score=score, max_score=len(answers), grading_type='quiz')
-            record(exercise_id, task+'-cloze', supplied, target, result, False)
-            st.session_state[prefix+':result'] = dict(percent=round(100*score/len(answers)), changes=[
-                {'Ô':i+1, 'Bạn điền':a, 'Mẫu':b} for i,(a,b) in enumerate(zip(supplied,answers)) if normalize(a)!=normalize(b)])
-            st.rerun()
-    else:
-        st.write('Ẩn mẫu rồi tự gõ lại phần vừa học.')
-        hint = st.checkbox('Cần gợi ý chữ cái đầu', key=prefix+':hint')
-        if hint:
-            st.info(initials(target))
-            st.session_state[prefix+':assisted'] = True
-        with st.form(prefix+':form'):
-            draft = st.text_area('Bài viết từ trí nhớ', height=220, max_chars=20000, key=prefix+':draft')
-            sent = st.form_submit_button('Kiểm tra', type='primary')
-        if sent:
-            if not draft.strip():
-                st.warning('Viết câu trả lời trước khi kiểm tra.'); return
-            result = memory_grade(draft, target, case_sensitive=False, punctuation=False)
-            record(exercise_id, task+'-memory', draft, target, result, st.session_state.get(prefix+':assisted', False))
-            st.session_state[prefix+':result'] = dict(percent=result['score'], changes=result['changes'])
-            st.rerun()
-
-
-def step_picker(key):
-    return st.radio('Cách học', STEPS, horizontal=True, key=key)
-
-
-def next_step(key, step):
-    index = STEPS.index(step)
-    if index < len(STEPS)-1:
-        def advance():
-            st.session_state[key] = STEPS[index+1]
-        st.button('Tiếp theo → '+STEPS[index+1].split(' · ')[1], on_click=advance,
-                  key=key+':next', type='primary' if index==0 else 'secondary')
-
-
-def study_structures(structures):
-    st.title('Học cấu trúc')
-    st.caption('Chọn một khung. Xem ví dụ, điền chỗ trống rồi tự gõ lại.')
-    group = st.selectbox('Dạng bài', list(GROUPS), key='focus-structure-group')
-    byid = {x['structure_id']: x for x in structures}
-    options = GROUPS[group]
-    ident = st.selectbox('Cấu trúc cần nhớ', options, format_func=lambda k: byid[k]['title'], key='focus-structure')
-    item = byid[ident]
-    step_key = 'focus-structure-step:'+ident
-    step = step_picker(step_key)
-    if step == STEPS[0]:
+    if copying:
         with st.container(border=True):
-            st.markdown('**Khung cần thuộc**')
-            show_highlighted(item['template'])
-            st.markdown('**Ví dụ**')
-            show_highlighted(item['examples'][0])
-            st.write(item['explanation_vi'])
-        with st.expander('Cách dùng và ví dụ khác'):
-            st.write(item['usage_conditions'])
-            for example in item['examples'][1:]:
-                show_highlighted(example)
-            st.caption(item['common_errors'])
-    else:
-        target_kind = st.selectbox('Nội dung cần nhớ', ['Khung cấu trúc', 'Câu ví dụ'], key='focus-target:'+ident)
-        target = item['template'] if target_kind == 'Khung cấu trúc' else item['examples'][0]
-        if target_kind == 'Khung cấu trúc':
-            st.caption('Giữ các ô [đối tượng], [số liệu] như trong khung đã học.')
-        suffix = 'template' if target_kind == 'Khung cấu trúc' else 'example'
-        recall('structure:'+ident, 'structure-'+ident+'-'+suffix, target,
-               'focus-structure:'+ident+':'+suffix, step)
-    next_step(step_key, step)
-
-
-def study_essays():
-    st.title('Học bài mẫu')
-    st.caption('Học từng đoạn trước, sau đó chọn Cả bài để nhớ toàn bộ.')
-    bank = load_bank()
-    byid = {x['id']: x for x in bank}
-    ident = st.selectbox('Bài cần thuộc', list(byid), format_func=lambda k: k+' · '+byid[k]['title'], key='focus-essay')
-    lesson = byid[ident]
-    part = st.selectbox('Phần cần thuộc', list(PARTS), format_func=PARTS.get, key='focus-essay-part')
-    with st.expander('Ảnh đề'):
-        st.image(str(ROOT/lesson['image']), width=650)
-    if ident in CAUTIONS:
-        st.caption('Lưu ý bài gốc: '+CAUTIONS[ident])
-    else:
-        st.caption('Bài gốc từ Word; hãy đối chiếu số liệu với ảnh đề.')
-    step_key = 'focus-essay-step:'+ident+':'+part
-    step = step_picker(step_key)
-    target = reference(lesson, part)
-    if step == STEPS[0]:
-        with st.container(border=True):
-            st.markdown('**'+PARTS[part]+'**')
-            show_highlighted(target)
+            st.markdown('**Bài mẫu để chép**'); show_highlighted(target)
+    with st.form(prefix+':form'):
+        draft = st.text_area('Chép bài vào đây' if copying else 'Viết bài từ trí nhớ',
+                             height=280, max_chars=20000, key=prefix+':draft')
+        sent = st.form_submit_button('Chấm bài', type='primary')
+    if sent:
+        if not draft.strip():
+            st.warning('Hãy viết bài trước khi chấm.'); return
+        grade = memory_grade(draft, target, case_sensitive=False, punctuation=False)
+        record('personal:'+ident, ('copy-' if copying else 'recall-')+part, draft, target, grade, copying or round_no > 0)
+        st.session_state[prefix+':result'] = dict(score=grade['score'], changes=grade['changes'], answer=draft)
+        st.rerun()
+    if copying:
         with st.expander('Giải thích trong tài liệu'):
             st.write('\n\n'.join(lesson['source_notes']))
-    else:
-        recall('personal:'+ident, 'focused-'+part, target, 'focus-essay:'+ident+':'+part, step)
-    next_step(step_key, step)
