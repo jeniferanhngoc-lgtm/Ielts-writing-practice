@@ -6,7 +6,9 @@ from core.review_schedule import reviews_from_attempts
 def app():
     at=AppTest.from_file(str(ROOT/'app.py'),default_timeout=30)
     at.secrets['storage_mode']='demo'
-    return at.run()
+    at.run()
+    at.sidebar.radio[0].set_value('Hôm nay').run()
+    return at
 
 
 def test_dashboard_test_route_hides_answers_until_submit():

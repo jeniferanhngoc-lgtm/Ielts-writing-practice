@@ -1,6 +1,8 @@
 # Học thuộc bài Task 1 từ tài liệu cá nhân
 
-Vào **Học thuộc bài của tôi** trong thanh bên. Bộ này lấy từ `dap an va bai lam .docx` và 18 ảnh trong `Quiz bank - task 1`, ghép theo mã 1.1–1.18. Toàn bộ văn bản gốc được giữ trong JSON và bản Word ở `assets/reference/personal-answers.docx`.
+Giao diện mặc định có hai mục **Học cấu trúc** và **Học bài mẫu**. Chọn một khung hoặc một đoạn rồi học theo ba bước **Xem mẫu → Điền khuyết → Tự viết lại**. Mỗi cấu trúc có câu ví dụ và cách dùng; chọn **Cả bài** khi đã nhớ các đoạn. Ảnh đề và giải thích dài có thể mở khi cần.
+
+Bộ bài lấy từ `dap an va bai lam .docx` và 18 ảnh trong `Quiz bank - task 1`, ghép theo mã 1.1–1.18. Toàn bộ văn bản gốc được giữ trong JSON và bản Word ở `assets/reference/personal-answers.docx`. Các chức năng mở rộng bên dưới vẫn ở **Công cụ khác → Học thuộc bài của tôi**. Lịch sử, cài đặt và sao lưu cũng nằm trong **Công cụ khác**.
 
 ## Các dạng học
 

@@ -71,11 +71,14 @@ def initialize():
             st.session_state.load_error = 'Chưa đọc được kho lưu trữ. Kiểm tra cấu hình/kết nối; chưa xác nhận đồng bộ.'
 
 
-def save_banner():
+def save_banner(compact=False):
     if st.session_state.get('load_error'):
         st.warning(st.session_state.load_error)
     if st.session_state.storage_mode == 'demo':
-        st.info('Chế độ demo: tiến độ chỉ nằm trong phiên. Xuất JSON trước khi đóng trang, hoặc cấu hình lưu local/Google Sheets.')
+        if compact:
+            st.caption('Tiến độ đang lưu trong phiên. Vào Công cụ khác → Cài đặt & dữ liệu để sao lưu hoặc bật lưu lâu dài.')
+        else:
+            st.info('Chế độ demo: tiến độ chỉ nằm trong phiên. Xuất JSON trước khi đóng trang, hoặc cấu hình lưu local/Google Sheets.')
     elif st.session_state.storage_mode == 'local':
         st.caption('Lưu SQLite trên máy này. Khi đưa lên Streamlit Cloud, chuyển sang Google Sheets để lưu qua redeploy.')
     if st.session_state.pending:

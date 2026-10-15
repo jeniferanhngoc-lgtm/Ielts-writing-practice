@@ -1,4 +1,8 @@
-# Bộ học thuộc cá nhân mới
+# Học thuộc cấu trúc và bài mẫu
+
+Giao diện chính chỉ có **Học cấu trúc** và **Học bài mẫu**. Mỗi lần học một khung hoặc một đoạn, theo ba bước **Xem mẫu → Điền khuyết → Tự viết lại**. Khung có ví dụ và giải thích; bài mẫu lấy từ tài liệu Word của bạn. Chọn **Cả bài** sau khi đã nhớ từng đoạn. Quiz, ChatGPT, thống kê và cài đặt được gom vào **Công cụ khác** trong thanh bên.
+
+## Bộ học thuộc cá nhân mở rộng
 
 Mục **Học thuộc bài của tôi** có 18 bài từ Word và 18 ảnh đề mã 1.1–1.18, kèm 8 dạng học: đọc hiểu, thẻ cấu trúc, điền khuyết, nhớ câu, sắp xếp câu, viết lại, quiz giải thích và hỏi ChatGPT (API tùy chọn). Xem [hướng dẫn chạy và cấu hình](PERSONAL_BANK_GUIDE.md). Bài gốc được giữ nguyên, có lưu ý lỗi nguồn trước khi luyện; điểm nhớ không phải band IELTS.
 
