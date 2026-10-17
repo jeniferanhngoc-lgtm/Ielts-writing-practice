@@ -1,6 +1,5 @@
 """Render answers as prose, never Streamlit's implicit JSON renderer."""
 import streamlit as st
-from ui.core_framework import show_highlighted
 
 
 def readable_text(value):
@@ -20,7 +19,7 @@ def show_answer(value, order_options=None):
                     text=order_options[int(ident)-1]
                 except (ValueError,IndexError,TypeError):
                     text=str(ident)
-                show_highlighted(f'{i}. {text}')
+                st.write(f'{i}. {text}')
         return
     if isinstance(value,dict):
         for key,item in value.items():
@@ -29,8 +28,9 @@ def show_answer(value, order_options=None):
     elif isinstance(value,(list,tuple)):
         for item in value:
             if isinstance(item,(list,tuple)):
-                show_highlighted(' → '.join(str(x) for x in item))
+                st.write(' → '.join(str(x) for x in item))
             else:
-                show_highlighted(str(item))
+                st.write(str(item))
     else:
-        show_highlighted(str(value))
+        st.write(str(value))
+

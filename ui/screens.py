@@ -58,10 +58,6 @@ def library(structures):
     st.title('Thư viện cấu trúc')
     st.write('Ít từ khó hơn. Dùng đúng cấu trúc, đúng ngữ cảnh.')
     category=st.selectbox('Lọc dạng bài',['all']+list(CATEGORIES),format_func=lambda x:'Tất cả' if x=='all' else CATEGORIES[x])
-    from ui.core_framework import framework_panel
-    framework_panel(category)
-    st.divider()
-    st.caption('Các cấu trúc mở rộng bên dưới để tham khảo; ưu tiên bộ cốt lõi trước.')
     role=st.selectbox('Chức năng',['all','introduction','overview','body'])
     for s in structures:
         if (category!='all' and category not in s['categories']) or (role!='all' and role!=s['paragraph_role']):
@@ -87,10 +83,6 @@ def corrections(exercises,structures):
     e=next((e for e in exercises if e['exercise_id']==a['exercise_id']),None)
     if not e:
         st.warning('Không tìm thấy phiên bản đề này trong ngân hàng hiện tại.'); return
-    st.caption('Màu cam + chữ đậm là cụm cấu trúc nhận diện được; không khẳng định câu đúng ngữ pháp.')
-    with st.expander('Bài của bạn và mẫu — nhận diện cấu trúc',expanded=True):
-        st.markdown('**Bài đã nộp**'); show_answer(a['answer'])
-        st.markdown('**Mẫu tại thời điểm làm**'); show_answer(a.get('reference_snapshot',''))
     prompt=make_prompt(e,a,structures)
     st.text_area('Chọn và copy nội dung sau sang ChatGPT',prompt,height=220)
     st.download_button('Tải gói chữa bài TXT',prompt,file_name=a['exercise_id']+'-chua-bai.txt')
@@ -107,16 +99,10 @@ def corrections(exercises,structures):
     if submitted:
         emit('correction',dict(correction_id=str(uuid.uuid4()),attempt_id=a['attempt_id'],exercise_id=e['exercise_id'],external_feedback=feedback,error_tags=[t.strip() for t in tags.split(',') if t.strip()],rewritten_answer=rewritten,self_review_state=assessment,target_structures_used=targets,status='rewritten' if rewritten.strip() else ('corrected' if feedback.strip() else 'not_corrected'),updated_at=now().isoformat()))
         st.success('Đã ghi nhận trong phiên. Trạng thái lưu lâu dài hiển thị ở cuối trang.')
-    if rewritten.strip():
-        st.markdown('**Bản viết lại — cấu trúc màu cam**'); show_answer(rewritten)
 
 
 def progress(exercises):
     st.title('Lịch sử & sổ lỗi')
-    from ui.journey import task_name, navigate
-    titles={e['exercise_id']:e['title'] for e in exercises}
-    from core.personal_bank import load_bank
-    titles.update({'personal:'+x['id']:x['id']+' · '+x['title'] for x in load_bank()})
     attempts=records('attempt'); sessions=records('session')
     quiz=[a for a in attempts if a['grading_type']=='quiz' and a['score'] is not None]
     seconds=sum(s['duration_seconds'] for s in sessions)
@@ -127,40 +113,21 @@ def progress(exercises):
     d.metric('Độ chính xác quiz',f"{100*sum(x['score'] for x in quiz)/sum(x['max_score'] for x in quiz):.0f}%" if quiz else '—')
     st.caption('Quiz tính trên mọi lần thử. Điểm nhớ mẫu, tự đánh giá và nhận xét được lưu riêng; không quy đổi band IELTS.')
     if attempts:
-        st.dataframe([{'Thời điểm':a['submitted_at'],'Bài':titles.get(a['exercise_id'],'Thẻ cấu trúc'),'Phần':task_name(a['task_id']),'Chế độ':{'study':'Ôn có hỗ trợ','test':'Kiểm tra độc lập'}.get(a.get('learning_mode'),'Lịch sử trước cập nhật'),'Điểm':a.get('score'),'Thời gian (giây)':a.get('duration_seconds')} for a in reversed(attempts)],hide_index=True,width='stretch')
+        st.dataframe([{k:a.get(k) for k in ['submitted_at','exercise_id','task_id','grading_type','score','max_score','duration_seconds','retry_of']} for a in reversed(attempts)],hide_index=True,width='stretch')
         byid={a['attempt_id']:a for a in attempts}
-        selected=st.selectbox('Xem nội dung một lần làm',list(reversed(byid)),format_func=lambda ident:byid[ident]['submitted_at'][:19]+' · '+titles.get(byid[ident]['exercise_id'],'Thẻ cấu trúc')+' · '+task_name(byid[ident]['task_id'])+' · '+ident[:4])
+        selected=st.selectbox('Xem nội dung một lần làm',list(reversed(byid)),format_func=lambda ident:byid[ident]['submitted_at'][:19]+' · '+byid[ident]['exercise_id']+' · '+byid[ident]['task_id']+' · '+ident[:8])
         chosen=byid[selected]
         show_answer(chosen['answer'])
-        if chosen['exercise_id'] in titles and st.button('Làm lại bài này'):
-            if chosen['exercise_id'].startswith('personal:'):
-                navigate('Học thuộc bài của tôi',**{'personal-lesson':chosen['exercise_id'].split(':',1)[1]})
-            else:
-                navigate('Luyện tập',study_mode='Kiểm tra',practice_category='all',practice_exercise=chosen['exercise_id'])
         with st.expander('Mẫu/đáp án tại thời điểm làm'):
             show_answer(chosen.get('reference_snapshot',''))
     if sessions:
         st.subheader('Thời gian từng buổi'); st.dataframe(sessions,hide_index=True,width='stretch')
-    missed=[a for a in attempts if a.get('learning_mode')=='test' and a.get('score') is not None and a['score']<a['max_score']]
-    if missed:
-        st.subheader('Bài cần ôn lại')
-        st.caption('Chưa khớp mẫu không đồng nghĩa sai ngữ pháp. Các lần dưới đây được đưa vào lịch ôn.')
-        for a in reversed(missed[-10:]):
-            with st.container(border=True):
-                st.write(titles.get(a['exercise_id'],'Cấu trúc đã học')+' · '+task_name(a['task_id']))
-                st.caption(f"Điểm nhớ mẫu: {a['score']}/{a['max_score']}")
-                if a['exercise_id'] in titles and st.button('Ôn lại bài này',key='missed-'+a['attempt_id']):
-                    part=next((p for p in ['introduction','overview','body1','body2','full'] if p in a['task_id']),'introduction')
-                    if a['exercise_id'].startswith('personal:'):
-                        navigate('Học thuộc bài của tôi',**{'personal-lesson':a['exercise_id'].split(':',1)[1]})
-                    else:
-                        navigate('Luyện tập',study_mode='Ôn tập',practice_category='all',practice_exercise=a['exercise_id'],learning_mode='Viết & học thuộc',memory_part=part)
     if records('correction'):
         st.subheader('Sổ lỗi và các lần viết lại')
         st.dataframe(records('correction'),hide_index=True,width='stretch')
     reviews=list(reviews_from_attempts(attempts).values())
     if reviews:
-        st.subheader('Lịch ôn'); st.dataframe([{'Bài':titles.get(r['exercise_id'],'Thẻ cấu trúc'),'Phần':task_name(r['task_id']),'Ngày ôn':r['next_review_date'],'Trạng thái':'Cần ôn lại' if r['mastery_state']=='learning' else 'Đang củng cố'} for r in reviews],hide_index=True,width='stretch')
+        st.subheader('Lịch ôn'); st.dataframe(reviews,hide_index=True,width='stretch')
 
 
 def settings_page(structures,exercises):

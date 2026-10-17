@@ -11,11 +11,10 @@ from core.learning import (ROLES, sentence_cards, shuffled, grade_order, grade_c
 from core.review_schedule import now, reviews_from_attempts
 from ui.state import emit, records
 from ui.readable import show_answer
-from ui.core_framework import show_highlighted
 from ui.drag_component import drag_board
 
 MODES = ['Ghép khung & kéo-thả','Điền khung cấu trúc','Dịch ngược — 3 cách',
-         'Quy trình 4 bước','Flashcard & ôn lại','Phân tích & viết overview']
+         'Quy trình 4 bước','Flashcard & ôn lại']
 
 
 def task_state(e, task_id):
@@ -29,7 +28,7 @@ def task_state(e, task_id):
 def submit(e, task_id, state, answer, reference, score=None, maximum=None,
            grading_type='open', **extra):
     ident=state['attempt_id']
-    result=dict(learning_mode='study',assisted=True,attempt_id=ident,learner_id=st.session_state.settings['learner_id'],
+    result=dict(attempt_id=ident,learner_id=st.session_state.settings['learner_id'],
                 exercise_id=e['exercise_id'],task_id=task_id,
                 content_version=e['content_version'],submitted_at=now().isoformat(),
                 answer=answer,reference_snapshot=reference,
@@ -59,17 +58,7 @@ def retry(key,state,label='Làm lại bài này'):
         st.rerun()
 
 
-def learning_panel(e, structures, mode=None):
-    if mode is None:
-        mode=st.selectbox('Dạng luyện tập',MODES+['Viết & học thuộc'],key='learning_mode')
-    if mode=='Phân tích & viết overview':
-        from ui.overview_lab import overview_lab
-        overview_lab(e)
-        return
-    if mode=='Viết & học thuộc':
-        from ui.practice import answer_panel
-        answer_panel(e,structures,e['exercise_id'])
-        return
+def learning_panel(e, structures, mode):
     # Supplemental editorial metadata is separate from the original corpus.
     metadata=json.loads((ROOT/'content/learning_tasks.json').read_text(encoding='utf-8'))
     e=dict(e,learning_tasks=e.get('learning_tasks',metadata.get(e['exercise_id'],{})),
@@ -78,7 +67,7 @@ def learning_panel(e, structures, mode=None):
     elif mode==MODES[1]: cloze_panel(e)
     elif mode==MODES[2]: reverse_panel(e)
     elif mode==MODES[3]: micro_panel(e)
-    else: flash_panel([s for s in structures if e['category'] in s['categories']])
+    else: flash_panel(structures)
 
 
 def outline_panel(e):
@@ -268,7 +257,7 @@ def reverse_panel(e):
         for i,(form,reference) in enumerate(zip(task['forms'],task['answers'])):
             st.markdown(f'**Cách {i+1} — {form}**')
             st.write('Bạn viết: '+state['result']['answer'][str(i+1)])
-            show_highlighted(reference)
+            st.success(reference)
         retry(key,state);return
     with st.form(key+str(state['round'])):
         answers={str(i+1):st.text_area(f'Cách {i+1}: {form}',height=80,max_chars=2000,
@@ -387,7 +376,7 @@ def flash_panel(structures):
     st.markdown('**Mặt trước**');st.info(card['front'])
     if state['submitted']:
         st.success('Đã lưu tự đánh giá và cập nhật lịch ôn.')
-        show_highlighted(card['back']);st.caption(card['note'])
+        st.write(card['back']);st.caption(card['note'])
         retry(key,state,'Ôn lại thẻ này');return
     shown=st.session_state.get(key+'shown-'+str(state['round']),False)
     if not shown:
@@ -395,10 +384,11 @@ def flash_panel(structures):
         if st.button('Lật thẻ — xem mặt sau',key=key+'flip'+str(state['round'])):
             st.session_state[key+'shown-'+str(state['round'])]=True;st.rerun()
     else:
-        st.markdown('**Mặt sau**');show_highlighted(card['back'])
-        show_highlighted(card['example']);st.caption(card['note'])
+        st.markdown('**Mặt sau**');st.success(card['back'])
+        st.write(card['example']);st.caption(card['note'])
         a,b=st.columns(2)
         for column,label,passed in [(a,'Cần ôn lại',False),(b,'Đã nhớ',True)]:
             if column.button(label,key=key+label+str(state['round'])):
                 submit(pseudo,'flash-'+ident,state,label,card['back'],
                        grading_type='flashcard',self_assessed_passed=passed)
+
