@@ -49,6 +49,7 @@ def study(exercises):
         mode=st.radio('Cách học',MODES)
         part=st.selectbox('Phần cần chép / học',list(PARTS),format_func=PARTS.get)
         st.caption('Chọn cả đoạn hoặc toàn bài. Không chia từng câu.')
+        st.caption('Đề trái · Mẫu và ô viết phải')
         storage_status()
     e=byid[ident]
     copy=mode==MODES[0]
@@ -68,7 +69,7 @@ def study(exercises):
         left,right=st.columns(2,gap='medium')
         with left:
             with st.container(height=660,border=True,key='study-left'):
-                st.subheader('Đề & mẫu' if copy else 'Đề bài')
+                st.subheader('Đề bài')
                 asset=ROOT/e.get('asset_reference','missing')
                 if asset.is_file():
                     st.image(str(asset),width='stretch')
@@ -77,6 +78,8 @@ def study(exercises):
                 st.write(e['prompt'])
                 if e.get('source_note'):
                     st.caption(e['source_note'])
+        with right:
+            with st.container(height=660,border=True,key='study-right'):
                 reveal=copy
                 if not copy:
                     reveal=st.checkbox('Hiện mẫu để kiểm tra',key='reveal-'+draft_key)
@@ -86,8 +89,7 @@ def study(exercises):
                     for p in (list(PARTS)[:4] if part=='full' else [part]):
                         st.markdown('**'+PARTS[p]+'**')
                         st.write(e['paragraphs'][p])
-        with right:
-            with st.container(height=660,border=True,key='study-right'):
+                st.divider()
                 st.subheader('Bài của bạn · '+PARTS[part])
                 if not state['submitted']:
                     widget_key='draft-widget:'+draft_key
