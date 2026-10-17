@@ -49,6 +49,7 @@ def study(exercises):
         mode=st.radio('Cách học',MODES)
         part=st.selectbox('Phần cần chép / học',list(PARTS),format_func=PARTS.get)
         st.caption('Chọn cả đoạn hoặc toàn bài. Không chia từng câu.')
+        st.caption('Đề trái · Mẫu và ô viết phải')
         storage_status()
     e=byid[ident]
     copy=mode==MODES[0]
