@@ -42,6 +42,13 @@ def validate_exercise(item, structure_ids):
 def load_content():
     structures = json.loads((ROOT/'content/structures.json').read_text(encoding='utf-8'))
     exercises = json.loads((ROOT/'content/exercises.json').read_text(encoding='utf-8'))
+    # Only user-supplied answers are eligible; generated models cannot re-enter.
+    source_path=ROOT/'content/user_answer_source_20261020.json'
+    if source_path.is_file():
+        source=json.loads(source_path.read_text(encoding='utf-8'))
+        exercises=source['source_exercises']
+    else:
+        exercises=[e for e in exercises if e.get('model_origin')=='user_pdf']
     ids = {s['structure_id'] for s in structures}
     seen = set()
     for item in exercises:
