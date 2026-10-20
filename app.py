@@ -38,6 +38,10 @@ def plain_explanation(text):
     return re.sub(r'[\U0001F000-\U0001FAFF\u2600-\u27BF\uFE0F\u200D]', '', str(text))
 
 
+def go_to_exercise(ident):
+    st.session_state['study-exercise-picker']=ident
+
+
 def retain_draft(widget_key,draft_key):
     st.session_state.study_drafts[draft_key]=st.session_state[widget_key]
 
@@ -147,7 +151,9 @@ def study(exercises):
             st.info('Chưa có đề phù hợp.');return
         pool.sort(key=lambda e:(e.get('source_lesson_index',999),e['exercise_id']))
         byid={e['exercise_id']:e for e in pool}
-        ident=st.selectbox('Chọn đề',list(byid),format_func=lambda x:x+' · '+byid[x]['title'])
+        if st.session_state.get('study-exercise-picker') not in byid:
+            st.session_state['study-exercise-picker']=next(iter(byid))
+        ident=st.selectbox('Chọn đề',list(byid),key='study-exercise-picker',format_func=lambda x:x+' · '+byid[x]['title'])
         mode=st.radio('Cách học',MODES)
         part=st.selectbox('Phần cần chép / học',list(PARTS),format_func=PARTS.get)
         st.caption('Đề trái · Mẫu và ô viết phải')
@@ -248,6 +254,14 @@ def study(exercises):
                         st.dataframe(result['changes'],hide_index=True,width='stretch')
                     else:
                         st.success('Đã khớp toàn bộ phần đã chọn.')
+                    ordered_ids=list(byid)
+                    current_index=ordered_ids.index(ident)
+                    next_ident=ordered_ids[current_index+1] if current_index+1<len(ordered_ids) else None
+                    st.button('Bài tiếp theo',type='primary',key='next-'+state_key,
+                              disabled=next_ident is None,on_click=go_to_exercise,
+                              args=(next_ident,))
+                    if next_ident is None:
+                        st.caption('Đã đến bài cuối trong danh sách đang lọc. Bạn có thể chọn đề khác ở thanh bên.')
                     if st.button('Viết lại',key='retry-'+state_key):
                         st.session_state[state_key]={
                             'attempt_id':str(uuid.uuid4()),'started':time.time(),
