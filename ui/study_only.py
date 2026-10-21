@@ -14,6 +14,14 @@ PARAGRAPHS=list(PARTS)[:4]
 MODES=['Chép theo mẫu','Học thuộc']
 
 
+def plain_explanation(text):
+    return re.sub(r'[\U0001F000-\U0001FAFF\u2600-\u27BF\uFE0F\u200D]', '', str(text))
+
+
+def go_to_exercise(ident):
+    st.session_state['study-exercise-picker']=ident
+
+
 def retain_draft(widget_key,draft_key):
     st.session_state.study_drafts[draft_key]=st.session_state[widget_key]
 
@@ -96,15 +104,12 @@ def paragraph_inputs(exercise,part,reveal,draft_key):
         if reveal:
             st.caption('Mẫu để chép / đối chiếu')
             st.write(exercise['paragraphs'][p])
-            if exercise.get('paragraph_notes',{}).get(p):
-                with st.expander('Giải thích cấu trúc · '+PARTS[p]):
-                    st.write(exercise['paragraph_notes'][p])
         entry_key=draft_key+':'+p if part=='full' else draft_key
         widget_key='draft-widget:'+entry_key
         label='Ô viết · '+PARTS[p] if part=='full' else 'Ô viết'
         answers[p]=st.text_area(label,value=st.session_state.study_drafts.get(entry_key,''),
-            height=(160 if p in ('introduction','overview') else 220) if part=='full' else 300,
-            max_chars=20000,key=widget_key,placeholder='Viết trọn đoạn '+PARTS[p]+' tại đây.',
+            height=400,
+            key=widget_key,placeholder='Viết trọn đoạn '+PARTS[p]+' tại đây.',
             on_change=retain_draft,args=(widget_key,entry_key))
         st.caption(f"{word_count(answers[p])} từ · Mẫu: {word_count(exercise['paragraphs'][p])} từ")
         st.divider()
@@ -112,6 +117,7 @@ def paragraph_inputs(exercise,part,reveal,draft_key):
 
 
 def study(exercises):
+    st.markdown('<style>\n.st-key-study-right [data-testid="stElementContainer"]:has([data-testid="stTextArea"]) {\n    flex-shrink:0 !important; min-height:450px !important;\n}\n.st-key-study-right [data-testid="stTextArea"] {\n    min-height:440px !important; flex-shrink:0 !important; width:100%;\n}\n.st-key-study-right [data-baseweb="textarea"] {\n    min-height:400px !important; border:1px solid #788b9b !important;\n    border-radius:8px; background:var(--secondary-background-color,#f0f2f6);\n}\n.st-key-study-right textarea {\n    min-height:400px !important; box-sizing:border-box !important;\n}\n</style>',unsafe_allow_html=True)
     st.session_state.setdefault('study_drafts',{})
     with st.sidebar:
         st.title('✍️ Chép & học thuộc')
@@ -126,7 +132,9 @@ def study(exercises):
             st.info('Chưa có đề phù hợp.');return
         pool.sort(key=lambda e:(e.get('source_lesson_index',999),e['exercise_id']))
         byid={e['exercise_id']:e for e in pool}
-        ident=st.selectbox('Chọn đề',list(byid),format_func=lambda x:x+' · '+byid[x]['title'])
+        if st.session_state.get('study-exercise-picker') not in byid:
+            st.session_state['study-exercise-picker']=next(iter(byid))
+        ident=st.selectbox('Chọn đề',list(byid),key='study-exercise-picker',format_func=lambda x:x+' · '+byid[x]['title'])
         mode=st.radio('Cách học',MODES)
         part=st.selectbox('Phần cần chép / học',list(PARTS),format_func=PARTS.get)
         st.caption('Đề trái · Mẫu và ô viết phải')
@@ -216,6 +224,9 @@ def study(exercises):
                         if reveal:
                             st.caption('Mẫu đối chiếu')
                             st.write(e['paragraphs'][p])
+                        if e.get('paragraph_notes',{}).get(p):
+                            with st.expander('Giải thích cấu trúc · '+PARTS[p]):
+                                st.write(plain_explanation(e['paragraph_notes'][p]))
                         st.caption('Bạn viết')
                         st.write(result.get('paragraph_answers',{}).get(p,result['answer'] if part!='full' else ''))
                     if part=='full' and not result.get('paragraph_answers'):
@@ -224,17 +235,25 @@ def study(exercises):
                         st.dataframe(result['changes'],hide_index=True,width='stretch')
                     else:
                         st.success('Đã khớp toàn bộ phần đã chọn.')
+                    ordered_ids=list(byid)
+                    current_index=ordered_ids.index(ident)
+                    next_ident=ordered_ids[current_index+1] if current_index+1<len(ordered_ids) else None
+                    st.button('Bài tiếp theo',type='primary',key='next-'+state_key,
+                              disabled=next_ident is None,on_click=go_to_exercise,
+                              args=(next_ident,))
+                    if next_ident is None:
+                        st.caption('Đã đến bài cuối trong danh sách đang lọc. Bạn có thể chọn đề khác ở thanh bên.')
                     if st.button('Viết lại',key='retry-'+state_key):
                         st.session_state[state_key]={
                             'attempt_id':str(uuid.uuid4()),'started':time.time(),
                             'submitted':False,'retry_of':result['attempt_id'],'round':state['round']+1,
                             'clock':{'seconds':0.0,'running_since':None,'used':False}}
                         st.rerun()
-                if e.get('source_explanation_verbatim'):
+                if state['submitted'] and e.get('source_explanation_verbatim'):
                     with st.expander('Tóm tắt cấu trúc nguyên văn trong PDF'):
-                        st.text(e['source_explanation_verbatim'])
-                if e.get('source_caveats'):
+                        st.text(plain_explanation(e['source_explanation_verbatim']))
+                if state['submitted'] and e.get('source_caveats'):
                     with st.expander('Ghi chú kiểm tra — không thay đổi câu mẫu'):
                         for note in e['source_caveats']:
-                            st.write(note)
+                            st.write(plain_explanation(note))
 
