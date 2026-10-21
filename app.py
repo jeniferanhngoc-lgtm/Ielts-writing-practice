@@ -7,14 +7,8 @@ st.set_page_config(page_title='Task 1 · Chép & học thuộc',page_icon='✍�
 st.markdown("""<style>
 .block-container {max-width:1600px;padding-top:1rem;padding-bottom:.5rem}
 h1 {font-size:1.7rem; margin-bottom:.3rem}
-.st-key-study-panes [data-testid="stHorizontalBlock"] {
-    flex-direction:row !important; flex-wrap:nowrap !important; align-items:flex-start !important;
-}
-.st-key-study-panes [data-testid="stColumn"] {
-    min-width:0 !important; width:calc(50% - 1rem) !important; flex:1 1 0% !important;
-}
 .st-key-study-left, .st-key-study-right {overscroll-behavior:contain}
-.st-key-study-right textarea {min-height:320px !important;height:320px !important;font-size:17px !important;line-height:1.7 !important;}
+
 [data-testid="stSidebar"] {border-right:1px solid #dde5e5}
 </style>""",unsafe_allow_html=True)
 
@@ -128,8 +122,8 @@ def paragraph_inputs(exercise,part,reveal,draft_key):
         widget_key='draft-widget:'+entry_key
         label='Ô viết · '+PARTS[p] if part=='full' else 'Ô viết'
         answers[p]=st.text_area(label,value=st.session_state.study_drafts.get(entry_key,''),
-            height=320,
-            max_chars=20000,key=widget_key,placeholder='Viết trọn đoạn '+PARTS[p]+' tại đây.',
+            height=400,
+            key=widget_key,placeholder='Viết trọn đoạn '+PARTS[p]+' tại đây.',
             on_change=retain_draft,args=(widget_key,entry_key))
         st.caption(f"{word_count(answers[p])} từ · Mẫu: {word_count(exercise['paragraphs'][p])} từ")
         st.divider()
@@ -137,6 +131,7 @@ def paragraph_inputs(exercise,part,reveal,draft_key):
 
 
 def study(exercises):
+    st.markdown('<style>\n.st-key-study-right [data-testid="stElementContainer"]:has([data-testid="stTextArea"]) {\n    flex-shrink:0 !important; min-height:450px !important;\n}\n.st-key-study-right [data-testid="stTextArea"] {\n    min-height:440px !important; flex-shrink:0 !important; width:100%;\n}\n.st-key-study-right [data-baseweb="textarea"] {\n    min-height:400px !important; border:1px solid #788b9b !important;\n    border-radius:8px; background:var(--secondary-background-color,#f0f2f6);\n}\n.st-key-study-right textarea {\n    min-height:400px !important; box-sizing:border-box !important;\n}\n</style>',unsafe_allow_html=True)
     st.session_state.setdefault('study_drafts',{})
     with st.sidebar:
         st.title('✍️ Chép & học thuộc')
@@ -157,7 +152,7 @@ def study(exercises):
         mode=st.radio('Cách học',MODES)
         part=st.selectbox('Phần cần chép / học',list(PARTS),format_func=PARTS.get)
         st.caption('Đề trái · Mẫu và ô viết phải')
-        st.caption('Giao diện 20/10 · Ô viết lớn · Giải thích sau khi nộp')
+        st.caption('Giao diện 21/10 B · Ô viết không co lại')
         st.caption('Chỉ sử dụng 18 bài gốc trong PDF bạn cung cấp.')
         storage_status()
     e=byid[ident]
