@@ -108,7 +108,7 @@ def paragraph_inputs(exercise,part,reveal,draft_key):
         widget_key='draft-widget:'+entry_key
         label='Ô viết · '+PARTS[p] if part=='full' else 'Ô viết'
         answers[p]=st.text_area(label,value=st.session_state.study_drafts.get(entry_key,''),
-            height=400,
+            height=250,
             key=widget_key,placeholder='Viết trọn đoạn '+PARTS[p]+' tại đây.',
             on_change=retain_draft,args=(widget_key,entry_key))
         st.caption(f"{word_count(answers[p])} từ · Mẫu: {word_count(exercise['paragraphs'][p])} từ")
@@ -117,7 +117,7 @@ def paragraph_inputs(exercise,part,reveal,draft_key):
 
 
 def study(exercises):
-    st.markdown('<style>\n.st-key-study-right [data-testid="stElementContainer"]:has([data-testid="stTextArea"]) {\n    flex-shrink:0 !important; min-height:450px !important;\n}\n.st-key-study-right [data-testid="stTextArea"] {\n    min-height:440px !important; flex-shrink:0 !important; width:100%;\n}\n.st-key-study-right [data-baseweb="textarea"] {\n    min-height:400px !important; border:1px solid #788b9b !important;\n    border-radius:8px; background:var(--secondary-background-color,#f0f2f6);\n}\n.st-key-study-right textarea {\n    min-height:400px !important; box-sizing:border-box !important;\n}\n</style>',unsafe_allow_html=True)
+    st.markdown('<style>\n.st-key-study-right [data-testid="stElementContainer"]:has([data-testid="stTextArea"]) {\n    flex:0 0 auto !important; height:auto !important; min-height:0 !important;\n}\n.st-key-study-right [data-testid="stTextArea"] {\n    height:auto !important; min-height:0 !important; width:100%;\n}\n.st-key-study-right [data-baseweb="textarea"] {\n    height:auto !important; min-height:0 !important;\n    border:1px solid #788b9b !important; border-radius:8px;\n}\n.st-key-study-right textarea {\n    resize:vertical !important; min-height:120px !important;\n    max-height:none !important; overflow:auto !important; box-sizing:border-box !important;\n}\n</style>',unsafe_allow_html=True)
     st.session_state.setdefault('study_drafts',{})
     with st.sidebar:
         st.title('✍️ Chép & học thuộc')
