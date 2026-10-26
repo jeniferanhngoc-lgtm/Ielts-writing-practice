@@ -617,15 +617,17 @@
   },
   "q041": {
     "grouping": {
-      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "instruction": "Gom nhóm theo dàn ý bài mẫu đang học.",
       "items": [
-        "Tất cả nhóm · 1980–1990",
-        "Tất cả nhóm · 1990–2000"
+        "Paper & Packaging",
+        "Sawn Wood",
+        "Wood Pulp"
       ],
       "accepted_assignments": [
         {
-          "Tất cả nhóm · 1980–1990": "body1",
-          "Tất cả nhóm · 1990–2000": "body2"
+          "Paper & Packaging": "body1",
+          "Sawn Wood": "body2",
+          "Wood Pulp": "body2"
         }
       ]
     }
@@ -1374,6 +1376,21 @@
         {
           "Bố cục cũ": "body1",
           "Các thay đổi hiện tại": "body2"
+        }
+      ]
+    }
+  },
+  "q101": {
+    "grouping": {
+      "instruction": "Gom nhóm theo dàn ý bài mẫu đang học.",
+      "items": [
+        "School A",
+        "School B"
+      ],
+      "accepted_assignments": [
+        {
+          "School A": "body1",
+          "School B": "body2"
         }
       ]
     }

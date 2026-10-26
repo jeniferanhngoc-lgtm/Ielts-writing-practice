@@ -18,6 +18,7 @@ import time
 import uuid
 import streamlit as st
 from core.content_validation import CATEGORIES, ROOT, full_model
+from ui.core_framework import show_highlighted
 from core.grading import memory_grade, word_count
 from core.review_schedule import now
 from ui.state import emit, flush
@@ -117,7 +118,7 @@ def paragraph_inputs(exercise,part,reveal,draft_key):
         st.markdown('### '+PARTS[p])
         if reveal:
             st.caption('Mẫu để chép / đối chiếu')
-            st.write(exercise['paragraphs'][p])
+            show_highlighted(exercise['paragraphs'][p])
         entry_key=draft_key+':'+p if part=='full' else draft_key
         widget_key='draft-widget:'+entry_key
         label='Ô viết · '+PARTS[p] if part=='full' else 'Ô viết'
@@ -139,7 +140,7 @@ def study(exercises):
              format_func=lambda x:'Tất cả' if x=='all' else CATEGORIES[x])
         search=st.text_input('Tìm đề')
         pool=[e for e in exercises if e.get('status')=='verified'
-              and e.get('model_origin')=='user_pdf'
+              and e.get('model_origin') in ('user_pdf','user_revision')
               and (category=='all' or e['category']==category)
               and search.casefold() in (e['exercise_id']+' '+e['title']).casefold()]
         if not pool:
@@ -177,7 +178,7 @@ def study(exercises):
         stopwatch(clock,draft_key,state['submitted'])
     st.title('Chép theo mẫu' if copy else 'Học thuộc')
     st.caption(f"{e['title']} · {PARTS[part]} · Hai khung cuộn riêng")
-    st.caption('Mẫu nguyên văn: '+e['source_filename']+' · trang '+', '.join(str(p) for p in e['source_pages']))
+    st.caption(('Mẫu đã cập nhật theo biểu đồ: ' if e.get('model_origin')=='user_revision' else 'Mẫu nguyên văn: ')+e['source_filename']+' · trang '+', '.join(str(p) for p in e['source_pages']))
     with st.container(key='study-panes'):
         left,right=st.columns(2,gap='medium')
         with left:
@@ -237,7 +238,7 @@ def study(exercises):
                         st.markdown('**'+PARTS[p]+'**')
                         if reveal:
                             st.caption('Mẫu đối chiếu')
-                            st.write(e['paragraphs'][p])
+                            show_highlighted(e['paragraphs'][p])
                         if e.get('paragraph_notes',{}).get(p):
                             with st.expander('Giải thích cấu trúc · '+PARTS[p]):
                                 st.write(plain_explanation(e['paragraph_notes'][p]))

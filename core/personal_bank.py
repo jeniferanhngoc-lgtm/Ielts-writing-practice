@@ -33,7 +33,7 @@ CAUTIONS = {
     '1.3': 'Bảng có số liệu %. Một số kỹ năng không giảm (reading/handwriting); tránh khẳng định tất cả đều giảm.',
     '1.6': 'Mexico giảm từ 6,000,000 xuống 2,400,000 rồi tăng lên 3,300,000. Cụm before decreasing trong bản gốc mô tả sai chặng cuối.',
     '1.7': 'Poor và Very poor cũng giảm như Satisfactory; dùng Similarly thay cho Conversely ở câu này.',
-    '1.8': 'Đối chiếu nhãn Train/Walking với ảnh trước khi nhớ số liệu. Conversely ở body 2 so sánh mức thấp, không phải xu hướng ngược.',
+    '1.8': 'Paper & Packaging cao nhất ở mọi mốc: consistently. Wood Pulp giảm rồi tăng lại; không mô tả là giảm liên tục.',
     '1.9': 'Giữ nhãn nhóm tuổi theo đề và phân biệt mốc dự báo. Không diễn đạt dự báo tương lai hoàn toàn bằng thì quá khứ.',
     '1.10': 'Nên viết Korea is expected to catch up with the USA thay vì the USA is expected to be reached by Korea.',
     '1.12': 'Đơn vị là số sự cố/chấn thương trên 100 triệu passenger miles travelled; phải giữ mẫu số khi giới thiệu.',

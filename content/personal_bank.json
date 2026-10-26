@@ -102,54 +102,30 @@
     },
     {
       "id": "1.3",
-      "title": "Educational problems",
-      "keywords": "Key word: change over time, table, <4 categories",
+      "title": "1.3 · Educational problems — 2 years, table",
+      "keywords": "Key word: 2 years, table",
       "sections": {
-        "introduction": "The table illustrates how many children experienced educational problems in two primary schools in 2005 and 2015.",
-        "overview": "Overall, there was a decline in the proportion of children facing most educational problems in School A, while an opposite trend was seen in School B. In addition, School A consistently recorded higher figures for almost all problem areas compared to School B throughout the period.",
-        "body1": "In 2005, the percentage of students having difficulties with following instructions in School A started at 42%, making it the highest figure in this school. High figures were also recorded for concentration in lessons, listening skills, and verbal expression, all ranging between 35% and 40%. Conversely, School B recorded much lower figures for all problem areas in 2005, with concentration in lessons reaching the highest point at only 15%, while spelling was the lowest figure at just 5%.",
-        "body2": "In 2015, the figure for following instructions in School A dropped significantly to end the period at 18%. Similar changes were seen in concentration, listening skills, and verbal expression, which decreased to around 18%-21% in the final year. Conversely, the figures for most problem areas in School B experienced slight increases, with spelling and following instructions going up to 10% and 12% respectively, while concentration in lessons remained unchanged at 15% in 2015."
+        "introduction": "The table illustrates the percentages of children who experienced seven different educational problems in two primary schools in 2005 and 2015.",
+        "overview": "Overall, there was a decline in the proportion of children facing most educational problems in School A, while the figures for School B either rose or remained unchanged. In addition, School A consistently recorded higher figures in every category in both years.",
+        "body1": "In School A, the proportion of children with difficulties in following instructions started at 42% in 2005, before falling significantly to 18% in 2015. Similar changes, but to a lesser extent, were seen in concentration, listening skills and verbal expression, which fell from 40%, 35% and 35% to 18%, 20% and 21% respectively. The figure for spelling also decreased from 30% to 25%. Conversely, reading difficulties rose slightly from 22% to 23%, while handwriting remained unchanged at 28%.",
+        "body2": "In School B, the figures for spelling and following instructions both doubled, rising from 5% to 10% and from 6% to 12% respectively. Reading difficulties, listening problems and verbal expression problems saw slight increases, ending at 9%, 12% and 15%, compared with 8%, 11% and 14% in 2005. Meanwhile, concentration and handwriting remained unchanged at 15% and 7% respectively."
       },
       "section_labels": {
-        "introduction": "Introduction",
-        "overview": "Overview",
-        "body1": "Body 1: In 2005",
-        "body2": "Body 2: In 2015"
+        "body1": "Body 1: School A",
+        "body2": "Body 2: School B"
       },
       "source_notes": [
-        "💡 Tóm tắt cấu trúc áp dụng:",
-        "Intro: The table illustrates how many + [N số nhiều] + [Verb] + [Mô tả] + [Thời gian].",
-        "Overview: Overall, there was a decline in... in [Group 1], while an opposite trend was seen in [Group 2]. In addition, [Group A] consistently recorded higher figures...",
-        "Body 1 (So sánh mốc đầu):",
-        "A started at [số liệu], making it the highest figure...",
-        "Conversely, B recorded much lower figures..., with [tiêu chí] reaching the highest point at...",
-        "Body 2 (So sánh mốc cuối & xu hướng):",
-        "A dropped significantly to end the period at [số liệu].",
-        "Similar changes were seen in..., which decreased to...",
-        "Conversely, the figures for... experienced slight increases..., while... remained unchanged at..."
+        "The table illustrates the percentages of + danh từ số nhiều + who + V quá khứ. Bảng cho tỷ lệ %, nên không dùng how many để nói số lượng tuyệt đối.",
+        "there was a decline in …, while … → In addition, … consistently … . Most vì không phải tất cả vấn đề ở A đều giảm; both years vì chỉ có hai mốc.",
+        "started at …, before falling to …; Similar changes, but to a lesser extent, were seen in …; respectively ghép các số đúng thứ tự. Conversely chỉ đối lập giảm với Reading tăng.",
+        "both doubled, rising from … to …; ending at …; remained unchanged at … . Handwriting của B giữ nguyên 7%, không tăng."
       ],
       "original_paragraphs": [
-        "Introduction",
-        "The table illustrates how many children experienced educational problems in two primary schools in 2005 and 2015.",
-        "Overview",
-        "Overall, there was a decline in the proportion of children facing most educational problems in School A, while an opposite trend was seen in School B. In addition, School A consistently recorded higher figures for almost all problem areas compared to School B throughout the period.",
-        "Body 1: In 2005",
-        "In 2005, the percentage of students having difficulties with following instructions in School A started at 42%, making it the highest figure in this school. High figures were also recorded for concentration in lessons, listening skills, and verbal expression, all ranging between 35% and 40%. Conversely, School B recorded much lower figures for all problem areas in 2005, with concentration in lessons reaching the highest point at only 15%, while spelling was the lowest figure at just 5%.",
-        "Body 2: In 2015",
-        "In 2015, the figure for following instructions in School A dropped significantly to end the period at 18%. Similar changes were seen in concentration, listening skills, and verbal expression, which decreased to around 18%-21% in the final year. Conversely, the figures for most problem areas in School B experienced slight increases, with spelling and following instructions going up to 10% and 12% respectively, while concentration in lessons remained unchanged at 15% in 2015.",
-        "💡 Tóm tắt cấu trúc áp dụng:",
-        "Intro: The table illustrates how many + [N số nhiều] + [Verb] + [Mô tả] + [Thời gian].",
-        "Overview: Overall, there was a decline in... in [Group 1], while an opposite trend was seen in [Group 2]. In addition, [Group A] consistently recorded higher figures...",
-        "Body 1 (So sánh mốc đầu):",
-        "A started at [số liệu], making it the highest figure...",
-        "Conversely, B recorded much lower figures..., with [tiêu chí] reaching the highest point at...",
-        "Body 2 (So sánh mốc cuối & xu hướng):",
-        "A dropped significantly to end the period at [số liệu].",
-        "Similar changes were seen in..., which decreased to...",
-        "Conversely, the figures for... experienced slight increases..., while... remained unchanged at..."
+        "School A: 5/7 vấn đề giảm; Following instructions giảm mạnh nhất (24 điểm phần trăm), tiếp đến Concentration (22 điểm). Reading tăng 22→23%; Handwriting giữ 28%. School B: 5/7 tăng, Concentration giữ 15% và Handwriting giữ 7%. School A cao hơn School B ở mọi hạng mục trong cả hai năm. Đơn vị là %, không phải số trẻ.",
+        "Body 1: School A — tỷ lệ lớn hơn, phần lớn giảm. Body 2: School B — tỷ lệ nhỏ hơn, tăng hoặc giữ nguyên."
       ],
-      "image": "assets/personal/1.3.png",
-      "source_status": "original_unverified"
+      "image": "assets/questions/revised-1-3.png",
+      "source_status": "chart_checked_user_revision"
     },
     {
       "id": "1.4",
@@ -367,71 +343,30 @@
     },
     {
       "id": "1.8",
-      "title": "Transport to university",
-      "keywords": "Key word: 2 years, pie chart",
+      "title": "1.8 · Forest industry production — <4 categories, line chart",
+      "keywords": "Key word: <4 categories, line chart",
       "sections": {
-        "introduction": "The charts illustrate how many people used five main methods of transport to travel to one university in 2004 and 2009.",
-        "overview": "Overall, there was an increase in the proportion of people travelling by bus, bicycle, train, and walking, while an opposite trend was seen in the figure for car users. In addition, \"Car\" generally had the highest figures in 2004, but it was surpassed by \"Bus\" in the last year of the period.",
-        "body1": "Data for the proportion of people using cars started at 51% in 2004, before decreasing to end the period at 28% in 2009.",
-        "body2": "The proportion of people travelling by bus started at 33% in 2004, after which it experienced a significant growth to 46% in 2009. Similar changes, but to a lesser extent, were seen in the figure for bicycles, which grew from 9% to 16% over the period. Conversely, the figures for walking and train were much lower. The percentage of people walking started at 4%, with a subsequent increase to 6% in 2009, while the figure for train saw a slight rise from 3% to 4%."
+        "introduction": "The line graph illustrates how much paper and packaging, wood pulp and sawn wood were produced in the UK between 1980 and 2000, measured in million tonnes.",
+        "overview": "Overall, there was an increase in paper and packaging production, while the figures for wood pulp and sawn wood ended below their initial levels. In addition, paper and packaging consistently recorded the highest figures throughout the period.",
+        "body1": "The amount of paper and packaging produced started at approximately 230 million tonnes in 1980, after which it saw a slight rise to 250 million tonnes in 1990, before going up significantly to reach the highest point at 350 million tonnes in the final year. The increase was therefore much greater in the second half of the period.",
+        "body2": "In contrast, sawn wood production started at 200 million tonnes in 1980, before decreasing to 150 million tonnes in 1990 and continuing to fall to about 130 million tonnes in 2000. Similar changes, but to a lesser extent, were seen in wood pulp production during the first decade, which fell from about 170 to 150 million tonnes. However, this was followed by a slight increase to end the period at around 160 million tonnes."
       },
       "section_labels": {
-        "introduction": "Introduction:",
-        "overview": "Overview:",
-        "body1": "Body 1 (Phương tiện giảm mạnh: Car):",
-        "body2": "Body 2 (Các phương tiện có xu hướng tăng: Bus, Bicycle, Train, Walking):"
+        "body1": "Body 1: Paper & Packaging",
+        "body2": "Body 2: Sawn Wood & Wood Pulp"
       },
       "source_notes": [
-        "Chi tiết các cấu trúc từ bài mẫu của bạn đã được ứng dụng:",
-        "Introduction:",
-        "The charts illustrate how many + [Danh từ số nhiều] + [Verb] + [Mô tả/Địa điểm] + [Thời gian].",
-        "The charts illustrate how many people used five main methods of transport to travel to one university in 2004 and 2009.",
-        "Overview (Áp dụng Trend + Cấu trúc vượt qua):",
-        "Overall, there was a decline in..., while a rise / an opposite trend was seen in... In addition, [Category A] was surpassed by [Category B]...",
-        "Thể hiện sự đối lập giữa xu hướng tăng của bus/bicycle/walking/train và xu hướng giảm của car.",
-        "Body 1 (Sử dụng cấu trúc giảm rồi chốt số cuối kỳ):",
-        "Data..., before decreasing to end the period at...",
-        "Mô tả phương tiện duy nhất bị giảm (Car từ 51% xuống 28%).",
-        "Body 2 (Sử dụng cấu trúc so sánh cùng chiều + cấu trúc tiếp theo):",
-        "A + started at..., after which it experienced a rise/growth to... in...",
-        "Similar changes, but to a lesser extent, were seen in the figure for B, which grew from... to...",
-        "Data..., with a subsequent increase..."
+        "The line graph illustrates how much + vật liệu không đếm được + were produced. Were vì chủ ngữ gồm nhiều loại sản phẩm nối bằng and; bị động quá khứ vì 1980–2000 đã kết thúc.",
+        "there was an increase in …, while … → In addition, … consistently recorded the highest figures. Consistently vì Paper & Packaging đứng đầu ở mọi mốc.",
+        "started at …, after which it saw …, before going up significantly to reach the highest point at … . Đỉnh tại năm cuối; mức tăng 1990–2000 lớn hơn 1980–1990.",
+        "before decreasing to …; Similar changes, but to a lesser extent, were seen in … chỉ áp dụng 1980–1990. followed by a slight increase to end the period at … mô tả Wood Pulp phục hồi."
       ],
       "original_paragraphs": [
-        "Dàn ý & Phân tích số liệu từ biểu đồ",
-        "Loại biểu đồ: Pie charts (So sánh sự thay đổi qua thời gian: 2004 và 2009).",
-        "Đối tượng: 5 phương tiện giao thông (Car, Bicycle, Bus, Train, Walking).",
-        "Đơn vị: Phần trăm (%).",
-        "Phân tích xu hướng (Overview):",
-        "Tăng: Bus (33%  46%), Bicycle (9%  16%), Train (3%  4%), Walking (4%  6%).",
-        "Giảm mạnh: Car (51%  28%).",
-        "Vị trí dẫn đầu: Car cao nhất năm 2004, nhưng bị Bus vượt qua vào năm 2009.",
-        "Bài viết hoàn chỉnh (Band 6.5 - 7.0)",
-        "Introduction:",
-        "The charts illustrate how many people used five main methods of transport to travel to one university in 2004 and 2009.",
-        "Overview:",
-        "Overall, there was an increase in the proportion of people travelling by bus, bicycle, train, and walking, while an opposite trend was seen in the figure for car users. In addition, \"Car\" generally had the highest figures in 2004, but it was surpassed by \"Bus\" in the last year of the period.",
-        "Body 1 (Phương tiện giảm mạnh: Car):",
-        "Data for the proportion of people using cars started at 51% in 2004, before decreasing to end the period at 28% in 2009.",
-        "Body 2 (Các phương tiện có xu hướng tăng: Bus, Bicycle, Train, Walking):",
-        "The proportion of people travelling by bus started at 33% in 2004, after which it experienced a significant growth to 46% in 2009. Similar changes, but to a lesser extent, were seen in the figure for bicycles, which grew from 9% to 16% over the period. Conversely, the figures for walking and train were much lower. The percentage of people walking started at 4%, with a subsequent increase to 6% in 2009, while the figure for train saw a slight rise from 3% to 4%.",
-        "Chi tiết các cấu trúc từ bài mẫu của bạn đã được ứng dụng:",
-        "Introduction:",
-        "The charts illustrate how many + [Danh từ số nhiều] + [Verb] + [Mô tả/Địa điểm] + [Thời gian].",
-        "The charts illustrate how many people used five main methods of transport to travel to one university in 2004 and 2009.",
-        "Overview (Áp dụng Trend + Cấu trúc vượt qua):",
-        "Overall, there was a decline in..., while a rise / an opposite trend was seen in... In addition, [Category A] was surpassed by [Category B]...",
-        "Thể hiện sự đối lập giữa xu hướng tăng của bus/bicycle/walking/train và xu hướng giảm của car.",
-        "Body 1 (Sử dụng cấu trúc giảm rồi chốt số cuối kỳ):",
-        "Data..., before decreasing to end the period at...",
-        "Mô tả phương tiện duy nhất bị giảm (Car từ 51% xuống 28%).",
-        "Body 2 (Sử dụng cấu trúc so sánh cùng chiều + cấu trúc tiếp theo):",
-        "A + started at..., after which it experienced a rise/growth to... in...",
-        "Similar changes, but to a lesser extent, were seen in the figure for B, which grew from... to...",
-        "Data..., with a subsequent increase..."
+        "Paper & Packaging tăng khoảng 230→250→350, luôn cao nhất: dùng consistently. Sawn Wood giảm 200→150→130. Wood Pulp giảm 170→150 rồi hồi lên 160: không gọi là giảm liên tục. Hai nhóm giảm cùng chiều chỉ trong thập niên đầu; sau 1990 đi ngược nhau. Đơn vị triệu tấn theo nhãn ảnh.",
+        "Body 1: Paper & Packaging — nhóm tăng. Body 2: Sawn Wood và Wood Pulp — kết thúc thấp hơn ban đầu."
       ],
-      "image": "assets/personal/1.8.png",
-      "source_status": "original_unverified"
+      "image": "assets/questions/revised-1-8.png",
+      "source_status": "chart_checked_user_revision"
     },
     {
       "id": "1.9",

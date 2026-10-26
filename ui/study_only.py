@@ -125,7 +125,7 @@ def study(exercises):
              format_func=lambda x:'Tất cả' if x=='all' else CATEGORIES[x])
         search=st.text_input('Tìm đề')
         pool=[e for e in exercises if e.get('status')=='verified'
-              and e.get('model_origin')=='user_pdf'
+              and e.get('model_origin') in ('user_pdf','user_revision')
               and (category=='all' or e['category']==category)
               and search.casefold() in (e['exercise_id']+' '+e['title']).casefold()]
         if not pool:
