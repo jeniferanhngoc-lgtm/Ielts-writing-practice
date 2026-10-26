@@ -100,42 +100,30 @@
   },
   "q004": {
     "grouping": {
-      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "instruction": "Phân loại theo tiêu đề hai đoạn thân bài trong PDF.",
       "items": [
-        "Japan",
-        "China",
-        "Mexico",
-        "Russia",
-        "Saudi Arabia"
+        "Body 1: Japan & China",
+        "Body 2: Russia, Mexico & Saudi Arabia"
       ],
       "accepted_assignments": [
         {
-          "Japan": "body1",
-          "China": "body1",
-          "Mexico": "body2",
-          "Russia": "body2",
-          "Saudi Arabia": "body2"
+          "Body 1: Japan & China": "body1",
+          "Body 2: Russia, Mexico & Saudi Arabia": "body2"
         }
       ]
     }
   },
   "q005": {
     "grouping": {
-      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "instruction": "Phân loại theo tiêu đề hai đoạn thân bài trong PDF.",
       "items": [
-        "Thùng chứa",
-        "Các lớp food / grass / newspaper",
-        "Thêm thành phần để ủ",
-        "Ủ trong 6 tháng",
-        "Thành phẩm"
+        "Body 1 (Các bước chuẩn bị & xếp lớp - Bước 1 đến Bước 3)",
+        "Body 2 (Các bước ủ phân & thành phẩm - Bước 4 và Bước 5)"
       ],
       "accepted_assignments": [
         {
-          "Thùng chứa": "body1",
-          "Các lớp food / grass / newspaper": "body1",
-          "Thêm thành phần để ủ": "body2",
-          "Ủ trong 6 tháng": "body2",
-          "Thành phẩm": "body2"
+          "Body 1 (Các bước chuẩn bị & xếp lớp - Bước 1 đến Bước 3)": "body1",
+          "Body 2 (Các bước ủ phân & thành phẩm - Bước 4 và Bước 5)": "body2"
         }
       ]
     }
@@ -159,36 +147,30 @@
   },
   "q008": {
     "grouping": {
-      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "instruction": "Phân loại theo tiêu đề hai đoạn thân bài trong PDF.",
       "items": [
-        "Bố cục hiện tại",
-        "Vòng xoay mới",
-        "Lối vào mới"
+        "Body 1 (Khu vực phía Tây & Nam - West & South)",
+        "Body 2 (Khu vực Trung tâm & phía Đông - Center & East)"
       ],
       "accepted_assignments": [
         {
-          "Bố cục hiện tại": "body1",
-          "Vòng xoay mới": "body2",
-          "Lối vào mới": "body2"
+          "Body 1 (Khu vực phía Tây & Nam - West & South)": "body1",
+          "Body 2 (Khu vực Trung tâm & phía Đông - Center & East)": "body2"
         }
       ]
     }
   },
   "q010": {
     "grouping": {
-      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "instruction": "Phân loại theo tiêu đề hai đoạn thân bài trong PDF.",
       "items": [
-        "7–14",
-        "15–24",
-        "25–35",
-        "35+"
+        "Body 1: Nhóm 15-24 và Nhóm 35 and over",
+        "Body 2: Nhóm 7-14 và Nhóm 25-35"
       ],
       "accepted_assignments": [
         {
-          "7–14": "body1",
-          "15–24": "body1",
-          "25–35": "body2",
-          "35+": "body2"
+          "Body 1: Nhóm 15-24 và Nhóm 35 and over": "body1",
+          "Body 2: Nhóm 7-14 và Nhóm 25-35": "body2"
         }
       ]
     }
@@ -539,36 +521,30 @@
   },
   "q036": {
     "grouping": {
-      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "instruction": "Phân loại theo tiêu đề hai đoạn thân bài trong PDF.",
       "items": [
-        "Stage 1: cleaning",
-        "Stage 2: heating/cooling/carbonation",
-        "Stage 3: mixing",
-        "Stage 4: filtering and filling",
-        "Stage 5: packaging"
+        "Body 1 (Giai đoạn 1 & Giai đoạn 2 - Xử lý nước và tạo ga)",
+        "Body 2 (Giai đoạn 3, 4 & 5 - Pha chế, đóng chai và vận chuyển)"
       ],
       "accepted_assignments": [
         {
-          "Stage 1: cleaning": "body1",
-          "Stage 2: heating/cooling/carbonation": "body1",
-          "Stage 3: mixing": "body2",
-          "Stage 4: filtering and filling": "body2",
-          "Stage 5: packaging": "body2"
+          "Body 1 (Giai đoạn 1 & Giai đoạn 2 - Xử lý nước và tạo ga)": "body1",
+          "Body 2 (Giai đoạn 3, 4 & 5 - Pha chế, đóng chai và vận chuyển)": "body2"
         }
       ]
     }
   },
   "q037": {
     "grouping": {
-      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "instruction": "Phân loại theo tiêu đề hai đoạn thân bài trong PDF.",
       "items": [
-        "Bố cục năm 1982",
-        "Các thay đổi đến năm 2012"
+        "Body 1 (Khu vực Phía Tây & Trung tâm - West & Center)",
+        "Body 2 (Khu vực Phía Bắc & Phía Đông - North & East)"
       ],
       "accepted_assignments": [
         {
-          "Bố cục năm 1982": "body1",
-          "Các thay đổi đến năm 2012": "body2"
+          "Body 1 (Khu vực Phía Tây & Trung tâm - West & Center)": "body1",
+          "Body 2 (Khu vực Phía Bắc & Phía Đông - North & East)": "body2"
         }
       ]
     }
@@ -617,17 +593,15 @@
   },
   "q041": {
     "grouping": {
-      "instruction": "Gom nhóm theo dàn ý bài mẫu đang học.",
+      "instruction": "Phân loại theo tiêu đề hai đoạn thân bài trong PDF.",
       "items": [
-        "Paper & Packaging",
-        "Sawn Wood",
-        "Wood Pulp"
+        "Body 1 (Đối tượng tăng trưởng mạnh: Paper & Packaging)",
+        "Body 2 (Các đối tượng có xu hướng giảm/biến động: Sawn-Wood và Wood Pulp)"
       ],
       "accepted_assignments": [
         {
-          "Paper & Packaging": "body1",
-          "Sawn Wood": "body2",
-          "Wood Pulp": "body2"
+          "Body 1 (Đối tượng tăng trưởng mạnh: Paper & Packaging)": "body1",
+          "Body 2 (Các đối tượng có xu hướng giảm/biến động: Sawn-Wood và Wood Pulp)": "body2"
         }
       ]
     }
@@ -856,23 +830,15 @@
   },
   "q057": {
     "grouping": {
-      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "instruction": "Phân loại theo tiêu đề hai đoạn thân bài trong PDF.",
       "items": [
-        "definite job",
-        "formal study",
-        "accompany/join",
-        "looking for work",
-        "no reason",
-        "other"
+        "Body 1 (Immigration to the UK)",
+        "Body 2 (Emigration from the UK)"
       ],
       "accepted_assignments": [
         {
-          "definite job": "body1",
-          "formal study": "body1",
-          "accompany/join": "body1",
-          "looking for work": "body2",
-          "no reason": "body2",
-          "other": "body2"
+          "Body 1 (Immigration to the UK)": "body1",
+          "Body 2 (Emigration from the UK)": "body2"
         }
       ]
     }
@@ -1090,19 +1056,15 @@
   },
   "q071": {
     "grouping": {
-      "instruction": "Phân nhóm theo chiến lược của bài mẫu đang học. Các cách chia khác có thể hợp lý; điểm ở đây đo mức khớp dàn ý mẫu.",
+      "instruction": "Phân loại theo tiêu đề hai đoạn thân bài trong PDF.",
       "items": [
-        "USA",
-        "Korea",
-        "China",
-        "India"
+        "Body 1 (Khổ lớn: USA & Korea)",
+        "Body 2 (Khổ nhỏ còn lại: China & India)"
       ],
       "accepted_assignments": [
         {
-          "USA": "body1",
-          "Korea": "body1",
-          "China": "body2",
-          "India": "body2"
+          "Body 1 (Khổ lớn: USA & Korea)": "body1",
+          "Body 2 (Khổ nhỏ còn lại: China & India)": "body2"
         }
       ]
     }
@@ -1382,15 +1344,135 @@
   },
   "q101": {
     "grouping": {
-      "instruction": "Gom nhóm theo dàn ý bài mẫu đang học.",
+      "instruction": "Phân loại theo tiêu đề hai đoạn thân bài trong PDF.",
       "items": [
-        "School A",
-        "School B"
+        "Body 1 (Trường có số liệu lớn hơn: School A)",
+        "Body 2 (Trường có số liệu nhỏ hơn: School B)"
       ],
       "accepted_assignments": [
         {
-          "School A": "body1",
-          "School B": "body2"
+          "Body 1 (Trường có số liệu lớn hơn: School A)": "body1",
+          "Body 2 (Trường có số liệu nhỏ hơn: School B)": "body2"
+        }
+      ]
+    }
+  },
+  "q103": {
+    "grouping": {
+      "instruction": "Phân loại theo tiêu đề hai đoạn thân bài trong PDF.",
+      "items": [
+        "Body 1: From 2000 to 2005",
+        "Body 2: From 2005 to 2015"
+      ],
+      "accepted_assignments": [
+        {
+          "Body 1: From 2000 to 2005": "body1",
+          "Body 2: From 2005 to 2015": "body2"
+        }
+      ]
+    }
+  },
+  "q015": {
+    "grouping": {
+      "instruction": "Phân loại theo tiêu đề hai đoạn thân bài trong PDF.",
+      "items": [
+        "Body 1: Nhóm giảm (Under 19 & 19-24)",
+        "Body 2: Nhóm tăng & biến động (30-34, 34-39, Over 40 & 25-30)"
+      ],
+      "accepted_assignments": [
+        {
+          "Body 1: Nhóm giảm (Under 19 & 19-24)": "body1",
+          "Body 2: Nhóm tăng & biến động (30-34, 34-39, Over 40 & 25-30)": "body2"
+        }
+      ]
+    }
+  },
+  "q102": {
+    "grouping": {
+      "instruction": "Phân loại theo tiêu đề hai đoạn thân bài trong PDF.",
+      "items": [
+        "Body 1: Handheld Games & Console Games",
+        "Body 2: Mobile Phone Games & Online Games"
+      ],
+      "accepted_assignments": [
+        {
+          "Body 1: Handheld Games & Console Games": "body1",
+          "Body 2: Mobile Phone Games & Online Games": "body2"
+        }
+      ]
+    }
+  },
+  "q104": {
+    "grouping": {
+      "instruction": "Phân loại theo tiêu đề hai đoạn thân bài trong PDF.",
+      "items": [
+        "Body 1 (Các nhóm có xu hướng tăng: Excellent & Good)",
+        "Body 2 (Các nhóm có xu hướng giảm: Satisfactory, Poor & Very poor)"
+      ],
+      "accepted_assignments": [
+        {
+          "Body 1 (Các nhóm có xu hướng tăng: Excellent & Good)": "body1",
+          "Body 2 (Các nhóm có xu hướng giảm: Satisfactory, Poor & Very poor)": "body2"
+        }
+      ]
+    }
+  },
+  "q021": {
+    "grouping": {
+      "instruction": "Phân loại theo tiêu đề hai đoạn thân bài trong PDF.",
+      "items": [
+        "Body 1 (Khổ lớn: Nhóm Over 65 và 38-45)",
+        "Body 2 (Khổ nhỏ còn lại: Nhóm 25-37 và 0-14)"
+      ],
+      "accepted_assignments": [
+        {
+          "Body 1 (Khổ lớn: Nhóm Over 65 và 38-45)": "body1",
+          "Body 2 (Khổ nhỏ còn lại: Nhóm 25-37 và 0-14)": "body2"
+        }
+      ]
+    }
+  },
+  "q105": {
+    "grouping": {
+      "instruction": "Phân loại theo tiêu đề hai đoạn thân bài trong PDF.",
+      "items": [
+        "Body 1 (Phương tiện cao vượt trội - Demand Response)",
+        "Body 2 (Các phương tiện còn lại)"
+      ],
+      "accepted_assignments": [
+        {
+          "Body 1 (Phương tiện cao vượt trội - Demand Response)": "body1",
+          "Body 2 (Các phương tiện còn lại)": "body2"
+        }
+      ]
+    }
+  },
+  "q106": {
+    "grouping": {
+      "instruction": "Phân loại theo tiêu đề hai đoạn thân bài trong PDF.",
+      "items": [
+        "Body 1 (Bar Chart - Living alone by age and gender)",
+        "Body 2 (Pie Chart - Number of bedrooms)"
+      ],
+      "accepted_assignments": [
+        {
+          "Body 1 (Bar Chart - Living alone by age and gender)": "body1",
+          "Body 2 (Pie Chart - Number of bedrooms)": "body2"
+        }
+      ]
+    }
+  },
+  "q107": {
+    "grouping": {
+      "instruction": "Phân loại theo tiêu đề hai đoạn thân bài trong PDF.",
+      "items": [
+        "Body 1 (Giai đoạn ở Sông và Cửa sông - River & Estuary)",
+        "Body 2 (Giai đoạn ở Đại dương & Quay lại đẻ trứng - Ocean & Return)"
+      ],
+      "accepted_assignments": [
+        {
+          "Body 1 (Giai đoạn ở Sông và Cửa sông - River & Estuary)": "body1",
+          "Body 2 (Giai đoạn ở Đại dương & Quay lại đẻ trứng - Ocean & Return)": "body2"
         }
       ]
     }

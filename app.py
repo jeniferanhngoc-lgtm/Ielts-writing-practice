@@ -264,10 +264,13 @@ def study(exercises):
                             'submitted':False,'retry_of':result['attempt_id'],'round':state['round']+1,
                             'clock':{'seconds':0.0,'running_since':None,'used':False}}
                         st.rerun()
-                if state['submitted'] and e.get('source_explanation_verbatim'):
+                if (reveal or state['submitted']) and e.get('source_analysis_verbatim'):
+                    with st.expander('Dàn ý & phân tích nguyên văn trong PDF'):
+                        st.text(plain_explanation(e['source_analysis_verbatim']))
+                if (reveal or state['submitted']) and e.get('source_explanation_verbatim'):
                     with st.expander('Tóm tắt cấu trúc nguyên văn trong PDF'):
                         st.text(plain_explanation(e['source_explanation_verbatim']))
-                if state['submitted'] and e.get('source_caveats'):
+                if (reveal or state['submitted']) and e.get('source_caveats'):
                     with st.expander('Ghi chú kiểm tra — không thay đổi câu mẫu'):
                         for note in e['source_caveats']:
                             st.write(plain_explanation(note))

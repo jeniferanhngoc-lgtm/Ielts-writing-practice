@@ -46,9 +46,7 @@ def load_content():
     source_path=ROOT/'content/user_answer_source_20261020.json'
     if source_path.is_file():
         source=json.loads(source_path.read_text(encoding='utf-8'))
-        revisions={e['source_lesson_index']:e for e in exercises
-                   if e.get('model_origin')=='user_revision' and e.get('verification_scope')=='chart_checked'}
-        exercises=[revisions.get(e.get('source_lesson_index'),e) for e in source['source_exercises']]
+        exercises=source['source_exercises']
     else:
         exercises=[e for e in exercises if e.get('model_origin') in ('user_pdf','user_revision')]
     ids = {s['structure_id'] for s in structures}
