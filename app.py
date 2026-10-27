@@ -19,6 +19,7 @@ import uuid
 import streamlit as st
 from core.content_validation import CATEGORIES, ROOT, full_model
 from ui.core_framework import show_highlighted
+from ui.answer_diff import answer_diff_html
 from core.grading import memory_grade, word_count
 from core.review_schedule import now
 from ui.state import emit, flush
@@ -26,7 +27,7 @@ from ui.state import emit, flush
 PARTS={'introduction':'Introduction','overview':'Overview',
        'body1':'Body 1','body2':'Body 2','full':'Toàn bài'}
 PARAGRAPHS=list(PARTS)[:4]
-MODES=['Chép theo mẫu','Học thuộc']
+MODES=['Chép theo mẫu','Học thuộc','Tự làm bài']
 
 
 def plain_explanation(text):
@@ -151,15 +152,16 @@ def study(exercises):
             st.session_state['study-exercise-picker']=next(iter(byid))
         ident=st.selectbox('Chọn đề',list(byid),key='study-exercise-picker',format_func=lambda x:x+' · '+byid[x]['title'])
         mode=st.radio('Cách học',MODES)
-        part=st.selectbox('Phần cần chép / học',list(PARTS),format_func=PARTS.get)
+        part='full' if mode=='Tự làm bài' else st.selectbox('Phần cần chép / học',list(PARTS),format_func=PARTS.get)
         st.caption('Đề trái · Mẫu và ô viết phải')
         st.caption('Giao diện 21/10 C · Kéo góc ô viết để đổi chiều cao')
         st.caption('Chỉ sử dụng 18 bài gốc trong PDF bạn cung cấp.')
         storage_status()
     e=byid[ident]
     copy=mode==MODES[0]
+    independent=mode=='Tự làm bài'
     reference=full_model(e) if part=='full' else e['paragraphs'][part]
-    task_id=('copy-' if copy else 'memory-')+part
+    task_id=('independent-' if independent else 'copy-' if copy else 'memory-')+part
     draft_key=f"{ident}:{e['content_version']}:{task_id}"
     state_key='study-only:'+draft_key
     if state_key not in st.session_state:
@@ -176,7 +178,7 @@ def study(exercises):
     st.session_state['study-clock-active']=state_key
     with st.sidebar:
         stopwatch(clock,draft_key,state['submitted'])
-    st.title('Chép theo mẫu' if copy else 'Học thuộc')
+    st.title(mode)
     st.caption(f"{e['title']} · {PARTS[part]} · Hai khung cuộn riêng")
     st.caption(('Mẫu đã cập nhật theo biểu đồ: ' if e.get('model_origin')=='user_revision' else 'Mẫu nguyên văn: ')+e['source_filename']+' · trang '+', '.join(str(p) for p in e['source_pages']))
     with st.container(key='study-panes'):
@@ -195,14 +197,19 @@ def study(exercises):
         with right:
             with st.container(height=660,border=True,key='study-right'):
                 reveal=copy
-                if not copy:
+                if not copy and not independent:
                     reveal=st.checkbox('Hiện mẫu để kiểm tra',key='reveal-'+draft_key)
                 if not state['submitted']:
                     st.subheader('Bài của bạn · '+PARTS[part])
-                    if part=='full':
+                    if part=='full' and not independent:
                         st.caption('Cuộn trong khung này: mỗi đoạn có mẫu và ô viết ngay bên dưới. Nộp chung sau Body 2.')
-                    answers=paragraph_inputs(e,part,reveal,draft_key)
-                    answer='\n\n'.join(answers[p] for p in (PARAGRAPHS if part=='full' else [part]))
+                    if independent:
+                        widget_key='draft-widget:'+draft_key
+                        answer=st.text_area('Bài viết của bạn',value=st.session_state.study_drafts.get(draft_key,''),height=450,key=widget_key,on_change=retain_draft,args=(widget_key,draft_key))
+                        answers={'full':answer}
+                    else:
+                        answers=paragraph_inputs(e,part,reveal,draft_key)
+                    answer=answer if independent else '\n\n'.join(answers[p] for p in (PARAGRAPHS if part=='full' else [part]))
                     st.caption(f'Tổng: {word_count(answer)} từ')
                     label='Nộp toàn bài' if part=='full' else 'Nộp bài'
                     if st.button(label,type='primary',key='submit-'+state_key):
@@ -215,6 +222,8 @@ def study(exercises):
                         clock_pause(clock)
                         timed=round(clock_seconds(clock),1) if clock['used'] else None
                         result=memory_grade(answer,reference,case_sensitive=True,punctuation=True)
+                        if independent:
+                            result.update(score=None,max_score=None,grading_type='ungraded',outcome='self_review')
                         attempt=dict(attempt_id=state['attempt_id'],
                             learner_id=st.session_state.settings['learner_id'],
                             exercise_id=ident,task_id=task_id,content_version=e['content_version'],
@@ -223,18 +232,21 @@ def study(exercises):
                             timed_seconds=timed,duration_seconds=timed if timed is not None else 0,
                             duration_basis='Đồng hồ bật thủ công, không gồm thời gian tạm dừng.' if timed is not None else 'Không sử dụng đồng hồ.',
                             wall_time_seconds=round(time.time()-state['started']),
-                            retry_of=state['retry_of'],study_mode='copy' if copy else 'recall',
+                            retry_of=state['retry_of'],study_mode='independent' if independent else 'copy' if copy else 'recall',
                             normalization_policy={'case_sensitive':True,'punctuation':True},**result)
                         emit('attempt',attempt,event_id=attempt['attempt_id'])
                         state.update(submitted=True,result=attempt)
                         st.rerun()
                 else:
                     result=state['result']
-                    st.metric('Mức khớp mẫu',f"{result['score']}/100")
-                    st.caption('Đối chiếu từ và dấu câu với mẫu; không phải chấm ngữ pháp hay band IELTS.')
+                    if not independent:
+                        st.metric('Mức khớp mẫu',f"{result['score']}/100")
+                    else:
+                        st.info('Màu cam: cách viết khác mẫu để bạn đối chiếu, chưa phải kết luận sai ngữ pháp. Phần tự làm chưa chấm band IELTS.')
+                    st.caption('Màu đỏ: chỗ khác/thừa so với mẫu; [Thiếu: …]: phần còn thiếu.' if not independent else 'Đối chiếu sau khi nộp; bạn có thể diễn đạt khác mẫu.')
                     if result.get('timer_used'):
                         st.info('Thời gian đã bấm giờ: '+clock_label(result['timed_seconds']))
-                    for p in (PARAGRAPHS if part=='full' else [part]):
+                    for p in (['full'] if independent else PARAGRAPHS if part=='full' else [part]):
                         st.markdown('**'+PARTS[p]+'**')
                         if reveal:
                             st.caption('Mẫu đối chiếu')
@@ -243,12 +255,15 @@ def study(exercises):
                             with st.expander('Giải thích cấu trúc · '+PARTS[p]):
                                 st.write(plain_explanation(e['paragraph_notes'][p]))
                         st.caption('Bạn viết')
-                        st.write(result.get('paragraph_answers',{}).get(p,result['answer'] if part!='full' else ''))
+                        student=result.get('paragraph_answers',{}).get(p,result['answer'] if independent or part!='full' else '')
+                        model=result['reference_snapshot'] if independent else e['paragraphs'][p]
+                        st.markdown(answer_diff_html(student,model,independent),unsafe_allow_html=True)
                     if part=='full' and not result.get('paragraph_answers'):
                         st.write(result['answer'])
                     if result.get('changes'):
-                        st.dataframe(result['changes'],hide_index=True,width='stretch')
-                    else:
+                        with st.expander('Chi tiết đối chiếu từng chỗ'):
+                            st.dataframe(result['changes'],hide_index=True,width='stretch')
+                    elif not independent:
                         st.success('Đã khớp toàn bộ phần đã chọn.')
                     ordered_ids=list(byid)
                     current_index=ordered_ids.index(ident)
